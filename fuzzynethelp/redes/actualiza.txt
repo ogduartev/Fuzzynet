@@ -1,0 +1,17 @@
+#!/bin/bash
+for i in redes/*.html
+do
+   sed 's/ALIGN="MIDDLE"/ALIGN="CENTER"/g' $i >tmp.html;
+   cp tmp.html $i;
+done
+rm tmp.html;
+./completaul redes/help.hhc;
+./completaul redes/help.hhk;
+rm /home/ogduarte/fuzzynet/fuzzynet/help/redes/*
+cp redes/*.* /home/ogduarte/fuzzynet/fuzzynet/help/redes/.
+rm /windows/C/Oscar/fuzzynet/help/redes/*
+cp redes/*.* /windows/C/Oscar/fuzzynet/help/redes/.
+rm /home/ogduarte/Proyectos/Granada/CDROM/Ejecutables/Linux/help/redes/*
+cp redes/*.* /home/ogduarte/Proyectos/Granada/CDROM/Ejecutables/Linux/help/redes/.
+rm /home/ogduarte/Proyectos/Granada/CDROM/Ejecutables/Windows/help/redes/*
+cp redes/*.* /home/ogduarte/Proyectos/Granada/CDROM/Ejecutables/Windows/help/redes/.

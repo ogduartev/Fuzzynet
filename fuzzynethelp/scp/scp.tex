@@ -1,0 +1,626 @@
+\documentclass[letterpaper,12pt]{book}
+\usepackage[spanish]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage{pst-all}
+\usepackage{pstcol}
+\usepackage{enumerate}
+\title{Sistemas de Computación con Palabras}
+\author{Oscar G. Duarte V.}
+\date{}
+\begin{document}
+%\maketitle
+%\tableofcontents
+\newcommand{\figura}[2]{
+\begin{figure}
+\centering
+\includegraphics[scale=0.75]{fig/#1}
+\caption{#2}
+\label{fig:#1}
+\end{figure}
+}
+
+\chapter[Introducción]{Introducción a los Sistemas de Computación con palabras}
+
+En términos simples, un \textbf{Sistemas de Computación con Palabras} es un algoritmo que cálcula \emph{palabras a partir de palabras}.
+
+Desde los primeros trabajos de Zadeh se ha reconocido que los Conjuntos Difusos son una herramienta útil para representar conceptos lingüísticos. Esta teoría es la fundamento principal del Paradigma de la Computación con palabras.
+
+En el contexto de este trabajo entendemos que las variables lingüísticas involucradas corresponden a conjuntos de etiquetas asociadas a alguna variable numérica de tal forma que se puede representar por un Número Difuso.
+
+\section{Técnicas Difusas}
+El término Técnicas difusas hace referencia a todas aquellas estrategias de representación del conocimiento y/o análisis de la información basadas en la teoría de conjuntos difusos propuesta por Zadeh. En este apéndice se resumen los conceptos fundamentales en los que éstas técnicas se fundamentan.
+
+Existen numerosos documentos que presentan con gran rigor matemático los fundamentos de las técnicas difusas. En contraposición, este documento se ha escrito buscando un lenguaje de fácil comprensión, haciendo énfasis en las explicaciones verbales acompañadas de figuras, más que en las expresiones matemáticas, pensando siempre en que el contenido de esta tesis puede ser de interés para un amplio espectro de lectores, algunos de los cuales quizás no estén familiarizados con el lenguaje matemático. 
+
+\subsection{Conjuntos Difusos}
+
+Las técnicas difusas se basan en el concepto de conjunto difuso, cuyo autor es Lotfi Zadeh. Para presentar este concepto, es conveniente hablar primero de otro concepto más difundido, y por tanto más sencillo de abordar: el concepto de Conjunto.
+
+Generalmente se entiende por conjunto una colección de cosas que comparten entre sí alguna característica común; de hecho, una de las acepciones que presenta el Diccionario de la Real Academia de la Lengua Española para este término es:
+
+\begin{quote}
+``La totalidad de los elementos o cosas poseedores de una propiedad común, que los distingue de otros. Por ejemplo, los números pares.''
+\end{quote}
+
+La teoría de conjuntos es una de las ramas de la matemática que se encarga de formalizar y estudiar los conjuntos. A partir de ella se ha podido construir todo el andamiaje que soporta el resto de las ramas de la matemática.
+
+El concepto de conjunto es, sin duda, tremendamente útil, y lo utilizamos tan a menudo que ni siquiera nos percatamos de ello: por ejemplo, en un supermercado las mercancias están organizadas en  grandes conjuntos (Artículos de aseo, Comestibles, etc. ) que a su vez se organizan en conjuntos más pequeños o subconjuntos (La sección de Comestibles puede organizarse en Verduras, Carnes, etc.).
+
+Un rasgo determinante de estos conjuntos es que, para cada conjunto, un elemento sólo tiene dos posibilidades: pertenecer al conjunto o no pertenecer a él. En nuestro ejemplo del supermercado, una determinada mercancia (una caja de leche, por ejemplo) pertenece al conjunto de las carnes, o no pertenece a él (la caja de leche claramente no pertenece al conjunto de las carnes).
+
+Tomando las palabras del Diccionario de la Real Academia, puede decirse que un elemento pertenece al conjunto si posee la propiedad común que caracteriza al conjunto. De lo contrario no pertenece al conjunto. Esta característica se conoce como el Principio del tercer excluido (sólo hay dos opciones, pertenecer o no pertenecer; cualquiera tercera opción está excluida).
+
+Sin embargo, en algunas ocasiones no es fácil determinar si un determinado elemento posee o no la propiedad común del  conjunto, ya que la propiedad puede poseerse parcialmente. 
+
+Por ejemplo, supóngase que se desea construir el conjunto de las ciudades populosas de un cierto país. Para ello deberiamos determinar cuáles de las ciudades de ese país poseen la propiedad ser populosa, y podriamos, por ejemplo, decidir que lo son aquellas cuyo último censo alcance o sobrepase una cierta cifra, digamos 500.000 habitantes. No obstante, esta solución presenta algunas dificultades como las siguientes:
+Dos ciudades cuyos censos hayan sido de 500.000 y 3?000.000 de habitantes serán consideradas como ciudades populosas, y sin embargo la primera no lo es tanto como la segunda.
+
+Dos ciudades cuyos censos hayan sido de 499.999 y 500.000 habitantes, pese a tener una población muy semejante, son catalogadas de forma diferente: la primera no pertenece al conjunto de las ciudades populosas, y la segunda sí. Supongase que, en el país del ejemplo, de este criterio depende el monto de las ayudas que el gobierno central destina a las ciudades ¿aceptarían los ciudadanos de la primera recibir menos dinero que los de la segunda por un único habitante de diferencia?
+
+Con este ejemplo se pone de manifiesto que existen ocasiones en las que es conveniente tener en cuenta que la propiedad que define al conjunto puede cumplirse en cierto grado (hay ciudades más populosas que otras), y que por lo tanto no es posible establecer tajantemente si un elemento pertenece o no al conjunto. Este hecho ha inspirado la aparición de los Conjuntos difusos.
+
+Un Conjunto difuso es un conjunto en el que los elementos pueden pertenecer parcialmente a él. Cada elemento tendrá un grado de pertenencia al conjunto, que puede expresarse en porcentaje, o como un número comprendido entre $0$ y $1$; de esta manera, se dice que un elemento pertenece a un conjunto difuso con un cierto grado de pertenencia. 
+
+Para distinguir los conjuntos difusos de lo que hasta este momento hemos denominado simplemente conjuntos, a partir ahora se denominarán a estos últimos en estas notas como Conjuntos Crisp.
+
+Si un elemento pertenece parcialmente a un conjunto (digamos en un 70\%), entonces a la vez no pertenece a él (digamos en un 30\%). En los conjuntos difusos se rompe con el principio del tercer excluido, porque ahora un mismo elemento puede pertenecer (parcialmente) y no pertenecer simultáneamente a un conjunto.
+
+Retomando el ejemplo de las ciudades populosas, se puede proponer la construcción de un conjunto difuso, para lo cual se debe establecer qué tanto pertenece cada ciudad a dicho conjunto. Dicho de otra forma, se debe establecer en qué grado cada ciudad cumple con la propiedad de ser populosa. 
+
+Por ejemplo, podriamos decir que aquellas ciudades con menos de 250.000 habitantes no cumplen en absoluto la propiedad, que aquellas con más de 1?000.000 la cumplen totalmente, y que aquellas con una población comprendida entre 250.000 y 1?000.000 de habitantes la cumplen parcialmente, más cuanto mayor sea el número de habitantes. 
+
+En la figura \ref{fig:populosa} se muestra el grado de pertenecia al conjunto difuso ciudades populosas como una función del número de habitantes.
+
+\figura{populosa}{Ejemplo de Conjunto difuso}
+
+\subsection{Alfa-cortes}
+Al establecer un grado de pertenecia a los conjuntos difusos se está admitiendo que algunos de los elementos del conjunto cumplen más o mejor la propiedad común del conjunto. 
+
+En nuestro ejemplo, una ciudad de 750.000 habitantes es más populosa que una de 500.000, porque sus grados de pertenencia al conjunto son 0.66 y 0.33 respectivamente.
+
+Es posible que en algún momento se desee conocer cuáles son los elementos del conjunto que cumplen la propiedad bastante bien, es decir que tienen un grado de pertenencia igual o mayor que un cierto umbral; por ejemplo, podemos deear saber cuáles son las ciudades que cumplen la propiedad de ser populosas en, por lo menos un 0.66.
+
+En la figura \ref{fig:populosa} se observa que todas aquellas ciudades cuya población sea de 750.000 habitantes o más tienen un grado de pertenecia de al menos 0.66; Se dice entonces, que el conjunto de las ciudades con 750.000 habitantes o más es el el ?$\alpha$-corte (pronunciado como el alfa-corte) del conjunto difuso de las ciudades populosas, para un valor de ? igual al 0.66. Vale la pena resaltar que un ?-corte es un conjunto crisp, es decir no es difuso.
+
+\subsection{Principio de Extensión}
+
+La principal diferencia entre los conjuntos crisp y los conjuntos difusos consiste en que para los primeros los elementos  sólo tienen dos posibilidades, pertenecer o no pertenecer, mientras que para los segundos se puede pertenecer en algún grado.
+
+Esto mismo puede decirse de otra forma: Mientras que en los conjuntos difusos los elementos pueden tener cualquier grado de pertenencia (entre 0 y 1), en los conjuntos crisp sólo hay dos posibilidades: tener grado de pertenencia de 0 (no pertenecer) o de 1 (pertenecer). 
+
+Visto asi, los conjuntos crisp son un caso particular de los conjuntos difusos, y por esta razón, se dice que los conjuntos difusos son una extensión de los conjuntos crisp.
+
+Lo anterior es muy útil a la hora de trabajar con conjuntos difusos, ya que se conocen muy bien muchas funciones sobre conjuntos crisp. La forma usual de encontrar una función sobre conjuntos difusos es buscar cuál es la que serviría si se tratase de conjuntos crisp, y extenderla al caso de los conjuntos difusos.
+
+\subsection{Variables Lingüísticas}
+Una variable lingüística es una variable que representamos con palabras en lugar de hacerlo con números. Como veremos a continuación, los conjuntos difusos permiten representar adecuadamente algunas de esta s variables.
+
+Mientras que los ordenadores están diseñados para trabajar con números, los seres humanos generalmente razonamos empleando palabras; por ejemplo, si tenemos que enseñar a alguien cómo conducir un coche, preferiremos decir ``acelera suavemente'' que ``acelera a 0.7 m/s2''.
+
+Un ejemplo típico de variable lingüística es la edad de las personas. Para hablar de la edad de alguien, usalmente le asignamos una Etiqueta como la de bebé, niño, adolescente, joven, adulto, viejo o anciano. Sin embargo, no existen fronteras exactas entre esas etiquetas (¿cuándo se pasa de niño a adolescente?), y por lo tanto podemos pensar en describirlas mediante conjuntos difusos.
+
+La figura \ref{fig:edad} muestra un ejemplo de cómo se podría defnir la variable lingüística Edad, empleando sólo tres etiquetas Joven, Edad Media y Viejo. Por supuesto, el número de etiquetas, y el conjunto difuso asociado a cada una de ellas dependerá de la aplicación que se vaya a efectuar de la Variable Lingüística.
+
+\figura{edad}{Ejemplo de Variable Lingü\`istica}
+
+\subsection{Números Difusos}
+``-¿Qué hora es? -Más o menos las tres y media''.
+
+``-¿Cuánto crees que cueste ese coche? -Cerca de millón y medio''.
+
+Este tipo de diálogos, comunes en nuestra vida diaria, muestran que en ocasiones las cantidades numéricas (la hora y el precio en estos ejemplos) no siempre están claramente definidas. Por esta razón puede ser conveniente represntarlos en forma difusa. 
+
+Un número difuso es un conjunto difuso con algunas particularidades, de las cuales destacamos las siguientes: primero, el universo de discurso es el 
+conjunto de los números reales; segundo, al menos uno de los números reales tiene un grado de pertenecia de $1$; además, debe cumplir otras propiedades matemáticas que aseguran que la forma del conjunto difuso no es ?demasiado extraña?1, de tal manera que los $\alpha$-cortes siempre son intervalos cerrados.
+
+Un tipo de número difuso muy empleado es el que se conoce como número difuso trapezoidal, debido a la forma de su función de pertenencia. En el contexto de esta tesis se usa la nomenclatura según la cual un conjunto difuso trapezoidal con una función de pertenecia como la de la figura \ref{fig:trapecio} se representa por $T(a,b,c,d)$.
+
+\figura{trapecio}{N\`umero Difuso Trapezoidal}
+\subsection{Aritmética Difusa}
+La aritmética difusa es el conjunto de estrategias empleadas para operar con números difusos. En otras palabras, mediante la aritmética difusa podemos sumar ``más o menos 3'' con ``un poco menos de 2''. 
+
+En general, se emplea el principio de extensión para definir las operaciones básicas (suma, resta, etc.) a partir de las operaciones sobre números reales convencionales.
+
+Al trabajar con números trapezoidales se pueden obtener algunas expresiones sencillas, por ejemplo, si $A=T(a,b,c,d)$ y $B=T(e,f,g,h)$ son dos números trapezoidales, su suma y su resta son otros números trapezoidales que se pueden calcular como:
+\[
+A+B=T(a+e, b+f, c+g, d+h)
+\]
+\[
+A-B=T(a-h, b-g, c-f, d-e)
+\]
+
+El inverso de la resta entre números difusos no es la suma:
+si $A=T(a,b,c,d)$ y $B=T(e,f,g,h)$ son dos números trapezoidales, entonces
+\[
+C=A-B=T(a-h, b-g, c-f, d-e)
+\]
+pero
+\[
+A=T(a,b,c,d) C+B=T(a+e-h, b+f-g, c+g-f, d+h-e)
+\]
+
+\subsection{Lógica difusa y razonamiento aproximado}
+Aunque en ocasiones se utiliza el término Lógica Difusa, para designar todas aquellas estrategias que emplean de alguna u otra manera el concepto de conjunto difuso, en esta notas se ha preferido emplear para ello el término de Técnicas difusas, reservando el de lógica difusa para algo menos amplio: la extensión de la lógica clásica al terreno de los conjuntos difusos.
+
+Por ejemplo, la Inferencia lógica clásica consiste en la combinación de proposiciones para producir nuevas proposiciones. Así, al combinar la proposición ``X es A'' con la proposición ``Si X es A Entonces Y es B'', se puede inferir la proposición ``Y es B''.
+
+Una inferencia como la presentada en el párrafo anterior sólo es posible en la lógica tradicional si la primera proposición (``X es A' ') es idéntica a la primera parte de la segunda proposición (``(Si) X es A' '); sin embargo, en la lógica difusa estas dos proposiciones no necesariamente deben ser idénticas, debido a que las fronteras de los conjuntos no son precisas. Así, al combinar la proposición ``X es A*'' con la proposición ``Si X es A Entonces Y es B'', puede obtenerse la proposición ``Y es B*''.
+
+\chapter[Sistemas de Computación con Palabras]{Sistemas de Computación con Palabras basados en Aritmética Difusa}
+\label{sec:ABCW}
+
+La Figura \ref{fig:cw_arit} muestra la estructura de un Sistema de Computación con palabras Basado en Aritmética Difusa. Las Entradas y Salidas del sistema son Palabras (calcula palabras a partir de palabras). 
+
+El bloque principal es el de Razonamiento Aproximado, que calcula Números Difusos a partir de números difusos empleando une \emph{Función de razonamiento Aproximado}.
+
+El bloque de Interpretación Lingüística convierte las palabras en Números Difusos, mientras que el bloque de Aproximación Lingüística convierte Números Difusos en palabras.
+
+\begin{figure}
+\centering
+\psset{unit=.8}
+\begin{pspicture}(-.5,0)(10,4)%\psgrid
+\psframe(0,0)(9.3,3.5)
+\tiny
+\rput[bl](0.5,0.5){
+  \psframe(0,0)(2.2,1.0)
+  \rput[t](1.1,.85){Interpretación}
+  \rput[b](1.1,.15){Lingüística}
+  \rput[b]{90}(-.8,.5){ENTRADAS}
+  \psline{<-}(0,.5)(-.7,.5)
+  \psline{->}(2.2,.5)(3,.5)
+}
+\rput[bl](3.5,0.5){
+  \psframe(0,0)(2.2,1.0)
+  \rput[t](1.1,.85){Razonamiento}
+  \rput[b](1.1,.15){Aproximado}
+  \psline{->}(2.2,.5)(3,.5)
+}
+\rput[bl](6.5,0.5){
+  \psframe(0,0)(2.2,1.0)
+  \rput[t](1.1,.85){Aproximación}
+  \rput[b](1.1,.15){Lingüística}
+  \rput[t]{90}(3.1,.5){SALIDAS}
+  \psline{->}(2.2,.5)(3,.5)
+}
+\rput[bl](3.5,2){
+  \psframe(0,0)(2.2,1.0)
+  \rput[t](1.1,.85){Función de}
+  \rput[c](1.1,.5){Razonamiento}
+  \rput[b](1.1,.15){Aproximado}
+  \psline{->}(1.1,0)(1.1,-.5)
+}
+\end{pspicture}
+\caption{Sistema de Computación con Palabras basado en Aritmética Difusa}
+\label{fig:cw_arit}
+\end{figure}
+
+\section{Definiciones}
+
+Asumimos que el sistema tiene $n$ entradas $x_1,x_2,\cdots,x_n$ y $1$ salida $y$. 
+
+Cada variable de entrada $x_i$ está definida sobre $U_i=[0,1]$ y la variable de salida $y$ está definida sobre $V=[0,1]$. Los conjuntos de todos los conjuntos difusos y todos los números difusossobre $U_i$ son $\mathcal{F}_{U_i}$ y  $\mathcal{N}_{U_i}$ respectivamente; los conjuntos de todos los conjuntos difusos y todos los números difusos sobre $V$ son $\mathcal{F}_V$ y  $\mathcal{N}_V$ respectivamente. 
+
+Definimos
+$\mathcal{F}_{U}=
+\mathcal{F}_{U_1} \times \mathcal{F}_{U_2} \times \cdots \times \mathcal{F}_{U_n}$
+y
+$\mathcal{N}_{U}=
+\mathcal{N}_{U_1} \times \mathcal{N}_{U_2} \times \cdots \times \mathcal{N}_{U_n}$.
+
+Para cada variable de entrada $x_i$ existe una variable lingüísticathere $\mathcal{X}_i$ con un conjunto dewith a set of $q_i$ etiquetas lingüísticas $\mathcal{L}_{x_{i1}},\mathcal{L}_{x_{i2}},\cdots,
+\mathcal{L}_{x_{iq_i}}$.
+
+Cada Etiqueta Lingüística $\mathcal{L}_{x_{ij}}$ se relaciona con un conjunto difuso $f_{x_{ij}}$.
+
+De forma análoga, la variable de salida $y$ tiene asociada una variable lingüístiac $\mathcal{Y}$ con un conjunto de $r$ etiquetas lingüísticas $\mathcal{L}_{y_{1}},\mathcal{L}_{y_{2}},\cdots,
+\mathcal{L}_{y_{r}}$. 
+
+Cada etiqueta lingüñistica $\mathcal{L}_{y_{i}}$ se relaciona con un conjunto difuso $f_{y_{i}}$.
+
+Es usual que cada conjunto difuso $f_{x_{ij}}$ y $f_{y_{i}}$ tenga forma trapezoidal. Sio ese es el caso empleamos la notación $f=T(a,b,c,d)$ para indicar que el conjunto difuso $f$ tiene una función de pertenencia como la que se muestra en la figura \ref{fig:trap}.
+
+\begin{figure}
+\centering
+\begin{pspicture}(0,0)(8,3)%\psgrid
+\rput[bl](1,.5)
+{
+  \psaxes[labels=y,dy=1.5]{->}(0,0)(6,2)
+  \psline[linewidth=2pt]{-}(1,0)(2,1.5)(4,1.5)(5,0)
+  \rput[b](1,-.4){$a$}
+  \rput[b](2,-.4){$b$}
+  \rput[b](4,-.4){$c$}
+  \rput[b](5,-.4){$d$}
+}
+\end{pspicture}
+\caption{Número Difuso Trapezoidal $f=T(a,b,c,d)$}
+\label{fig:trap}
+\end{figure}
+
+\section{Interpretación Lingüística}
+\label{sec:ling_inter}
+El propósito del bloque de Interpretación Lingüística es convertir las entradas en números difusos. Las entradas pueden ser de diferentes tipos, y la salida será siempre un número difuso $\eta_i$ para cada entrada. El siguiente listado muestra cuáles son los tipos entradas validos:
+
+\begin{description}
+\item[Números crisp:] si la entrada actual $x_i$ es el número crisp $a$, la salida del bloque será el número difuso singleton $\eta_i=T(a,a,a,a)$.
+
+\item[Intervalos:] si la entrada actual $x_i$ es el intervalo $[a,b]$, la salida del bloque será el número difuso rectangular $\eta_i=T(a,a,b,b)$.
+
+\item[Números difusos:] si la entrada actual $x_i$ es un número difuso la salida del bloque $\eta_i$ será la misma entrada sin cambios.
+
+\item[Etiquetas Lingüísticas:] si la entrada actual $x_i$ es la etiqueta lingüística $\mathcal{L}_{x_{ij}}$ la salida del bloque $\eta_i$ será su conjunto difuso relacionado $f_{x_{ij}}$.
+\item[Etiquetas Lingüísticas modificadas:] si la entrada actual $x_i$ es la etiqueta lingüística modificada \textit{``al menos''} $\mathcal{L}_{x_{ij}}$ la salida del bloque $\eta_i$ será una versión modificada de su conjunto difuso relacionado $f_{x_{ij}}$: El límite superior de cada $\alpha-$corte de $f_{x_{ij}}$ se remplazará por $1$, el límite superior de su Universo de Discurso $U_i$.
+
+De forma similar, si la entrada actual $x_i$ es la etiqueta lingüística modificada \textit{``a lo sumo''} $\mathcal{L}_{x_{ij}}$ la salida del bloque $\eta_i$ será una versión modificada de su conjunto difuso relacionado $f_{x_{ij}}$: El límite inferior de cada $\alpha-$corte de $f_{x_{ij}}$ se remplazará por $0$, el límite inferior de su Universo de Discurso $U_i$.
+
+\item[Palabras simples:] si la entrada actual $x_i$ es la palabra simple \textit{``nada''} la salida del bloque será el número difuso trapezoidal $\eta_i=T(0,0,0,0)$.
+
+Si la entrada actual $x_i$ es la palabra simple \textit{``cualquier cosa''} la salida del bloque será el número difuso trapezoidal $\eta_i=T(0,0,1,1)$.
+\end{description}
+
+\section{Razonamiento Aproximado}
+\label{sec:approximate}
+
+La máquina de Inferencia basada en Aritmátiica Difusa puede verse como una plicación $ARF:N_U \to N_V$. En otras palabras, las entradas al bloque de Razonamiento Aproximado serán los conjuntos difusos $\eta_1,\eta_2,\cdots,\eta_n$ y la salida será el número difuso $\lambda$:
+\begin{equation}
+\lambda=ARF(\eta_1,\eta_2,\cdots,\eta_n)
+\label{ecu:ARF}
+\end{equation}
+
+$ARF$ es una \textit{Función de Razonamiento Aproximado} cuyo objetivo es el de capturar el conocimiento que se tiene del sistema.
+
+Por ejemplo, si se tiene un caso en el que el conocimiento disponible es de la forma:
+\begin{itemize}
+\item ``Cada vez que se incrementa la entrada $i$ la salida tambien crece.''
+\item ``La entrada $i$ es más importante que la entrada $j$''
+\end{itemize}
+
+Dicho conocimiento puede representarse por la siguiente ecuación
+\begin{equation}
+y=\sum_{i=1}^{n}w_ix_i \qquad \sum_{i=1}^{n}w_i = 1 \quad w_i\geq 0
+\label{ecu:prom}
+\end{equation}
+
+La ecuación (\ref{ecu:prom}) establece que la salida $y$ crece cuando se incrementa cualquiera de las entradas $x_i$ . Además, si $w_i > w_j$ entonces el efecto de variar $w_i$ es mayor que el de variar $w_j$, O lo que es igual, la entrada $i$ es más importante que la entrada $j$.
+
+Podemos construir la ecuación (\ref{ecu:ARF}) empleando funciones aritméticas crisp y empleando el principio de extensión; estas funciones crisp las denominamos $arf$.
+
+\subsection{Algunas $fra$}
+
+A continuación se listan algunas $arf$ útiles, de propósito general. En todos los caso $w_i$ es un parámetro de ponderación que nos permite establecer las importancias relativas de las entradas; se restringe a $0\leq w_i\leq 1$ y $\sum_{i=1}^{n}w_i = 1$; También definimos $s_i$ como una variable auxiliar que define el sentido del efecto de variar la entrada  $i$ sobre la saluda:
+\[
+s_i=
+\left\{
+\begin{matrix}	
+1 & \text{si $y$ crece cuando $x_i$ crece} \\
+0 & \text{si $y$ decrece cuando $x_i$ crece}
+\end{matrix}
+\right.
+\]
+
+Para analizar las diferencias entre las distintas opciones, definimos $w^+$ y $w^-$ como las sumas de los pesos de las entradas de relaciones crecientes y decrecientes respectivamente:
+\[
+\begin{matrix}
+w^+=\sum_{i=1}^{n}s_i w_i & & w^-=\sum_{i=1}^{n}(1-s_i) w_i
+\end{matrix}
+\]
+Claramente $w^+$, $w^-$ pertenecen a $[0,1]$ y $w^+ + w^-=1$.
+
+\begin{description}
+\item [Opción 1:] Una combinación lineal en $[0,1]$
+\[
+y=arf_1(x)=\sum_{i=1}^{n}s_iw_ix_i + \sum_{i=1}^{n}(1-s_i)w_i(1-x_i)
+\]
+Es<fñacil probar que
+\[
+y=arf_1(x)=w^-+\sum_{i=1}^{n}(-1)^{s_i+1}w_ix_i
+\]
+Nótese que,
+\begin{itemize}
+	\item si $x_i=1-s_i\;\; i=1,2,\cdots,n$ entonces $y=0$, el mínimo posible valor de salida.
+	\item si $x_i=s_i\;\; i=1,2,\cdots,n$ entonces $y=1$, el máximo posible valor de salida.
+	\item el rango de salida es $1-0=1$
+	\item si $x_i=0\;\; i=1,2,\cdots,n$ entonces $y=w^-$; esta es la salida correspondiente a los mínimos posibles valores de entrada.
+	\item si $x_i=1\;\; i=1,2,\cdots,n$ entonces $y=w^+$; esta es la salida correspondiente a los máximos posibles valores de entrada.
+\end{itemize}
+
+\item [Opción 2:] Una combinación lineal centrada
+\[
+y=arf_2(x)=0.5\left[ 1 + \sum_{i=1}^{n}(-1)^{s_i+1}w_ix_i \right]
+\]
+Notese que,
+\begin{itemize}
+	\item si $x_i=1-s_i\;\; i=1,2,\cdots,n$ entonces $y=0.5(1-w^-)$, el mínimo valor de salida posible.
+	\item si $x_i=s_i\;\; i=1,2,\cdots,n$ entonces $y=0.5(1+w^+)$, el máximo valor de salida posible.
+	\item el rango de salida es $0.5(1+w^+)-0.5(1-w^-)=0.5$
+	\item si $x_i=0\;\; i=1,2,\cdots,n$ entonces $y=0.5$; esta es la salida con el mínimo valor en las entradas posible. Llamamos a esta opción ``centrada'' porque entradas cero ocasionan un valor de salida en el centro de $[0,1]$.
+	\item si $x_i=1\;\; i=1,2,\cdots,n$ entonces $y=0.5(1+w^+-w^-)$; esta es la salida con el máximo valor en las entradas posible.
+\end{itemize}
+
+\end{description}
+
+Opciones 3 y 4 son modificaciones de las opciones 1 y 2: Hemos remplazado $x_i$ por una función genérica $g_i(x_i):[0,1]\to [0,1]$ que debe ser monótonamente creciente y tal que $g(0)=0$ y $g(1)=1$. A manera de ejemplo, supóngase $g_i(x_i)=x_i^{r_i}$; si $r_i>1$ entonces los valores menores de $x_i$ serán subvalorados, y los valore mayores serán sobrevalorados.
+
+\begin{description}
+\item [Opción 3:] Una combinación no lineal en $[0,1]$:
+\[
+y=arf_3(x)=\sum_{i=1}^{n}s_iw_ig_i(x_i) + \sum_{i=1}^{n}(1-s_i)w_ig_i(1-x_i)
+\]
+
+\item [Opción 4:] Una combinación no lineal centrada:
+\[
+y=arf_4(x)=0.5\left[ 1 + \sum_{i=1}^{n}(-1)^{s_i+1}w_ig_i(x_i) \right]
+\]
+
+\end{description}
+
+La Figura \ref{fig:options} muestra una comparación gráfica entre estas opciones. Se han seleccionado $n=2$, $s_1=1$, $s_2=0$, $w_1=0.4$, $w_2=0.6$, $r_1=2$, $r_2=0.5$ y se han graficado $arf_i(x)$ ($i=1,2,3,4$) para tres valores de $x_2$: $0.0$, $0.5$  $1.0$. 
+
+Claramente, las opciones $1$ y $2$ son hiperplanos con diferentes pendientes y desplazamientos. La opciones $3$ y $4$ son hipersuperficies que pueden verse como deformaciones de los planos originales.
+
+\begin{figure}
+\centering
+\begin{pspicture}(0,-1)(6,5)%\psgrid
+\tiny
+\rput[bl](.5,3)
+{
+	\psset{unit=1.5}
+  \psaxes{->}(0,0)(1.2,1.2)
+  \rput[br](1.2,.1){\small $x_1$}
+  \rput[bl](.1,1){\small $arf_1(x)$}
+  \psplot[linestyle=solid]{0}{1}{0.4 x mul 1 0 sub 0.6 mul add}
+  \psplot[linestyle=dashed]{0}{1}{0.4 x mul 1 0.5 sub 0.6 mul add}
+  \psplot[linestyle=dotted]{0}{1}{0.4 x mul 1 1 sub 0.6 mul add}
+}
+\rput[bl](4,3)
+{
+	\psset{unit=1.5}
+  \psaxes{->}(0,0)(1.2,1.2)
+  \rput[br](1.2,.1){\small $x_1$}
+  \rput[bl](.1,1){\small $arf_2(x)$}
+  \psplot[linestyle=solid]{0}{1}{0.5 1 0.4 x mul -0.6 0 mul add add mul}
+  \psplot[linestyle=dashed]{0}{1}{0.5 1 0.4 x mul -0.6 0.5 mul add add mul}
+  \psplot[linestyle=dotted]{0}{1}{0.5 1 0.4 x mul -0.6 1 mul add add mul}
+}
+\rput[bl](.5,.5)
+{
+	\psset{unit=1.5}
+  \psaxes{->}(0,0)(1.2,1.2)
+  \rput[br](1.2,.1){\small $x_1$}
+  \rput[bl](.1,1){\small $arf_3(x)$}
+\psplot[linestyle=solid]{0}{1}{0.4 x x mul mul 1 0 0.5 exp sub 0.6 mul add}
+  \psplot[linestyle=dashed]{0}{1}{0.4 x x mul mul 1 0.5 0.5 exp sub 0.6 mul add}
+  \psplot[linestyle=dotted]{0}{1}{0.4 x x mul mul 1 1 0.5 exp sub 0.6 mul add}
+}
+\rput[bl](4,.5)
+{
+	\psset{unit=1.5}
+  \psaxes{->}(0,0)(1.2,1.2)
+  \rput[br](1.2,.1){\small $x_1$}
+  \rput[bl](.1,1){\small $arf_4(x)$}
+\psplot[linestyle=solid]{0}{1}{0.5 1 0.4 x x mul mul -0.6 0 0.5 exp mul add add mul}
+  \psplot[linestyle=dashed]{0}{1}{0.5 1 0.4 x x mul mul -0.6 0.5 0.5 exp mul add add mul}
+  \psplot[linestyle=dotted]{0}{1}{0.5 1 0.4 x x mul mul -0.6 1 0.5 exp mul add add mul}
+}
+\rput[l](0,-.5)
+{
+	\psline[linestyle=solid](0,0)(0.5,0)
+	\rput[l](0.6,0){\small :$x_2=0.0$}
+}
+\rput[l](2.5,-.5)
+{
+	\psline[linestyle=dashed](0,0)(0.5,0)
+	\rput[l](0.6,0){\small :$x_2=0.5$}
+}
+\rput[l](5,-.5)
+{
+	\psline[linestyle=dotted](0,0)(0.5,0)
+	\rput[l](0.6,0){\small :$x_2=1.0$}
+}
+\end{pspicture}
+
+\caption{Comparación entre $arf_i(x)$ ($i=1,2,3,4$)}
+\label{fig:options}
+\end{figure}
+
+\subsection{Construcción de una $arf$}
+\label{sec:arf}
+Se resumen aqui algunas ideas generales sobre cómo obtener una $arf$ adecuada en tres situaciones diferentes:
+\begin{enumerate}[a.]
+	\item \textit{Se ha definido previamente una estrategia crisp: }
+	El paradigma de la computación con palabras puede dar nuevas perspectivas a problemas previamente estudiados. A manera de ejemplo, considerese el problema de estimar el impacto ambiental: La Importancia $I$ de un impacto simple debe evaluarse teniendo en cuenta un conjunto de $n$ características $F=\{F_1,F_2,\cdots ,F_n\}$. La propuesta usual es efectuar un propmedio ponderado de dichas características (véase, por ejemplo \cite{Canter88}). 
+
+\begin{equation}
+I= \sum_{i=1}^{n}a_iF_i
+\label{ecu:importa}
+\end{equation}
+	
+	Otra posibilidad es la de usar un sistema de computación con palabras basado en aritmética difusa para el cálculo de $I$ (ver \cite{Duarte00}). Las principales ventajas de esta alternativa son: una forma más natural de especificar los valores de cada $F_i$ y un marco unificado para el manejo de incertidumbres y ambigüedades. Para construir una $arf$ adecuada, podemos adaptar \ref{ecu:importa}.
+	
+	\item \textit{Es posible consultar a expertos: } Si los expertos están disponibles, se puede diseñar con elllos una $arf$ adecuada; mediante encuestas o técnicas más sofistricadas como las entrevistas Delphi, se puede intentar dar respuesta a las siguientes preguntas:
+	
+\begin{enumerate}[i.]
+	\item ¿La relación entre entradas y salidas es monótona?
+	\item ¿En caso afirmativo, cuál es el sentido de esa monotonía, creciente o decreciente?
+	\item ¿Qué tan importante es cada entrada?
+	\item ¿La salida debe estar4 centrada cuando las entradas son las mínimas posibles?
+	\item ¿Deberiamos esperar una relación lineal para cada entrada?
+\end{enumerate}
+
+	Las respuesta a esas preguntas pueden brindarnos buena información para la construicción de una $arf$ adecuada:
+\begin{itemize}
+	\item Si la relación es monótona, podemos intentar una de las opciones listadas arriba. Si no lo es, deberiamos recolectar datos e intentar otro procedimiento.
+	\item El sentido de la monotía define $s_i$: $1$ si es creciente, y $0$ si es decreciente.
+	\item La importancia de cada entrada define $w_i$. Recuerde que $0\leq w_i \leq 1$ y $\sum_i w_i=1$.
+	\item Si la salida debe estar centrada cuando las entradas son mínimas, pueden usarse las opciones 2 o 4; en caso contrario pueden usarse las opciones 1 o 3.
+	\item Si la relación es lineal, usamos las opciones 1 o 2. De lo contrario usamos las opciones 3 o 4; En este caso deberiamos recolectar datos para efectuar un ajuste de los parámetros de $g_i(x_i)$
+\end{itemize}
+
+	\item \textit{Existe un registro histórico de datos: } Si se dispone de una colección de parejas de entrada-salida, puede intentarse un ajuste de una $arf$ genérica a esos datos. Las opciones listadas arriba son muy rígidas para este propósito. En su ligar, las redes de computación con palabras pueden ser más flexibles que un único sistema de computación con palabras.
+	
+\end{enumerate}
+
+\section{Aproximación Lingüística}
+\label{sec:ling_app}
+
+El propósito del bloque de Interpretación Lingüística es el de convertir Números Difusos en Palabras. Sin embargo, en este trabajo se proponen diferentes tipos de salidas para distintas aplicaciones:
+
+\begin{description}
+\item [Una palabra simple:] Se calcula la consistencia entre $\lambda$ (la salida del bloque de razonamiento aproximado) y cada conjunto difuso de la Variable Lingüística de salida $\mathcal{Y}$
+\[
+c_i=\text{cons}(\lambda,f_i)\qquad i=1,2,\cdots,r
+\]
+Se selecciona como salida del bloque aquella etiqueta cuya consistencia sea máxima.
+\item [Una frase descriptiva:] Se calcula $c_i$ para $i=1,2,\cdots,r$ y se construye una frase de la forma
+
+``La salida $P_1 \;\mathcal{L}_{y_1}$, es $P_2 \;\mathcal{L}_{y_2}\cdots$, y es $P_r \;\mathcal{L}_{y_r}$''.
+
+En donde $P_i$ es uno de los siguientes modificadores:
+\[
+P_i=
+\left\{
+\begin{matrix}
+\text{muy posiblemente} & \text{if } 0<c_i\geq 1/3 \\
+\text{posiblemente} & \text{if } 1/3<c_i\geq 2/3 \\
+\text{poco posiblemente} & \text{if } 2/3<c_i\geq 1 \\
+\end{matrix}
+\right.
+\]
+
+\item [Un número difuso:] Una salida válida es el número difuso $\lambda$ sin cambio alguno.
+\item [Un número Crisp:] Otra salñida válida es un número crisp que represente el valor central del número difuso. Usamos el valor representativo definido en \cite{Delgado88a}, introduciendo un parámetro adicional $\beta$ que se explica en la sección \ref{sec:representa}.
+
+Existen otras muchas alternativas para obtener un valor representativo de un número difuso; véase, por ejemplo, \cite{Requena95} para conocer una aplicación de Redes neuronales que captura la subjetividad de un decisor.
+
+\item [Una pareja de números crisp:] Otra salida válida es una pareja de números crisp formada por el valor representativo y una medida de la ambigüedad del número, explicada en la sección \ref{sec:representa}.
+
+\end{description}
+
+\chapter[Valor Representativo]{Valor representativo de un número difuso}
+\label{sec:representa}
+Sea $N$ un número difuso, y $N_\alpha=[L_\alpha, R_\alpha]$ un $\alpha-$corte. Definimos $v_N(\alpha,\beta)$, el valor representativo de $N_\alpha$, como
+\begin{equation}
+	v_N(\alpha,\beta)=(1-\beta)L_\alpha + \beta R_\alpha\qquad 0\leq\beta\leq 1
+	\label{equ:v_alpha}
+\end{equation}
+
+La ambigüedad de $N_\alpha$ es el tamaño del intervalo
+
+\begin{equation}
+  I_\alpha=R_\alpha-L\alpha
+	\label{equ:I_alpha}
+\end{equation}
+
+Claramente $v_N(\alpha,\beta) \in N_\alpha$; Además, si variamos $\beta$ desde $0$ hasta $1$ entonces $v_N(\alpha,\beta)$ ``viaja'' desde $L_\alpha$ a $R_\alpha$. Llamamos a $\beta$ el \textit{optimismo} de la representación crisp del intervalo\footnote{Asumimos que un valor alto del número es ``mejor'' que un valor bajo, de tal manera que es optimista esperar un valor mayor que el centro del intervalo.}.
+
+Sea $h(\alpha):[0,1]\to [0,1]$ una función creciente tal que  $h(0)=0$ y $h(1)=1$. Definimos $V_N(\beta)$, el valor representativo de $N$ como el promedio ponderado del valor representativo de todos sus $\alpha-$cortes; El peso de la ponderación está definido por $h(\alpha)$:
+\begin{equation}
+	V_N(\beta)=\frac{\int_0^1 h(\alpha)v_N(\alpha,\beta)d\alpha}
+	{\int_0^1 h(\alpha)d\alpha}
+	\label{equ:v_N}
+\end{equation}
+
+De otro lado, empleamos la definición de ambigüedad dada en \cite{Delgado88a}
+\begin{equation}
+	A_N=\frac{\int_0^1 h(\alpha)(I_\alpha)d\alpha}
+	{\int_0^1 h(\alpha)d\alpha}
+	\label{equ:A_N}
+\end{equation}
+
+Para el número difuso trapezoidal $T(a,b,c,d)$ y para
+\begin{equation}
+	h(\alpha)=\alpha^r \text{ with } r\geq 0
+	\label{equ:r}
+\end{equation}
+las equaciones (\ref{equ:v_N}) and (\ref{equ:A_N}) se reducen a
+\begin{equation}
+  \begin{matrix}
+	V_N(\beta)=v_N\left(\hat\alpha,\beta\right) \\
+	A_N=I_{\hat\alpha} \\
+	\hat\alpha=\frac{r+1}{r+2}
+	\end{matrix}
+	\label{equ:v_N_eje_1}
+\end{equation}
+lo que significa que el valor representativo y la ambigüedad del número difuso $N$ son iguales a las de su $\hat\alpha-$corte con $\hat\alpha=\frac{r+1}{r+2}$. (Nótese que $1/2\leq\hat\alpha\leq 1$)
+
+\section{Ejemplo 1}
+
+Exploremos el significado del parámetro $\beta$ en las ecuaciones \ref{equ:v_alpha} y \ref{equ:v_N}. La Figura \ref{fig:ex_opt} muestra las funciones de pertenecia de dos números difusos trapezoidales $N_1=T(1,3,3,5)$ y $N_2=T(2,3,3,4)$. Estamos interesados en ordenar esos números, es decir, en decidir cúal de los dos es ``mayor'' que el otro.
+
+\begin{figure}
+\centering
+\begin{pspicture}(0,0)(8,3)%\psgrid
+\rput[bl](1,.5)
+{
+  \psaxes[dx=1.0,dy=1.5]{->}(0,0)(6,2)
+  \psline[linewidth=2pt]{-}(1,0)(3,1.5)(3,1.5)(5,0)
+  \psline[linestyle=dashed,linewidth=2pt]%
+  {-}(2,0)(3,1.5)(3,1.5)(4,0)
+}
+\end{pspicture}
+\caption{Números Difusos Trapezoidales $N_1=T(1,3,3,5)$ (solido) y $N_2=T(2,3,3,4)$ (punteado) en el ejemplo 1}
+\label{fig:ex_opt}
+\end{figure}
+
+Si seleccionamos $h(\alpha)=\alpha^r\;\;r=0$ en la ecuación \ref{equ:v_N}, podemos calcular el valor representativo de $N_1$ y $N_2$ como una función de $\beta$. Los resultados se muestran en la figura \ref{fig:ex_varia_opt}. Nótese que para $\beta < 0.5$ el valor represe4ntaivo de $N_2$ es mayor que el de $N_1$; lo contrario sucede para $\beta > 0.5$; para $\beta=0.5$ ambos números difusos tienen el mismo valor representativo.
+
+Nuestra interpretación lingüística de este ejemplo es la siguiente: Un ordenamiento optimista de $N_1$ y $N_2$ ($\beta>0.5$) es que $N_1$ es mayor que $N_2$, porque esperamos un valor real de $N_1$ mejor que el de $N_2$. De<otro olado, un ordenamiento pesimista de $N_1$ y $N_2$ ($\beta<0.5$) es que $N_1$ es menor que $N_2$, porque esperamos un valor de $N_1$ peor que el de $N_2$. 
+
+Nótese que tanto $N_1$ como $N_2$ están centrados en $3$ y tienen una forma simétrica alrededor de ese centro. Para valores altos de $\beta$ ($\beta>0.5$) el valor representativo estará a la derecha de ese centro; para $N_1$ la distancia entre elr y el centro es mayor que para $N_2$, porque el número es más ancho, lo que significa que hay una mayor incertidumbre respecto a su valor actual.
+
+\begin{figure}
+\begin{center}
+	\begin{pspicture}(0,0)(6,6)%\psgrid
+	\psaxes[dx=1,Dx=.2,dy=1,Dy=.5,Oy=2.0]{->}(0,0)(6,5)
+	\psline[linestyle=solid](0,0)(5,4)
+	\psline[linestyle=dashed](0,1)(5,3)
+	\rput[br](5,0.1){$\beta$}
+	\end{pspicture}
+\end{center}
+	\caption{Valores Representativos de $N_1$ (solido) y $N_2$ (punteado) en el ejemplo 1 como una función de $\beta$ ($r=0$)}
+	\label{fig:ex_varia_opt}
+\end{figure}
+
+\section{Ejemplo 2}
+
+Exploremos ahora el significado del parámetro $r$ en la ecuación \ref{equ:r}. La Figura \ref{fig:ex_r} n¡muestra las funciones de pertenencia de dos números difusos trapezoidales $N_3=T(1,4,4,4)$ and $N_4=T(3,3.5,3.5,4)$. De nuevo, estamos interesados en decidir cuál de los dos números difusos es ``mayor'' que el otro.
+
+\begin{figure}
+\centering
+\begin{pspicture}(0,0)(8,3)%\psgrid
+\rput[bl](1,.5)
+{
+  \psaxes[dx=1.0,dy=1.5]{->}(0,0)(6,2)
+  \psline[linewidth=2pt]{-}(1,0)(4,1.5)(4,1.5)(4,0)
+  \psline[linestyle=dashed,linewidth=2pt]%
+  {-}(3,0)(3.5,1.5)(3.5,1.5)(4,0)
+}
+\end{pspicture}
+\caption{Números Difusos Trapezoidales $N_3=T(1,4,4,4)$ (solido) y $N_4=T(3,3.5,3.5,4)$ (punteado) en el ejemplo 2}
+\label{fig:ex_r}
+\end{figure}
+
+Si seleccionamos $\beta=0.5$ en la ecuación \ref{equ:v_N}, podemos calcular el valor representativo de $N_3$ y $N_4$ como una función de $r$. Los resultados se muestran en la figura \ref{fig:ex_varia_r}. Nótese que para $r < 1$ el valor representativo de $N_4$ es mayor que el de $N_3$; lo contrario sucede para $r > 1$.
+
+La ecuación \ref{equ:v_N} muestra que el valor representativo de un número difuso es un promedio ponderado de sus $\alpha-$cortes. El parámetro $r$ en \ref{equ:r} cambia el peso relativo de cada  $\alpha-$cut: los $\alpha-$cortes bajos del número serán menos importantes para el caso en que $r>1$ que para el caso en que $r<1$. 
+
+\begin{figure}
+\begin{center}
+	\begin{pspicture}(0,0)(6,6)%\psgrid
+	\psaxes[dx=1,Dx=.4,dy=1,Dy=0.2,Oy=3.0]{->}(0,0)(6,5)
+	\psplot[linestyle=solid]{0}{5}%
+	{1 x 0.4 mul add 2 x 0.4 mul add div 1.5 mul 2.5 add 3.0 sub 5 mul}
+	\psline[linestyle=dashed](0,2.5)(5,2.5)
+	\rput[br](5,0.1){$\beta$}
+	\end{pspicture}
+\end{center}
+	\caption{Valores representativos de $N_3$ (solido) y $N_4$ (punteado) en el ejemplo 2 como una función de $r$ ($\beta=0.5$)}
+	\label{fig:ex_varia_r}
+\end{figure}
+
+%\bibliographystyle{plain}
+%\bibliography{fuzzy}
+%
+\end{document}

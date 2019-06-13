@@ -1,0 +1,110 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.70)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Conjuntos Difusos</TITLE>
+<META NAME="description" CONTENT="Conjuntos Difusos">
+<META NAME="keywords" CONTENT="scp">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="scp.css">
+
+</HEAD>
+
+<BODY >
+
+<H2><A NAME="SECTION00111000000000000000">
+Conjuntos Difusos</A>
+</H2>
+
+<P>
+Las t&#233;cnicas difusas se basan en el concepto de conjunto difuso, cuyo autor es Lotfi Zadeh. Para presentar este concepto, es conveniente hablar primero de otro concepto m&#225;s difundido, y por tanto m&#225;s sencillo de abordar: el concepto de Conjunto.
+
+<P>
+Generalmente se entiende por conjunto una colecci&#243;n de cosas que comparten entre s&#237; alguna caracter&#237;stica com&#250;n; de hecho, una de las acepciones que presenta el Diccionario de la Real Academia de la Lengua Espa&#241;ola para este t&#233;rmino es:
+
+<P>
+<BLOCKQUOTE>
+``La totalidad de los elementos o cosas poseedores de una propiedad com&#250;n, que los distingue de otros. Por ejemplo, los n&#250;meros pares.''
+
+</BLOCKQUOTE>
+
+<P>
+La teor&#237;a de conjuntos es una de las ramas de la matem&#225;tica que se encarga de formalizar y estudiar los conjuntos. A partir de ella se ha podido construir todo el andamiaje que soporta el resto de las ramas de la matem&#225;tica.
+
+<P>
+El concepto de conjunto es, sin duda, tremendamente &#250;til, y lo utilizamos tan a menudo que ni siquiera nos percatamos de ello: por ejemplo, en un supermercado las mercancias est&#225;n organizadas en  grandes conjuntos (Art&#237;culos de aseo, Comestibles, etc. ) que a su vez se organizan en conjuntos m&#225;s peque&#241;os o subconjuntos (La secci&#243;n de Comestibles puede organizarse en Verduras, Carnes, etc.).
+
+<P>
+Un rasgo determinante de estos conjuntos es que, para cada conjunto, un elemento s&#243;lo tiene dos posibilidades: pertenecer al conjunto o no pertenecer a &#233;l. En nuestro ejemplo del supermercado, una determinada mercancia (una caja de leche, por ejemplo) pertenece al conjunto de las carnes, o no pertenece a &#233;l (la caja de leche claramente no pertenece al conjunto de las carnes).
+
+<P>
+Tomando las palabras del Diccionario de la Real Academia, puede decirse que un elemento pertenece al conjunto si posee la propiedad com&#250;n que caracteriza al conjunto. De lo contrario no pertenece al conjunto. Esta caracter&#237;stica se conoce como el Principio del tercer excluido (s&#243;lo hay dos opciones, pertenecer o no pertenecer; cualquiera tercera opci&#243;n est&#225; excluida).
+
+<P>
+Sin embargo, en algunas ocasiones no es f&#225;cil determinar si un determinado elemento posee o no la propiedad com&#250;n del  conjunto, ya que la propiedad puede poseerse parcialmente. 
+
+<P>
+Por ejemplo, sup&#243;ngase que se desea construir el conjunto de las ciudades populosas de un cierto pa&#237;s. Para ello deberiamos determinar cu&#225;les de las ciudades de ese pa&#237;s poseen la propiedad ser populosa, y podriamos, por ejemplo, decidir que lo son aquellas cuyo &#250;ltimo censo alcance o sobrepase una cierta cifra, digamos 500.000 habitantes. No obstante, esta soluci&#243;n presenta algunas dificultades como las siguientes:
+Dos ciudades cuyos censos hayan sido de 500.000 y 3?000.000 de habitantes ser&#225;n consideradas como ciudades populosas, y sin embargo la primera no lo es tanto como la segunda.
+
+<P>
+Dos ciudades cuyos censos hayan sido de 499.999 y 500.000 habitantes, pese a tener una poblaci&#243;n muy semejante, son catalogadas de forma diferente: la primera no pertenece al conjunto de las ciudades populosas, y la segunda s&#237;. Supongase que, en el pa&#237;s del ejemplo, de este criterio depende el monto de las ayudas que el gobierno central destina a las ciudades &#191;aceptar&#237;an los ciudadanos de la primera recibir menos dinero que los de la segunda por un &#250;nico habitante de diferencia?
+
+<P>
+Con este ejemplo se pone de manifiesto que existen ocasiones en las que es conveniente tener en cuenta que la propiedad que define al conjunto puede cumplirse en cierto grado (hay ciudades m&#225;s populosas que otras), y que por lo tanto no es posible establecer tajantemente si un elemento pertenece o no al conjunto. Este hecho ha inspirado la aparici&#243;n de los Conjuntos difusos.
+
+<P>
+Un Conjunto difuso es un conjunto en el que los elementos pueden pertenecer parcialmente a &#233;l. Cada elemento tendr&#225; un grado de pertenencia al conjunto, que puede expresarse en porcentaje, o como un n&#250;mero comprendido entre 0 y <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img18.gif"
+ ALT="$ 1$">; de esta manera, se dice que un elemento pertenece a un conjunto difuso con un cierto grado de pertenencia. 
+
+<P>
+Para distinguir los conjuntos difusos de lo que hasta este momento hemos denominado simplemente conjuntos, a partir ahora se denominar&#225;n a estos &#250;ltimos en estas notas como Conjuntos Crisp.
+
+<P>
+Si un elemento pertenece parcialmente a un conjunto (digamos en un 70%), entonces a la vez no pertenece a &#233;l (digamos en un 30%). En los conjuntos difusos se rompe con el principio del tercer excluido, porque ahora un mismo elemento puede pertenecer (parcialmente) y no pertenecer simult&#225;neamente a un conjunto.
+
+<P>
+Retomando el ejemplo de las ciudades populosas, se puede proponer la construcci&#243;n de un conjunto difuso, para lo cual se debe establecer qu&#233; tanto pertenece cada ciudad a dicho conjunto. Dicho de otra forma, se debe establecer en qu&#233; grado cada ciudad cumple con la propiedad de ser populosa. 
+
+<P>
+Por ejemplo, podriamos decir que aquellas ciudades con menos de 250.000 habitantes no cumplen en absoluto la propiedad, que aquellas con m&#225;s de 1?000.000 la cumplen totalmente, y que aquellas con una poblaci&#243;n comprendida entre 250.000 y 1?000.000 de habitantes la cumplen parcialmente, m&#225;s cuanto mayor sea el n&#250;mero de habitantes. 
+
+<P>
+En la figura <A HREF="#fig:populosa">1.1</A> se muestra el grado de pertenecia al conjunto difuso ciudades populosas como una funci&#243;n del n&#250;mero de habitantes.
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fig:populosa"></A><A NAME="439"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figura 1.1:</STRONG>
+Ejemplo de Conjunto difuso</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER"><IMG
+ WIDTH="323" HEIGHT="126" ALIGN="BOTTOM" BORDER="0"
+ SRC="img19.gif"
+ ALT="\includegraphics[scale=0.75]{fig/populosa}">
+</DIV></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+<BR><HR>
+<ADDRESS>
+Oscar Duarte
+2005-05-01
+</ADDRESS>
+</BODY>
+</HTML>

@@ -1,0 +1,492 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.70)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Variables de Entrada</TITLE>
+<META NAME="description" CONTENT="Variables de Entrada">
+<META NAME="keywords" CONTENT="ediav">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="ediav.css">
+
+</HEAD>
+
+<BODY >
+
+<H1><A NAME="SECTION01210000000000000000"></A>
+<A NAME="varentrada"></A>
+<BR>
+Variables de Entrada
+</H1>
+
+<P>
+La informaci&#243;n de entrada para cada vertedero es la siguiente:
+
+<P>
+
+<UL>
+<LI><U>Variables Incidencia de Impacto</U> que se muestran en la tabla <A HREF="#tab:vars_input">2.1</A>; alli, <IMG
+ WIDTH="13" HEIGHT="34" ALIGN="CENTER" BORDER="0"
+ SRC="img21.gif"
+ ALT="$ j$"> representa cada uno de los Factores Ambientales definidos en la tabla <A HREF="#tab:vars_j">2.2</A>: Debe determinarse para cada Factor Ambiental, la probabilidad de que el vertedero produzca un impacto en &#233;l, el Valor del impacto en si, y el efecto del tratamiento dado a los desechos en ese impacto.
+</LI>
+<LI><U>Variables de Circunstancias Singulares</U> que se resumen en la tabla <A HREF="#tab:vars_i">2.3</A>; debe evaluarse la presencia de estas circunstancias.
+</LI>
+<LI><U>Variables de Impactos Evidentes</U>  que se resumen en la tabla <A HREF="#tab:vars_k">2.4</A>; debe evaluarse la presencia de estas circunstancias.
+</LI>
+<LI><IMG
+ WIDTH="49" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2.gif"
+ ALT="$ POB$">, la <U>Poblaci&#243;n</U> que usa el vertedero.
+</LI>
+</UL>
+
+<P>
+Toda la informaci&#243;n puede ingresarse al software como:
+
+<UL>
+<LI>Un n&#250;mero crisp
+</LI>
+<LI>Un intervalo
+</LI>
+<LI>Un n&#250;mero difuso
+</LI>
+<LI>Un etiqueta ling&#252;&#237;stica de la variable
+</LI>
+</UL> 
+
+<P>
+<BR><P></P>
+<DIV ALIGN="CENTER"><A NAME="100"></A>
+<TABLE>
+<CAPTION><STRONG>Tabla 2.1:</STRONG>
+Variables de Incidencia de Impacto</CAPTION>
+<TR><TD>	<DIV ALIGN="CENTER">
+<TABLE CELLPADDING=3 BORDER="1" ALIGN="CENTER">
+<TR><TD ALIGN="LEFT">Nombre</TD>
+<TD ALIGN="LEFT">Rango</TD>
+<TD ALIGN="LEFT">Significado</TD>
+</TR>
+<TR><TD ALIGN="LEFT"><IMG
+ WIDTH="35" HEIGHT="35" ALIGN="CENTER" BORDER="0"
+ SRC="img22.gif"
+ ALT="$ Pr_j$"></TD>
+<TD ALIGN="LEFT"><IMG
+ WIDTH="47" HEIGHT="33" ALIGN="CENTER" BORDER="0"
+ SRC="img23.gif"
+ ALT="$ 0-2$"></TD>
+<TD ALIGN="LEFT">Probabilidad</TD>
+</TR>
+<TR><TD ALIGN="LEFT"><IMG
+ WIDTH="25" HEIGHT="35" ALIGN="CENTER" BORDER="0"
+ SRC="img24.gif"
+ ALT="$ C_j$"></TD>
+<TD ALIGN="LEFT"><IMG
+ WIDTH="47" HEIGHT="33" ALIGN="CENTER" BORDER="0"
+ SRC="img25.gif"
+ ALT="$ 0-5$"></TD>
+<TD ALIGN="LEFT">Valor</TD>
+</TR>
+<TR><TD ALIGN="LEFT"><IMG
+ WIDTH="23" HEIGHT="35" ALIGN="CENTER" BORDER="0"
+ SRC="img26.gif"
+ ALT="$ T_j$"></TD>
+<TD ALIGN="LEFT"><IMG
+ WIDTH="47" HEIGHT="33" ALIGN="CENTER" BORDER="0"
+ SRC="img23.gif"
+ ALT="$ 0-2$"></TD>
+<TD ALIGN="LEFT">Tratamiento</TD>
+</TR>
+</TABLE>
+</DIV>
+	
+	<A NAME="tab:vars_input"></A></TD></TR>
+</TABLE>
+</DIV><P></P>
+<BR>
+
+<P>
+<BR><P></P>
+<DIV ALIGN="CENTER"><A NAME="109"></A>
+<TABLE>
+<CAPTION><STRONG>Tabla 2.2:</STRONG>
+Factores ambientales</CAPTION>
+<TR><TD>	<DIV ALIGN="CENTER">
+<TABLE CELLPADDING=3 BORDER="1" ALIGN="CENTER">
+<TR><TD ALIGN="LEFT"><IMG
+ WIDTH="13" HEIGHT="34" ALIGN="CENTER" BORDER="0"
+ SRC="img21.gif"
+ ALT="$ j$"></TD>
+<TD ALIGN="LEFT">Sub&#237;ndice</TD>
+<TD ALIGN="LEFT">Nombre</TD>
+<TD ALIGN="CENTER"><IMG
+ WIDTH="29" HEIGHT="35" ALIGN="CENTER" BORDER="0"
+ SRC="img27.gif"
+ ALT="$ W_j$"></TD>
+</TR>
+<TR><TD ALIGN="LEFT"><IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img28.gif"
+ ALT="$ 1$"></TD>
+<TD ALIGN="LEFT"><IMG
+ WIDTH="32" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img29.gif"
+ ALT="$ SP$"></TD>
+<TD ALIGN="LEFT">Agua Superficial</TD>
+<TD ALIGN="CENTER"><IMG
+ WIDTH="23" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img30.gif"
+ ALT="$ 20$"></TD>
+</TR>
+<TR><TD ALIGN="LEFT"><IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img31.gif"
+ ALT="$ 2$"></TD>
+<TD ALIGN="LEFT"><IMG
+ WIDTH="32" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img32.gif"
+ ALT="$ SB$"></TD>
+<TD ALIGN="LEFT">Agua Subterr&#225;nea</TD>
+<TD ALIGN="CENTER"><IMG
+ WIDTH="23" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img33.gif"
+ ALT="$ 30$"></TD>
+</TR>
+<TR><TD ALIGN="LEFT"><IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img34.gif"
+ ALT="$ 3$"></TD>
+<TD ALIGN="LEFT"><IMG
+ WIDTH="32" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img35.gif"
+ ALT="$ SU$"></TD>
+<TD ALIGN="LEFT">Suelo</TD>
+<TD ALIGN="CENTER"><IMG
+ WIDTH="23" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img36.gif"
+ ALT="$ 10$"></TD>
+</TR>
+<TR><TD ALIGN="LEFT"><IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img37.gif"
+ ALT="$ 4$"></TD>
+<TD ALIGN="LEFT"><IMG
+ WIDTH="32" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img38.gif"
+ ALT="$ AT$"></TD>
+<TD ALIGN="LEFT">Atmosfera</TD>
+<TD ALIGN="CENTER"><IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img39.gif"
+ ALT="$ 5$"></TD>
+</TR>
+<TR><TD ALIGN="LEFT"><IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img39.gif"
+ ALT="$ 5$"></TD>
+<TD ALIGN="LEFT"><IMG
+ WIDTH="36" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img40.gif"
+ ALT="$ NA$"></TD>
+<TD ALIGN="LEFT">Ecosistemas Naturales</TD>
+<TD ALIGN="CENTER"><IMG
+ WIDTH="23" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img41.gif"
+ ALT="$ 15$"></TD>
+</TR>
+<TR><TD ALIGN="LEFT"><IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img42.gif"
+ ALT="$ 6$"></TD>
+<TD ALIGN="LEFT"><IMG
+ WIDTH="31" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img43.gif"
+ ALT="$ SA$"></TD>
+<TD ALIGN="LEFT">Salud P&#250;blica</TD>
+<TD ALIGN="CENTER"><IMG
+ WIDTH="23" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img41.gif"
+ ALT="$ 15$"></TD>
+</TR>
+<TR><TD ALIGN="LEFT"><IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img44.gif"
+ ALT="$ 7$"></TD>
+<TD ALIGN="LEFT"><IMG
+ WIDTH="33" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img45.gif"
+ ALT="$ PA$"></TD>
+<TD ALIGN="LEFT">Paisaje</TD>
+<TD ALIGN="CENTER"><IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img39.gif"
+ ALT="$ 5$"></TD>
+</TR>
+</TABLE>
+</DIV>
+
+<P>
+
+	<A NAME="tab:vars_j"></A></TD></TR>
+</TABLE>
+</DIV><P></P>
+<BR>
+
+<P>
+<BR><P></P>
+<DIV ALIGN="CENTER"><A NAME="118"></A>
+<TABLE>
+<CAPTION><STRONG>Tabla 2.3:</STRONG>
+Variables de Circunstancias Singulares</CAPTION>
+<TR><TD>	<DIV ALIGN="CENTER">
+<TABLE CELLPADDING=3 BORDER="1" ALIGN="CENTER">
+<TR><TD ALIGN="LEFT"><IMG
+ WIDTH="11" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img46.gif"
+ ALT="$ i$"></TD>
+<TD ALIGN="LEFT"><IMG
+ WIDTH="36" HEIGHT="35" ALIGN="CENTER" BORDER="0"
+ SRC="img47.gif"
+ ALT="$ CS_i$"></TD>
+<TD ALIGN="LEFT">Nombre</TD>
+<TD ALIGN="CENTER">Rango</TD>
+</TR>
+<TR><TD ALIGN="LEFT"><IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img28.gif"
+ ALT="$ 1$"></TD>
+<TD ALIGN="LEFT"><IMG
+ WIDTH="37" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img48.gif"
+ ALT="$ NE$"></TD>
+<TD ALIGN="LEFT">Neum&#225;ticos</TD>
+<TD ALIGN="CENTER"><IMG
+ WIDTH="47" HEIGHT="33" ALIGN="CENTER" BORDER="0"
+ SRC="img25.gif"
+ ALT="$ 0-5$"></TD>
+</TR>
+<TR><TD ALIGN="LEFT"><IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img31.gif"
+ ALT="$ 2$"></TD>
+<TD ALIGN="LEFT"><IMG
+ WIDTH="29" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img49.gif"
+ ALT="$ RI$"></TD>
+<TD ALIGN="LEFT">Residuos Industriales</TD>
+<TD ALIGN="CENTER"><IMG
+ WIDTH="56" HEIGHT="33" ALIGN="CENTER" BORDER="0"
+ SRC="img50.gif"
+ ALT="$ 0-25$"></TD>
+</TR>
+<TR><TD ALIGN="LEFT"><IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img34.gif"
+ ALT="$ 3$"></TD>
+<TD ALIGN="LEFT"><IMG
+ WIDTH="32" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img51.gif"
+ ALT="$ VL$"></TD>
+<TD ALIGN="LEFT">Residuos L&#237;quidos</TD>
+<TD ALIGN="CENTER"><IMG
+ WIDTH="56" HEIGHT="33" ALIGN="CENTER" BORDER="0"
+ SRC="img52.gif"
+ ALT="$ 0-30$"></TD>
+</TR>
+<TR><TD ALIGN="LEFT"><IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img37.gif"
+ ALT="$ 4$"></TD>
+<TD ALIGN="LEFT"><IMG
+ WIDTH="32" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img53.gif"
+ ALT="$ PL$"></TD>
+<TD ALIGN="LEFT">Baterias o Pilas</TD>
+<TD ALIGN="CENTER"><IMG
+ WIDTH="56" HEIGHT="33" ALIGN="CENTER" BORDER="0"
+ SRC="img54.gif"
+ ALT="$ 0-10$"></TD>
+</TR>
+<TR><TD ALIGN="LEFT"><IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img39.gif"
+ ALT="$ 5$"></TD>
+<TD ALIGN="LEFT"><IMG
+ WIDTH="29" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img55.gif"
+ ALT="$ PI$"></TD>
+<TD ALIGN="LEFT">Pesticidas</TD>
+<TD ALIGN="CENTER"><IMG
+ WIDTH="56" HEIGHT="33" ALIGN="CENTER" BORDER="0"
+ SRC="img54.gif"
+ ALT="$ 0-10$"></TD>
+</TR>
+<TR><TD ALIGN="LEFT"><IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img42.gif"
+ ALT="$ 6$"></TD>
+<TD ALIGN="LEFT"><IMG
+ WIDTH="33" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img56.gif"
+ ALT="$ OT$"></TD>
+<TD ALIGN="LEFT">Otros</TD>
+<TD ALIGN="CENTER"><IMG
+ WIDTH="56" HEIGHT="33" ALIGN="CENTER" BORDER="0"
+ SRC="img57.gif"
+ ALT="$ 0-20$"></TD>
+</TR>
+</TABLE>
+</DIV>
+
+<P>
+
+	<A NAME="tab:vars_i"></A></TD></TR>
+</TABLE>
+</DIV><P></P>
+<BR>
+
+<P>
+<BR><P></P>
+<DIV ALIGN="CENTER"><A NAME="127"></A>
+<TABLE>
+<CAPTION><STRONG>Tabla 2.4:</STRONG>
+Variables de Impactos Evidentes</CAPTION>
+<TR><TD>	<DIV ALIGN="CENTER">
+<TABLE CELLPADDING=3 BORDER="1" ALIGN="CENTER">
+<TR><TD ALIGN="LEFT"><IMG
+ WIDTH="15" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img58.gif"
+ ALT="$ k$"></TD>
+<TD ALIGN="LEFT"><IMG
+ WIDTH="36" HEIGHT="35" ALIGN="CENTER" BORDER="0"
+ SRC="img59.gif"
+ ALT="$ IE_k$"></TD>
+<TD ALIGN="LEFT">Nombre</TD>
+<TD ALIGN="CENTER">Rango</TD>
+</TR>
+<TR><TD ALIGN="LEFT"><IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img28.gif"
+ ALT="$ 1$"></TD>
+<TD ALIGN="LEFT"><IMG
+ WIDTH="44" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img60.gif"
+ ALT="$ LIX$"></TD>
+<TD ALIGN="LEFT">Lixiviados</TD>
+<TD ALIGN="CENTER"><IMG
+ WIDTH="56" HEIGHT="33" ALIGN="CENTER" BORDER="0"
+ SRC="img52.gif"
+ ALT="$ 0-30$"></TD>
+</TR>
+<TR><TD ALIGN="LEFT"><IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img31.gif"
+ ALT="$ 2$"></TD>
+<TD ALIGN="LEFT"><IMG
+ WIDTH="36" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img40.gif"
+ ALT="$ NA$"></TD>
+<TD ALIGN="LEFT">Quema de neum&#225;ticos</TD>
+<TD ALIGN="CENTER"><IMG
+ WIDTH="56" HEIGHT="33" ALIGN="CENTER" BORDER="0"
+ SRC="img50.gif"
+ ALT="$ 0-25$"></TD>
+</TR>
+<TR><TD ALIGN="LEFT"><IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img34.gif"
+ ALT="$ 3$"></TD>
+<TD ALIGN="LEFT"><IMG
+ WIDTH="34" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img61.gif"
+ ALT="$ CO$"></TD>
+<TD ALIGN="LEFT">Quema incontrolada</TD>
+<TD ALIGN="CENTER"><IMG
+ WIDTH="56" HEIGHT="33" ALIGN="CENTER" BORDER="0"
+ SRC="img52.gif"
+ ALT="$ 0-30$"></TD>
+</TR>
+<TR><TD ALIGN="LEFT"><IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img37.gif"
+ ALT="$ 4$"></TD>
+<TD ALIGN="LEFT"><IMG
+ WIDTH="44" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img62.gif"
+ ALT="$ INS$"></TD>
+<TD ALIGN="LEFT">Insectos o ratas</TD>
+<TD ALIGN="CENTER"><IMG
+ WIDTH="56" HEIGHT="33" ALIGN="CENTER" BORDER="0"
+ SRC="img54.gif"
+ ALT="$ 0-10$"></TD>
+</TR>
+<TR><TD ALIGN="LEFT"><IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img39.gif"
+ ALT="$ 5$"></TD>
+<TD ALIGN="LEFT"><IMG
+ WIDTH="34" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img63.gif"
+ ALT="$ RE$"></TD>
+<TD ALIGN="LEFT">Rebusca o Transeuntes</TD>
+<TD ALIGN="CENTER"><IMG
+ WIDTH="56" HEIGHT="33" ALIGN="CENTER" BORDER="0"
+ SRC="img57.gif"
+ ALT="$ 0-20$"></TD>
+</TR>
+<TR><TD ALIGN="LEFT"><IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img42.gif"
+ ALT="$ 6$"></TD>
+<TD ALIGN="LEFT"><IMG
+ WIDTH="34" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img64.gif"
+ ALT="$ PE$"></TD>
+<TD ALIGN="LEFT">Sustrato permeable</TD>
+<TD ALIGN="CENTER"><IMG
+ WIDTH="56" HEIGHT="33" ALIGN="CENTER" BORDER="0"
+ SRC="img50.gif"
+ ALT="$ 0-25$"></TD>
+</TR>
+<TR><TD ALIGN="LEFT"><IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img44.gif"
+ ALT="$ 7$"></TD>
+<TD ALIGN="LEFT"><IMG
+ WIDTH="36" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img65.gif"
+ ALT="$ DV$"></TD>
+<TD ALIGN="LEFT">Dispersi&#243;n por viento</TD>
+<TD ALIGN="CENTER"><IMG
+ WIDTH="56" HEIGHT="33" ALIGN="CENTER" BORDER="0"
+ SRC="img54.gif"
+ ALT="$ 0-10$"></TD>
+</TR>
+</TABLE>
+</DIV>
+
+<P>
+
+	<A NAME="tab:vars_k"></A></TD></TR>
+</TABLE>
+</DIV><P></P>
+<BR>
+
+<P>
+<BR><HR>
+<ADDRESS>
+Oscar Duarte
+2005-10-17
+</ADDRESS>
+</BODY>
+</HTML>

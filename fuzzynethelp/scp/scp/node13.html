@@ -1,0 +1,164 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.70)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Razonamiento Aproximado</TITLE>
+<META NAME="description" CONTENT="Razonamiento Aproximado">
+<META NAME="keywords" CONTENT="scp">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="scp.css">
+
+</HEAD>
+
+<BODY >
+
+<H1><A NAME="SECTION00230000000000000000"></A>
+<A NAME="sec:approximate"></A>
+<BR>
+Razonamiento Aproximado
+</H1>
+
+<P>
+La m&#225;quina de Inferencia basada en Aritm&#225;tiica Difusa puede verse como una plicaci&#243;n <!-- MATH
+ $ARF:N_U \to N_V$
+ -->
+<IMG
+ WIDTH="146" HEIGHT="35" ALIGN="CENTER" BORDER="0"
+ SRC="img64.gif"
+ ALT="$ ARF:N_U \to N_V$">. En otras palabras, las entradas al bloque de Razonamiento Aproximado ser&#225;n los conjuntos difusos <!-- MATH
+ $\eta_1,\eta_2,\cdots,\eta_n$
+ -->
+<IMG
+ WIDTH="110" HEIGHT="33" ALIGN="CENTER" BORDER="0"
+ SRC="img65.gif"
+ ALT="$ \eta_1,\eta_2,\cdots,\eta_n$"> y la salida ser&#225; el n&#250;mero difuso <IMG
+ WIDTH="16" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img66.gif"
+ ALT="$ \lambda$">:
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="ecu:ARF"></A><!-- MATH
+ \begin{equation}
+\lambda=ARF(\eta_1,\eta_2,\cdots,\eta_n)
+\end{equation}
+ -->
+<TABLE CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="CENTER">
+<TD NOWRAP ALIGN="CENTER"><IMG
+ WIDTH="204" HEIGHT="37" ALIGN="CENTER" BORDER="0"
+ SRC="img67.gif"
+ ALT="$\displaystyle \lambda=ARF(\eta_1,\eta_2,\cdots,\eta_n)$"></TD>
+<TD NOWRAP WIDTH="10" ALIGN="RIGHT">
+(2.1)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+
+<P>
+<IMG
+ WIDTH="48" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img68.gif"
+ ALT="$ ARF$"> es una <I>Funci&#243;n de Razonamiento Aproximado</I> cuyo objetivo es el de capturar el conocimiento que se tiene del sistema.
+
+<P>
+Por ejemplo, si se tiene un caso en el que el conocimiento disponible es de la forma:
+
+<UL>
+<LI>``Cada vez que se incrementa la entrada <IMG
+ WIDTH="11" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img69.gif"
+ ALT="$ i$"> la salida tambien crece.''
+</LI>
+<LI>``La entrada <IMG
+ WIDTH="11" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img69.gif"
+ ALT="$ i$"> es m&#225;s importante que la entrada <IMG
+ WIDTH="13" HEIGHT="34" ALIGN="CENTER" BORDER="0"
+ SRC="img70.gif"
+ ALT="$ j$">''
+</LI>
+</UL>
+
+<P>
+Dicho conocimiento puede representarse por la siguiente ecuaci&#243;n
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="ecu:prom"></A><!-- MATH
+ \begin{equation}
+y=\sum_{i=1}^{n}w_ix_i \qquad \sum_{i=1}^{n}w_i = 1 \quad w_i\geq 0
+\end{equation}
+ -->
+<TABLE CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="CENTER">
+<TD NOWRAP ALIGN="CENTER"><IMG
+ WIDTH="302" HEIGHT="71" ALIGN="CENTER" BORDER="0"
+ SRC="img71.gif"
+ ALT="$\displaystyle y=\sum_{i=1}^{n}w_ix_i \qquad \sum_{i=1}^{n}w_i = 1 \quad w_i\geq 0$"></TD>
+<TD NOWRAP WIDTH="10" ALIGN="RIGHT">
+(2.2)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+
+<P>
+La ecuaci&#243;n (<A HREF="#ecu:prom">2.2</A>) establece que la salida <IMG
+ WIDTH="14" HEIGHT="33" ALIGN="CENTER" BORDER="0"
+ SRC="img33.gif"
+ ALT="$ y$"> crece cuando se incrementa cualquiera de las entradas <IMG
+ WIDTH="21" HEIGHT="33" ALIGN="CENTER" BORDER="0"
+ SRC="img34.gif"
+ ALT="$ x_i$"> . Adem&#225;s, si <IMG
+ WIDTH="69" HEIGHT="33" ALIGN="CENTER" BORDER="0"
+ SRC="img72.gif"
+ ALT="$ w_i &gt; w_j$"> entonces el efecto de variar <IMG
+ WIDTH="23" HEIGHT="33" ALIGN="CENTER" BORDER="0"
+ SRC="img73.gif"
+ ALT="$ w_i$"> es mayor que el de variar <IMG
+ WIDTH="25" HEIGHT="33" ALIGN="CENTER" BORDER="0"
+ SRC="img74.gif"
+ ALT="$ w_j$">, O lo que es igual, la entrada <IMG
+ WIDTH="11" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img69.gif"
+ ALT="$ i$"> es m&#225;s importante que la entrada <IMG
+ WIDTH="13" HEIGHT="34" ALIGN="CENTER" BORDER="0"
+ SRC="img70.gif"
+ ALT="$ j$">.
+
+<P>
+Podemos construir la ecuaci&#243;n (<A HREF="#ecu:ARF">2.1</A>) empleando funciones aritm&#233;ticas crisp y empleando el principio de extensi&#243;n; estas funciones crisp las denominamos <IMG
+ WIDTH="35" HEIGHT="35" ALIGN="CENTER" BORDER="0"
+ SRC="img5.gif"
+ ALT="$ arf$">.
+
+<P>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"><STRONG>Subsecciones</STRONG></A>
+
+<UL>
+<LI><A NAME="tex2html180"
+  HREF="node14.html">Algunas <IMG
+ WIDTH="35" HEIGHT="35" ALIGN="CENTER" BORDER="0"
+ SRC="img2.gif"
+ ALT="$ fra$"></A>
+<LI><A NAME="tex2html181"
+  HREF="node15.html">Construcción de una <IMG
+ WIDTH="35" HEIGHT="35" ALIGN="CENTER" BORDER="0"
+ SRC="img5.gif"
+ ALT="$ arf$"></A>
+</UL>
+<!--End of Table of Child-Links-->
+<BR><HR>
+<ADDRESS>
+Oscar Duarte
+2005-05-01
+</ADDRESS>
+</BODY>
+</HTML>

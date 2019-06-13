@@ -1,0 +1,23 @@
+<UL>
+<LI> <object type='text/sitemap'><param name='Name' value='Introducción a las Redes de Cálculo con Palabras'>
+<param name='Local' value='node1.html'>
+</object>
+<LI> <object type='text/sitemap'><param name='Name' value='Entrenamiento de las Redes'>
+<param name='Local' value='node2.html'>
+</object>
+<LI> <object type='text/sitemap'><param name='Name' value='Funciones de Error'>
+<param name='Local' value='node3.html'>
+</object>
+<LI> <object type='text/sitemap'><param name='Name' value='Diferenciabilidad'>
+<param name='Local' value='node4.html'>
+</object>
+<LI> <object type='text/sitemap'><param name='Name' value='Valor Representativo de un Número Difuso. Ordenamiento'>
+<param name='Local' value='node5.html'>
+</object>
+<LI> <object type='text/sitemap'><param name='Name' value='Primer Caso'>
+<param name='Local' value='node6.html'>
+</object>
+<LI> <object type='text/sitemap'><param name='Name' value='Segundo Caso'>
+<param name='Local' value='node7.html'>
+</object>
+</UL>

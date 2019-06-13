@@ -1,0 +1,48 @@
+\BOOKMARK [0][-]{chapter.1}{Fuzzynet - Presentaci\363n}{}
+\BOOKMARK [0][-]{chapter.2}{El Proyecto}{}
+\BOOKMARK [1][-]{section.2.1}{Edici\363n del Proyecto}{chapter.2}
+\BOOKMARK [0][-]{chapter.3}{Estrategias}{}
+\BOOKMARK [1][-]{section.3.1}{Edici\363n de Estrategias}{chapter.3}
+\BOOKMARK [0][-]{chapter.4}{Casos}{}
+\BOOKMARK [1][-]{section.4.1}{Edici\363n de Casos}{chapter.4}
+\BOOKMARK [1][-]{section.4.2}{Copiar Variables de una Estrategias}{chapter.4}
+\BOOKMARK [1][-]{section.4.3}{Ordenar los Casos}{chapter.4}
+\BOOKMARK [0][-]{chapter.5}{Nodos de C\341lculo}{}
+\BOOKMARK [1][-]{section.5.1}{Edici\363n de Nodos de C\341lculo}{chapter.5}
+\BOOKMARK [1][-]{section.5.2}{Funciones de Razonamiento aproximado}{chapter.5}
+\BOOKMARK [0][-]{chapter.6}{Variables Ling\374\355sticas}{}
+\BOOKMARK [1][-]{section.6.1}{Edici\363n de Variables Ling\374\355sticas}{chapter.6}
+\BOOKMARK [2][-]{subsection.6.1.1}{Edici\363n de Intervalos}{section.6.1}
+\BOOKMARK [2][-]{subsection.6.1.2}{Edici\363n de N\372meros Difusos}{section.6.1}
+\BOOKMARK [2][-]{subsection.6.1.3}{Copiar N\372meros Difusos}{section.6.1}
+\BOOKMARK [2][-]{subsection.6.1.4}{Edici\363n de Modificadores Ling\374\355sticos}{section.6.1}
+\BOOKMARK [1][-]{section.6.2}{Definici\363n Autom\341tica de Variables}{chapter.6}
+\BOOKMARK [1][-]{section.6.3}{Presentaci\363n de Variables Ling\374\355sticas}{chapter.6}
+\BOOKMARK [0][-]{chapter.7}{Librer\355as}{}
+\BOOKMARK [1][-]{section.7.1}{Administraci\363n de Librer\355as}{chapter.7}
+\BOOKMARK [0][-]{chapter.8}{Reportes}{}
+\BOOKMARK [1][-]{section.8.1}{Generaci\363n de Reportes}{chapter.8}
+\BOOKMARK [0][-]{chapter.9}{Importaci\363n y Exportaci\363n de Archivos}{}
+\BOOKMARK [1][-]{section.9.1}{Exportar Archivos de texto}{chapter.9}
+\BOOKMARK [1][-]{section.9.2}{Importar Archivos de Texto}{chapter.9}
+\BOOKMARK [0][-]{chapter.10}{La Interfaz Gr\341fica}{}
+\BOOKMARK [1][-]{section.10.1}{Vistas disponibles}{chapter.10}
+\BOOKMARK [1][-]{section.10.2}{Configuraci\363n de la Interfaz Gr\341fica}{chapter.10}
+\BOOKMARK [1][-]{section.10.3}{Significado de los colores}{chapter.10}
+\BOOKMARK [1][-]{section.10.4}{Edici\363n de Generalidades}{chapter.10}
+\BOOKMARK [0][-]{chapter.11}{Un ejemplo Ilustrativo}{}
+\BOOKMARK [1][-]{section.11.1}{Estrategias 1 y 2}{chapter.11}
+\BOOKMARK [1][-]{section.11.2}{Nodos de la Estrategia 1}{chapter.11}
+\BOOKMARK [2][-]{subsection.11.2.1}{Edici\363n de la Variable Ling\374\355stica Evaluaci\363n 1}{section.11.2}
+\BOOKMARK [2][-]{subsection.11.2.2}{Edici\363n de la Variable Ling\374\355stica VPN}{section.11.2}
+\BOOKMARK [2][-]{subsection.11.2.3}{Edici\363n de la Variable Ling\374\355stica Implicaciones Sociales}{section.11.2}
+\BOOKMARK [2][-]{subsection.11.2.4}{La Funci\363n de Razonamiento Aproximado}{section.11.2}
+\BOOKMARK [1][-]{section.11.3}{Nodos de la Estrategia 2}{chapter.11}
+\BOOKMARK [2][-]{subsection.11.3.1}{Edici\363n de la Variable Ling\374\355stica Evaluaci\363n 2}{section.11.3}
+\BOOKMARK [2][-]{subsection.11.3.2}{Edici\363n de la Variable Ling\374\355stica TIR}{section.11.3}
+\BOOKMARK [2][-]{subsection.11.3.3}{Edici\363n de la Variable Ling\374\355stica Implicaciones Sociales}{section.11.3}
+\BOOKMARK [2][-]{subsection.11.3.4}{La Funci\363n de Razonamiento Aproximado}{section.11.3}
+\BOOKMARK [1][-]{section.11.4}{Casos a Evaluar}{chapter.11}
+\BOOKMARK [2][-]{subsection.11.4.1}{Definici\363n de cada variable en cada caso}{section.11.4}
+\BOOKMARK [2][-]{subsection.11.4.2}{Definici\363n del valor de cada Variable}{section.11.4}
+\BOOKMARK [1][-]{section.11.5}{An\341lisis de Resultados}{chapter.11}

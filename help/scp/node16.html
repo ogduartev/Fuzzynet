@@ -1,0 +1,163 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.70)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Aproximación Lingüística</TITLE>
+<META NAME="description" CONTENT="Aproximación Lingüística">
+<META NAME="keywords" CONTENT="scp">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="scp.css">
+
+</HEAD>
+
+<BODY >
+
+<H1><A NAME="SECTION00240000000000000000"></A>
+<A NAME="sec:ling_app"></A>
+<BR>
+Aproximaci&#243;n Ling&#252;&#237;stica
+</H1>
+
+<P>
+El prop&#243;sito del bloque de Interpretaci&#243;n Ling&#252;&#237;stica es el de convertir N&#250;meros Difusos en Palabras. Sin embargo, en este trabajo se proponen diferentes tipos de salidas para distintas aplicaciones:
+
+<P>
+<DL>
+<DT><STRONG>Una palabra simple:</STRONG></DT>
+<DD>Se calcula la consistencia entre <IMG
+ WIDTH="16" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img65.gif"
+ ALT="$ \lambda$"> (la salida del bloque de razonamiento aproximado) y cada conjunto difuso de la Variable Ling&#252;&#237;stica de salida <!-- MATH
+ $\mathcal{Y}$
+ -->
+<IMG
+ WIDTH="19" HEIGHT="35" ALIGN="CENTER" BORDER="0"
+ SRC="img49.gif"
+ ALT="$ \mathcal{Y}$">
+<!-- MATH
+ \begin{displaymath}
+c_i=\text{cons}(\lambda,f_i)\qquad i=1,2,\cdots,r
+\end{displaymath}
+ -->
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="38" HEIGHT="33" ALIGN="CENTER" BORDER="0"
+ SRC="img128.gif"
+ ALT="$\displaystyle c_i=$">cons<IMG
+ WIDTH="203" HEIGHT="37" ALIGN="CENTER" BORDER="0"
+ SRC="img129.gif"
+ ALT="$\displaystyle (\lambda,f_i)\qquad i=1,2,\cdots,r
+$">
+</DIV><P></P>
+Se selecciona como salida del bloque aquella etiqueta cuya consistencia sea m&#225;xima.
+</DD>
+<DT><STRONG>Una frase descriptiva:</STRONG></DT>
+<DD>Se calcula <IMG
+ WIDTH="18" HEIGHT="33" ALIGN="CENTER" BORDER="0"
+ SRC="img130.gif"
+ ALT="$ c_i$"> para <!-- MATH
+ $i=1,2,\cdots,r$
+ -->
+<IMG
+ WIDTH="118" HEIGHT="34" ALIGN="CENTER" BORDER="0"
+ SRC="img131.gif"
+ ALT="$ i=1,2,\cdots,r$"> y se construye una frase de la forma
+
+<P>
+``La salida <!-- MATH
+ $P_1 \;\mathcal{L}_{y_1}$
+ -->
+<IMG
+ WIDTH="57" HEIGHT="35" ALIGN="CENTER" BORDER="0"
+ SRC="img132.gif"
+ ALT="$ P_1 \;\mathcal{L}_{y_1}$">, es <!-- MATH
+ $P_2 \;\mathcal{L}_{y_2}\cdots$
+ -->
+<IMG
+ WIDTH="85" HEIGHT="35" ALIGN="CENTER" BORDER="0"
+ SRC="img133.gif"
+ ALT="$ P_2 \;\mathcal{L}_{y_2}\cdots$">, y es <!-- MATH
+ $P_r \;\mathcal{L}_{y_r}$
+ -->
+<IMG
+ WIDTH="57" HEIGHT="35" ALIGN="CENTER" BORDER="0"
+ SRC="img134.gif"
+ ALT="$ P_r \;\mathcal{L}_{y_r}$">''.
+
+<P>
+En donde <IMG
+ WIDTH="22" HEIGHT="35" ALIGN="CENTER" BORDER="0"
+ SRC="img135.gif"
+ ALT="$ P_i$"> es uno de los siguientes modificadores:
+<!-- MATH
+ \begin{displaymath}
+P_i=
+\left\{
+\begin{matrix}
+\text{muy posiblemente} & \text{if } 0<c_i\geq 1/3 \\
+\text{posiblemente} & \text{if } 1/3<c_i\geq 2/3 \\
+\text{poco posiblemente} & \text{if } 2/3<c_i\geq 1 \\
+\end{matrix}
+\right.
+\end{displaymath}
+ -->
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="370" HEIGHT="88" ALIGN="CENTER" BORDER="0"
+ SRC="img136.gif"
+ ALT="$\displaystyle P_i=
+\left\{
+\begin{matrix}
+\text{muy posiblemente} &amp; \text{if } ...
+...\
+\text{poco posiblemente} &amp; \text{if } 2/3&lt;c_i\geq 1 \\
+\end{matrix}\right.
+$">
+</DIV><P></P>
+
+<P>
+</DD>
+<DT><STRONG>Un n&#250;mero difuso:</STRONG></DT>
+<DD>Una salida v&#225;lida es el n&#250;mero difuso <IMG
+ WIDTH="16" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img65.gif"
+ ALT="$ \lambda$"> sin cambio alguno.
+</DD>
+<DT><STRONG>Un n&#250;mero Crisp:</STRONG></DT>
+<DD>Otra sal&#241;ida v&#225;lida es un n&#250;mero crisp que represente el valor central del n&#250;mero difuso. Usamos el valor representativo , introduciendo un par&#225;metro adicional <IMG
+ WIDTH="16" HEIGHT="35" ALIGN="CENTER" BORDER="0"
+ SRC="img9.gif"
+ ALT="$ \beta$"> que se explica en la secci&#243;n <A HREF="node17.html#sec:representa">3</A>.
+
+<P>
+
+<P>
+</DD>
+<DT><STRONG>Una pareja de n&#250;meros crisp:</STRONG></DT>
+<DD>Otra salida v&#225;lida es una pareja de n&#250;meros crisp formada por el valor representativo y una medida de la ambig&#252;edad del n&#250;mero, explicada en la secci&#243;n <A HREF="node17.html#sec:representa">3</A>.
+
+<P>
+</DD>
+</DL>
+
+<P>
+<BR><HR>
+<ADDRESS>
+Oscar Duarte
+2005-10-17
+</ADDRESS>
+</BODY>
+</HTML>

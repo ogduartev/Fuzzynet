@@ -1,0 +1,111 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.70)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>La Función de Razonamiento Aproximado</TITLE>
+<META NAME="description" CONTENT="La Función de Razonamiento Aproximado">
+<META NAME="keywords" CONTENT="fzn">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="fzn.css">
+
+</HEAD>
+
+<BODY >
+
+<H2><A NAME="SECTION011124000000000000000">
+La Funci&#243;n de Razonamiento Aproximado</A>
+</H2>
+Proponemos calcular la variable <I>Evaluacion 1</I> mediante un promedio ponderado simple de las variables <I>VPN</I> e <I>Implicaciones Sociales</I>. Teniendo en cuenta que el rango de la variable <IMG
+ WIDTH="51" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img44.gif"
+ ALT="$ VPN$"> es de 0 a <IMG
+ WIDTH="33" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img45.gif"
+ ALT="$ 100$">, mientras que el rango de las otras dos es de 0 a <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img46.gif"
+ ALT="$ 1$">, construimos la Funci&#243;n de Razonamiento Aproximado:
+<!-- MATH
+ \begin{displaymath}
+Evaluaci\acute{o}n\;\;\mathit{1} =
+\frac{1}{2}\left(\frac{VPN}{100}\right) +
+\frac{1}{2}\left(Implicaciones\;\; Sociales\right)
+\end{displaymath}
+ -->
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="495" HEIGHT="64" ALIGN="CENTER" BORDER="0"
+ SRC="img47.gif"
+ ALT="$\displaystyle Evaluaci\acute{o}n\;\;\mathit{1} =
+\frac{1}{2}\left(\frac{VPN}{100}\right) +
+\frac{1}{2}\left(Implicaciones\;\; Sociales\right)
+$">
+</DIV><P></P>
+
+<P>
+Para implementar esta funci&#243;n en Fuzzynet, editamos el Nodo de C&#225;lculo correpondiente a <I>Evaluaci&#243;n 1</I>. Este nodo ya tiene definidos los dos nodos hijos <I>VPN</I> e<I>Implicaciones Sociales</I>; Seleccionamos el tipo de funci&#243;n <I>Combinaci&#243;n Lineal</I> y asignamos los siguientes par&#225;metros:
+
+<UL>
+<LI><IMG
+ WIDTH="69" HEIGHT="37" ALIGN="CENTER" BORDER="0"
+ SRC="img48.gif"
+ ALT="$ a[0]=0$"> (La combinaci&#243;n lineal no tiene offset)
+</LI>
+<LI><IMG
+ WIDTH="119" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img49.gif"
+ ALT="$ VPN=0.005$"> (El coeficiente correspondiente a <IMG
+ WIDTH="51" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img44.gif"
+ ALT="$ VPN$">
+</LI>
+<LI><!-- MATH
+ $Implicaciones\;\; Sociales=0.5$
+ -->
+<IMG
+ WIDTH="251" HEIGHT="35" ALIGN="CENTER" BORDER="0"
+ SRC="img50.gif"
+ ALT="$ Implicaciones\;\; Sociales=0.5$"> (El coeficiente correspondiente a <I>Implicaciones Sociales</I> 
+</LI>
+</UL>  
+
+<P>
+La figura <A HREF="#fig:ejemplo_funcion_1">11.11</A> muestra el cuadro de di&#225;logo resultante.
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fig:ejemplo_funcion_1"></A><A NAME="1395"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figura 11.11:</STRONG>
+Nodo de C&#225;lculo <I>Evaluaci&#243;n 1</I> con la funci&#243;n de razonamiento aproximado definida</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER"></DIV>
+<P>
+<DIV ALIGN="CENTER"><IMG
+  WIDTH="568" HEIGHT="432" ALIGN="BOTTOM" BORDER="0"
+ SRC="./ejemplo_funcion_1.jpg"
+ ALT="Image ejemplo_funcion_1">
+</DIV></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+<BR><HR>
+<ADDRESS>
+Oscar Duarte
+2005-10-17
+</ADDRESS>
+</BODY>
+</HTML>

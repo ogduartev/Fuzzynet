@@ -1,0 +1,125 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.70)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Aritmética Difusa</TITLE>
+<META NAME="description" CONTENT="Aritmética Difusa">
+<META NAME="keywords" CONTENT="scp">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="scp.css">
+
+</HEAD>
+
+<BODY >
+
+<H2><A NAME="SECTION00116000000000000000">
+Aritm&#233;tica Difusa</A>
+</H2>
+La aritm&#233;tica difusa es el conjunto de estrategias empleadas para operar con n&#250;meros difusos. En otras palabras, mediante la aritm&#233;tica difusa podemos sumar ``m&#225;s o menos 3'' con ``un poco menos de 2''. 
+
+<P>
+En general, se emplea el principio de extensi&#243;n para definir las operaciones b&#225;sicas (suma, resta, etc.) a partir de las operaciones sobre n&#250;meros reales convencionales.
+
+<P>
+Al trabajar con n&#250;meros trapezoidales se pueden obtener algunas expresiones sencillas, por ejemplo, si <!-- MATH
+ $A=T(a,b,c,d)$
+ -->
+<IMG
+ WIDTH="133" HEIGHT="37" ALIGN="CENTER" BORDER="0"
+ SRC="img23.gif"
+ ALT="$ A=T(a,b,c,d)$"> y <!-- MATH
+ $B=T(e,f,g,h)$
+ -->
+<IMG
+ WIDTH="137" HEIGHT="37" ALIGN="CENTER" BORDER="0"
+ SRC="img24.gif"
+ ALT="$ B=T(e,f,g,h)$"> son dos n&#250;meros trapezoidales, su suma y su resta son otros n&#250;meros trapezoidales que se pueden calcular como:
+<!-- MATH
+ \begin{displaymath}
+A+B=T(a+e, b+f, c+g, d+h)
+\end{displaymath}
+ -->
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="302" HEIGHT="37" ALIGN="CENTER" BORDER="0"
+ SRC="img25.gif"
+ ALT="$\displaystyle A+B=T(a+e, b+f, c+g, d+h)
+$">
+</DIV><P></P>
+<!-- MATH
+ \begin{displaymath}
+A-B=T(a-h, b-g, c-f, d-e)
+\end{displaymath}
+ -->
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="304" HEIGHT="37" ALIGN="CENTER" BORDER="0"
+ SRC="img26.gif"
+ ALT="$\displaystyle A-B=T(a-h, b-g, c-f, d-e)
+$">
+</DIV><P></P>
+
+<P>
+El inverso de la resta entre n&#250;meros difusos no es la suma:
+si <!-- MATH
+ $A=T(a,b,c,d)$
+ -->
+<IMG
+ WIDTH="133" HEIGHT="37" ALIGN="CENTER" BORDER="0"
+ SRC="img23.gif"
+ ALT="$ A=T(a,b,c,d)$"> y <!-- MATH
+ $B=T(e,f,g,h)$
+ -->
+<IMG
+ WIDTH="137" HEIGHT="37" ALIGN="CENTER" BORDER="0"
+ SRC="img24.gif"
+ ALT="$ B=T(e,f,g,h)$"> son dos n&#250;meros trapezoidales, entonces
+<!-- MATH
+ \begin{displaymath}
+C=A-B=T(a-h, b-g, c-f, d-e)
+\end{displaymath}
+ -->
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="344" HEIGHT="37" ALIGN="CENTER" BORDER="0"
+ SRC="img27.gif"
+ ALT="$\displaystyle C=A-B=T(a-h, b-g, c-f, d-e)
+$">
+</DIV><P></P>
+pero
+<!-- MATH
+ \begin{displaymath}
+A=T(a,b,c,d) C+B=T(a+e-h, b+f-g, c+g-f, d+h-e)
+\end{displaymath}
+ -->
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="561" HEIGHT="37" ALIGN="CENTER" BORDER="0"
+ SRC="img28.gif"
+ ALT="$\displaystyle A=T(a,b,c,d) C+B=T(a+e-h, b+f-g, c+g-f, d+h-e)
+$">
+</DIV><P></P>
+
+<P>
+<BR><HR>
+<ADDRESS>
+Oscar Duarte
+2005-10-17
+</ADDRESS>
+</BODY>
+</HTML>

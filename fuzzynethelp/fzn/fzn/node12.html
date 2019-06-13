@@ -1,0 +1,328 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.70)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Funciones de Razonamiento aproximado</TITLE>
+<META NAME="description" CONTENT="Funciones de Razonamiento aproximado">
+<META NAME="keywords" CONTENT="fzn">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="fzn.css">
+
+</HEAD>
+
+<BODY >
+
+<H1><A NAME="SECTION00520000000000000000"></A>
+<A NAME="fra"></A>
+<BR>
+Funciones de Razonamiento aproximado
+</H1>
+
+<P>
+El listado de funciones de razonamiento aproximado implementadas se muestra en la tabla <A HREF="#tab:fra">5.2</A>
+
+<P>
+<BR><P></P>
+<DIV ALIGN="CENTER"><A NAME="170"></A>
+<TABLE>
+<CAPTION><STRONG>Tabla 5.2:</STRONG>
+Funciones de Razonamiento aproximado implementadas</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+<TABLE CELLPADDING=3 BORDER="1" ALIGN="CENTER">
+<TR><TH ALIGN="LEFT" VALIGN="TOP" WIDTH=57><FONT SIZE="-2">
+<B>Funci&#243;n</B> </FONT></TH>
+<TH ALIGN="LEFT" VALIGN="TOP" WIDTH=113><FONT SIZE="-2"> <B>Descripci&#243;n</B> </FONT></TH>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=170><FONT SIZE="-2"> <IMG
+ WIDTH="35" HEIGHT="35" ALIGN="CENTER" BORDER="0"
+ SRC="img14.png"
+ ALT="$ fra$">
+</FONT>
+<P>
+</TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=57><FONT SIZE="-2">  
+Combinaci&#243;n Lineal </FONT></TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=113><FONT SIZE="-2">
+Efect&#250;a la Combinaci&#243;n Lineal de los argumentos (un promedio ponderado); incluye un valor constante. </FONT></TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=170><!-- MATH
+ \begin{displaymath}
+f(x_1,x_2,\cdots,x_n)=a_0 + \sum_{i=1}^n{a_1x_i}
+\end{displaymath}
+ -->
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="270" HEIGHT="71" ALIGN="CENTER" BORDER="0"
+ SRC="img15.png"
+ ALT="$\displaystyle f(x_1,x_2,\cdots,x_n)=a_0 + \sum_{i=1}^n{a_1x_i}
+$">
+</DIV><P></P>
+<P>
+</TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=57><FONT SIZE="-2">  
+Supremo </FONT></TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=113><FONT SIZE="-2">
+Calcula el m&#225;ximo valor de los argumentos. </FONT></TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=170><!-- MATH
+ \begin{displaymath}
+f(x_1,x_2,\cdots,x_n)=\max (x_1,x_2,...,x_n)
+\end{displaymath}
+ -->
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="311" HEIGHT="37" ALIGN="CENTER" BORDER="0"
+ SRC="img16.png"
+ ALT="$\displaystyle f(x_1,x_2,\cdots,x_n)=\max (x_1,x_2,...,x_n)
+$">
+</DIV><P></P>
+<P>
+</TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=57><FONT SIZE="-2">  
+&#205;nfimo </FONT></TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=113><FONT SIZE="-2">
+Calcula el m&#237;nimo valor de los argumentos. </FONT></TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=170><!-- MATH
+ \begin{displaymath}
+f(x_1,x_2,\cdots,x_n)=\min(x_1,x_2,...,x_n)
+\end{displaymath}
+ -->
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="308" HEIGHT="37" ALIGN="CENTER" BORDER="0"
+ SRC="img17.png"
+ ALT="$\displaystyle f(x_1,x_2,\cdots,x_n)=\min(x_1,x_2,...,x_n)
+$">
+</DIV><P></P>
+<P>
+</TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=57><FONT SIZE="-2">  
+Polinomio </FONT></TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=113><FONT SIZE="-2">
+Efect&#250;a la Combinaci&#243;n Lineal de monomios de los argumentos. 
+S&#243;lo es v&#225;lida para valores no negativos de los argumentos. </FONT></TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=170><!-- MATH
+ \begin{displaymath}
+f(x_1,x_2,\cdots,x_n)=\sum_{i=1}^n{a_ix_i^{b_i}}
+\end{displaymath}
+ -->
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="234" HEIGHT="71" ALIGN="CENTER" BORDER="0"
+ SRC="img18.png"
+ ALT="$\displaystyle f(x_1,x_2,\cdots,x_n)=\sum_{i=1}^n{a_ix_i^{b_i}}
+$">
+</DIV><P></P>
+<P>
+</TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=57><FONT SIZE="-2">  
+Combinaci&#243;n Lineal Acotada </FONT></TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=113><FONT SIZE="-2">
+Efect&#250;a la Combinaci&#243;n Lineal de los argumentos (propedio ponderado); incluye un Valor constante. 
+El resultado se acota entre CotaInferior y CotaSuperior. </FONT></TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=170>
+<P>
+<!-- MATH
+ \begin{displaymath}
+y=a_0 + \sum_{i=1}^n{a_ix_i}
+\end{displaymath}
+ -->
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="142" HEIGHT="71" ALIGN="CENTER" BORDER="0"
+ SRC="img19.png"
+ ALT="$\displaystyle y=a_0 + \sum_{i=1}^n{a_ix_i}
+$">
+</DIV><P></P><!-- MATH
+ \begin{displaymath}
+z=\max(y, CotaInferior)
+\end{displaymath}
+ -->
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="221" HEIGHT="37" ALIGN="CENTER" BORDER="0"
+ SRC="img20.png"
+ ALT="$\displaystyle z=\max(y, CotaInferior)
+$">
+</DIV><P></P><!-- MATH
+ \begin{displaymath}
+f(x_1,x_2,\cdots,x_n)=\min(z, CotaSuperior)
+\end{displaymath}
+ -->
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="344" HEIGHT="37" ALIGN="CENTER" BORDER="0"
+ SRC="img21.png"
+ ALT="$\displaystyle f(x_1,x_2,\cdots,x_n)=\min(z, CotaSuperior)
+$">
+</DIV><P></P>
+<P>
+</TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=57><FONT SIZE="-2">  
+Producto - Suma </FONT></TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=113><FONT SIZE="-2">
+Multiplica el primer argumento por la Combinaci&#243;n Lineal de los restantes argumentos; incluye un Valor constante. 
+S&#243;lo es v&#225;lida para valores no negativos de los argumentos. </FONT></TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=170><!-- MATH
+ \begin{displaymath}
+f(x_1,x_2,\cdots,x_n)=a_0 + a_1x_1\left(\sum_{i=2}^n{a_ix_i}\right)
+\end{displaymath}
+ -->
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="337" HEIGHT="76" ALIGN="CENTER" BORDER="0"
+ SRC="img22.png"
+ ALT="$\displaystyle f(x_1,x_2,\cdots,x_n)=a_0 + a_1x_1\left(\sum_{i=2}^n{a_ix_i}\right)
+$">
+</DIV><P></P>
+<P>
+</TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=57><FONT SIZE="-2">  
+Suma - Producto </FONT></TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=113><FONT SIZE="-2">
+Efectua la Combinaci&#243;n Lineal del producto de parejas de argumentos; incluye un Valor constante. 
+S&#243;lo es v&#225;lida para valores no negativos de los argumentos. </FONT></TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=170><!-- MATH
+ \begin{displaymath}
+f(x_1,x_2,\cdots,x_n)=a_0 + \sum_{i=1}^{n/2}{a_ix_ia_{i+1}x_{i+1}}
+\end{displaymath}
+ -->
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="334" HEIGHT="82" ALIGN="CENTER" BORDER="0"
+ SRC="img23.png"
+ ALT="$\displaystyle f(x_1,x_2,\cdots,x_n)=a_0 + \sum_{i=1}^{n/2}{a_ix_ia_{i+1}x_{i+1}}
+$">
+</DIV><P></P>
+<P>
+</TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=57><FONT SIZE="-2">  
+Ranking </FONT></TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=113><FONT SIZE="-2">
+Compara el valor del primer argumento respecto a los dem&#225;s. 
+La comparaci&#243;n puede ser ascendente o descendente. </FONT></TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=170><FONT SIZE="-2">
+Si <IMG
+ WIDTH="87" HEIGHT="35" ALIGN="CENTER" BORDER="0"
+ SRC="img24.png"
+ ALT="$ orden &gt; 0$"> :
+</FONT><!-- MATH
+ \begin{displaymath}
+f(x_1,x_2,\cdots,x_n)=\frac{Pos - 0.5}{n}
+\end{displaymath}
+ -->
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="249" HEIGHT="61" ALIGN="CENTER" BORDER="0"
+ SRC="img25.png"
+ ALT="$\displaystyle f(x_1,x_2,\cdots,x_n)=\frac{Pos - 0.5}{n}
+$">
+</DIV><P></P><FONT SIZE="-2">
+Si <IMG
+ WIDTH="87" HEIGHT="35" ALIGN="CENTER" BORDER="0"
+ SRC="img26.png"
+ ALT="$ orden &lt; 0$"> :
+</FONT><!-- MATH
+ \begin{displaymath}
+f(x_1,x_2,\cdots,x_n)=1 - \frac{Pos - 0.5}{n}
+\end{displaymath}
+ -->
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="282" HEIGHT="61" ALIGN="CENTER" BORDER="0"
+ SRC="img27.png"
+ ALT="$\displaystyle f(x_1,x_2,\cdots,x_n)=1 - \frac{Pos - 0.5}{n}
+$">
+</DIV><P></P><!-- MATH
+ \begin{displaymath}
+Pos = n - card\{x_i, i=1,2,\cdots n|x_i>x_1\}
+\end{displaymath}
+ -->
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="345" HEIGHT="37" ALIGN="CENTER" BORDER="0"
+ SRC="img28.png"
+ ALT="$\displaystyle Pos = n - card\{x_i, i=1,2,\cdots n\vert x_i&gt;x_1\}
+$">
+</DIV><P></P><!-- MATH
+ \begin{displaymath}
+f(x_1,x_2,\cdots,x_n)\in \left(\frac{1}{2n},1 - \frac{1}{2n}\right)
+\end{displaymath}
+ -->
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="281" HEIGHT="64" ALIGN="CENTER" BORDER="0"
+ SRC="img29.png"
+ ALT="$\displaystyle f(x_1,x_2,\cdots,x_n)\in \left(\frac{1}{2n},1 - \frac{1}{2n}\right)
+$">
+</DIV><P></P>
+<P>
+</TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=57><FONT SIZE="-2">  
+Producto </FONT></TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=113><FONT SIZE="-2">
+Efect&#250;a el Producto de los argumentos; incluye un Valor constante. 
+S&#243;lo es v&#225;lida para valores no negativos de los argumentos. </FONT></TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=170><FONT SIZE="-2"> 
+</FONT><!-- MATH
+ \begin{displaymath}
+f(x_1,x_2,\cdots,x_n)=a_0 + \prod_{i=1}^n{a_ix_i}
+\end{displaymath}
+ -->
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="265" HEIGHT="71" ALIGN="CENTER" BORDER="0"
+ SRC="img30.png"
+ ALT="$\displaystyle f(x_1,x_2,\cdots,x_n)=a_0 + \prod_{i=1}^n{a_ix_i}
+$">
+</DIV><P></P>
+<P>
+</TD>
+</TR>
+</TABLE></DIV> 
+
+<A NAME="tab:fra"></A></TD></TR>
+</TABLE>
+</DIV><P></P>
+<BR>
+
+<P>
+<BR><HR>
+<ADDRESS>
+Oscar Duarte
+2005-05-01
+</ADDRESS>
+</BODY>
+</HTML>

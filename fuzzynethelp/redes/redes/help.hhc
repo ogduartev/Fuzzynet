@@ -1,0 +1,34 @@
+<UL>
+<LI> <object type='text/sitemap'><param name='Name' value='Introducción a las Redes de Cálculo con Palabras'>
+<param name='ID' value=1>
+<param name='Local' value='node1.html'>
+</object>
+<LI> <object type='text/sitemap'><param name='Name' value='Entrenamiento de las Redes'>
+<param name='ID' value=2>
+<param name='Local' value='node2.html'>
+</object>
+<UL>
+<LI> <object type='text/sitemap'><param name='Name' value='Funciones de Error'>
+<param name='ID' value=3>
+<param name='Local' value='node3.html'>
+</object>
+<LI> <object type='text/sitemap'><param name='Name' value='Diferenciabilidad'>
+<param name='ID' value=4>
+<param name='Local' value='node4.html'>
+</object>
+</UL>
+<LI> <object type='text/sitemap'><param name='Name' value='Valor Representativo de un Número Difuso. Ordenamiento'>
+<param name='ID' value=5>
+<param name='Local' value='node5.html'>
+</object>
+<UL>
+<LI> <object type='text/sitemap'><param name='Name' value='Primer Caso'>
+<param name='ID' value=6>
+<param name='Local' value='node6.html'>
+</object>
+<LI> <object type='text/sitemap'><param name='Name' value='Segundo Caso'>
+<param name='ID' value=7>
+<param name='Local' value='node7.html'>
+</object>
+</UL>
+</UL>

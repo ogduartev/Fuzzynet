@@ -1,0 +1,13 @@
+\select@language {spanish}
+\contentsline {chapter}{\numberline {1}Introducci\'on}{5}
+\contentsline {section}{\numberline {1.1}T\'ecnicas Difusas}{5}
+\contentsline {chapter}{\numberline {2}Sistemas de Computaci\'on con Palabras}{7}
+\contentsline {section}{\numberline {2.1}Definiciones}{8}
+\contentsline {section}{\numberline {2.2}Interpretaci\'on Ling\"u\IeC {\'\i }stica}{8}
+\contentsline {section}{\numberline {2.3}Razonamiento Aproximado}{9}
+\contentsline {subsection}{\numberline {2.3.1}Algunas $fra$}{10}
+\contentsline {subsection}{\numberline {2.3.2}Construcci\'on de una $arf$}{13}
+\contentsline {section}{\numberline {2.4}Aproximaci\'on Ling\"u\IeC {\'\i }stica}{14}
+\contentsline {chapter}{\numberline {3}Valor Representativo}{17}
+\contentsline {section}{\numberline {3.1}Ejemplo 1}{18}
+\contentsline {section}{\numberline {3.2}Ejemplo 2}{19}

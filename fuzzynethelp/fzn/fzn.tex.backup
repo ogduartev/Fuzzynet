@@ -1,0 +1,1007 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  COMPILAR CON PDFLATEX
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[letterpaper,12pt]{book}
+\usepackage[spanish]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage{longtable}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{html}
+\title{Fuzzynet - Manual de Usuario}
+\author{Oscar G. Duarte V.}
+\date{}
+
+\newcommand{\figura}[2]{
+\begin{figure}
+\centering
+\latex{\includegraphics[scale=0.75]{fig/jpg/#1.jpg}}
+\html{\includegraphics{fig/jpg/#1.jpg}}
+\caption{#2}
+\label{fig:#1}
+\end{figure}
+}
+
+\begin{document}
+%\maketitle
+%\tableofcontents
+%\listoffigures
+%\listoftables
+
+\chapter{Fuzzynet - Presentación}
+
+Existen algunas situaciones en las que es necesario hacer algunos cálculos en los que una parte de la información disponible es numérica y otra parte es lingüística (son palabras). Fuzzynet provee una solución a este tipo de problemas empleando para ello \textit{Redes de Cálculo con Palabras}. 
+
+Un archivo de Fuzzynet contiene un \textit{Proyecto} (ver sección \ref{proyecto}), que en esencia es una colección de \textit{Estrategias} (ver sección \ref{estrategias}) que se aplican a una conjunto de \textit{Casos} (ver sección \ref{casos}).
+
+Cada Estrategia es una forma de calcular algo. Cada Caso contiene una información específica para hacer esos cálculos. La sección \ref{ejemplo} muestra un ejemplo de estos conceptos.
+
+\chapter{El Proyecto}
+\label{proyecto}
+Un \textit{Proyecto} de Fuzzynet es un conjunto de Estrategias aplicadas a un Conjunto de Casos. Cada Estrategia debe tener un nombre diferente con el que se identificará. De igual forma, cada Caso debe tener un nombre diferente..
+
+Adicionalmente, el Proyecto puede tener un listado de propiedades que lo caractericen, y un texto descriptivo.
+
+El cálculo del valor representativo y la ambigüedad de todos los números difusos en un Proyecto, se hace con el mismo nivel de optimismo y el mismo valor de representatividad (Ver sección \textit{Valor representativo de un número difuso}) 
+
+\section{Edición del Proyecto}
+\label{dialogoproyecto}
+La Figura \ref{fig:dialogoproyecto} muestra el cuadro de diálogo de edición de Proyectos. Para acceder a él se deben seleccionar las opciones del Menú:
+
+\begin{center}
+\textbf{Proyecto} $\to$ \textbf{Proyecto}
+\end{center}
+
+Los principales componentes de este cuadro de diálogo se explican a continuación:
+\begin{description}
+\item[Estrategias - Editar:] Permite editar la estrategia que esté seleccionada en el listado (Ver sección \ref{estrategias}).
+\item[Estrategias - Nueva:] Crea una nueva estrategia. Ésta se inserta en el listado justamente a continuación de la estrategia que esté seleccionada. El usuario debe asignara a la nueva estrategia un nombre distinto al de todas las otras estrategias previamente definidas.
+\item[Estrategias - Borar:] Elimina la estrategia seleccionada. El usuario debe confirmar la acción. Al menos debe existir una estrategia en el proyecto.
+\item[Casos - Editar:] Permite editar el caso que esté seleccionado en el listado (Ver sección \ref{casos}).
+\item[Casos - Nuevo:] Crea un nuevo caso. Éste se inserta en el listado justamente a continuación del caso que esté seleccionado. El usuario debe asignara al nuevo caso un nombre distinto al de todos los otros casos previamente definidos.
+\item[Casos - Borar:] Elimina el caso seleccionado. El usuario debe confirmar la acción. Al menos debe existir un caso en el proyecto.
+\item[Casos - Ordenar:] Permite reordenar el listado de Casos según diferentes criterios (Ver sección \ref{dialogoordenarcasos})
+\item[Optimismo:] Esta variable modela el nivel de optimismo del usuario; debe tomar un valor entre $0\%$ y $100\%$. Al incrementar el optimismo, el valor representativo calculadao para cada número difuso se incrementa (Ver sección \textit{Valor representativo de un número difuso}). 
+\item[Representatividad:] Esta variable controla la representatividad asignada a cada $\alpha-$corte de un número difuso. Debe ser un número positivo o cero (Si se asigna un valor negativo se interpreta como cero). Un valor grande de esta variable da mayor peso a los $\alpha-$cortes superiores (Ver sección \textit{Valor representativo de un número difuso}).
+\item[Propiedades:] El usuario puede asignar un listado de propiedades y sus respectivos valores al proyecto (Ver sección \ref{dialogopropiedades}).
+\item[Descripción:] El usuario puede incluir un texto descriptivo del Proyecto.
+\end{description} 
+
+\figura{dialogoproyecto}{Di\'alogo para edici\'on de Proyectos}
+
+\chapter{Estrategias}
+\label{estrategias}
+
+En pocas palabras, una \textit{Estrategia} es una forma de calcular algo a partir de alguna información. En Fuzzynet una estrategia es una \textit{Red de Computación con Palabras}; Un mismo proyecto puede tener varias estrategias.
+
+Cada Estrategia se identifica por su nombre, que debe ser único. El principal componente de una Estrategia es la Red mediante la cual se efectúan los cálculos. La sección \ref{vistas} explica cómo visualizar la red.
+
+Adicionalmente, una Estrategia puede tener un listado de propiedades que la caractericen, y un texto descriptivo.
+
+\section{Edición de Estrategias}
+\label{dialogoestrategia}
+La Figura \ref{fig:dialogoestrategia} muestra el cuadro de diálogo de edición de Estrategias. Para acceder a él se deben seleccionar las opciones del Menú:
+
+\begin{center}
+\textbf{Proyecto} $\to$ \textbf{Estrategia}
+\end{center}
+
+Téngase en cuenta que la Estrategia que se editará será aquella que esté previamente seleccionada en el Proyecto. Para cambiar la selección puede usarse el listado de la Barra de Herramientas, o el cuadro de diálogo de edición de proyectos (Ver sección \ref{dialogoproyecto})
+
+Los principales componentes de este cuadro de diálogo se explican a continuación:
+\begin{description}
+\item[Nombre:] Este es el nombre que identificará a la Estrategia; debe ser único.
+\item[Nodo Principal:] Con esta opción se puede editar el Nodo Principal de la Red, y a través de él a todos los demás nodos (Ver sección \ref{dialogonodo}).
+\item[Propiedades:] El usuario puede asignar un listado de propiedades y sus respectivos valores a la estrategia (Ver sección \ref{dialogopropiedades}).
+\item[Descripción:] El usuario puede incluir un texto descriptivo de la Estrategia.
+\end{description}
+
+\figura{dialogoestrategia}{Di\'alogo para edici\'on de Estrategias}
+
+\chapter{Casos}
+\label{casos}
+
+En pocas palabras, un \textit{Caso} contiene la información que se necesita para calcular algo con una estrategia. 
+
+Cada Caso se identifica por su nombre, que debe ser único. El principal componente de un Caso es un listado de Variables; en cada variable hay una información que puede ser usada para calcular algo con una determinada estrategia.
+
+Adicionalmente, un Caso puede tener un listado de propiedades que la caractericen, y un texto descriptivo.
+
+\section{Edición de Casos}
+\label{dialogocaso}
+
+\figura{dialogocaso}{Di\'alogo para edici\'on de Casos}
+La Figura \ref{fig:dialogocaso} muestra el cuadro de diálogo de edición de Casos. Para acceder a él se deben seleccionar las opciones del Menú:
+
+\begin{center}
+\textbf{Proyecto} $\to$ \textbf{Caso}
+\end{center}
+
+Téngase en cuenta que el caso que se editará será aquel que esté previamente seleccionada en el Proyecto. Para cambiar la selección puede usarse el listado de la Barra de Herramientas, o el cuadro de diálogo de edición de proyectos (Ver sección \ref{dialogoproyecto})
+
+Los principales componentes de este cuadro de diálogo se explican a continuación:
+\begin{description}
+\item[Nombre:] Este es el nombre que identificará al Caso; debe ser único.
+\item[Variables:] Cada variable es un trozo de la información del Caso. En el cuadro de diálogo se muestra el listado de las variables definidas, y se encunentran las opciones de crear nuevas variables asi como de editar o eliminar variables ya existentes.
+\item[Copiar:] Con esta opción el usuario puede copiar todas las variables que están definidas en una determinada estrategia (ver sección \ref{dialogoseleccionarestrategia}).
+\item[Propiedades:] El usuario puede asignar un listado de propiedades y sus respectivos valores al caso (Ver sección \ref{dialogopropiedades}).
+\item[Descripción:] El usuario puede incluir un texto descriptivo de la Estrategia.
+\end{description}
+
+\section{Copiar Variables de una Estrategias}
+\label{dialogoseleccionarestrategia}
+Con esta opción el usuario puede copiar todas las variables que están definidas en una determinada estrategia. La Figura \ref{fig:dialogoseleccionarestrategia} muestra el cuadro de diálogo. Para acceder a él se deben seleccionar las opciones del Menú:
+
+\begin{center}
+\textbf{Proyecto} $\to$ \textbf{Caso} $\to$ \textbf{Copiar}
+\end{center}
+
+Los principales componentes de este cuadro de diálogo se explican a continuación:
+\begin{description}
+\item[Estrategias:] El usuario debe seleccionar de este listado aquella estrategia cuyas variables serán copiadas al caso.
+\item[Generalidades:] Si se activa esta opción se copiaran tambien al caso las generalidades (propiedades genéricas) definidas en ña estrategia.
+\item[Borrar/Adicionar:] Estas opciones son mutuamente excluyentes. \textit{Borrar} elimina las variables definidas en el caso antes de copiar las variables de la estrategia, mientras que \textit{Adicionar} no lo hace.  
+\end{description}
+
+\figura{dialogoseleccionarestrategia}{Di\'alogo para selección de estrategia}
+
+\section{Ordenar los Casos}
+\label{dialogoordenarcasos}
+Con esta opción el usuario puede ordenar los casos según dos posibles criterios: por orden alfabético, o según el valor representatyivo de un nodo específico. La Figura \ref{fig:dialogoordenarcasos} muestra el cuadro de diálogo. Para acceder a él se deben seleccionar las opciones del Menú:
+
+\begin{center}
+\textbf{Proyecto} $\to$ \textbf{Ordenar} 
+\end{center}
+
+Los principales componentes de este cuadro de diálogo se explican a continuación:
+\begin{description}
+\item[Estrategias y Nodos:] En estos listados se seleccionan la estrategia y el nodo específicos según los cuales se ordenarán los casos.
+\item[Orden Alfabético:] Seleccione esta opción si desea que los casos se oreden alfabéticamente, en lugar de numéricamente.
+\item[Ascendente/Descendente:] Estas opciones mutuamente excluyentes permiten seleccionar el sentido del ordenamiento.
+\end{description}
+
+\figura{dialogoordenarcasos}{Di\'alogo para ordenar los casos}
+
+\chapter{Nodos de Cálculo}
+\label{nodos}
+
+Las redes de cálculo están formadas por nodos interconectados entre si. Cada nodo realiza una operación aritmética simple sobre sus entradas. En realidad, cada nodo es un \textit{Sistema de Computación con palabras} (ver ayuda específica). 
+
+\section{Edición de Nodos de Cálculo}
+\label{dialogonodo}
+La figura \ref{fig:dialogonodo} muestra el cuadro de diálogo para edición de los nodos de cálculo. Para acceder a él puede seguirse algunoi cualquiera de los siguientes procedimientos:
+\begin{itemize}
+\item Desde el menú, seleccionar (Para editar el nodo superior de la red):
+\begin{center}
+\textbf{Proyecto} $\to$ \textbf{Estrategia} $\to$ \textbf{Nodo Principal}
+\end{center}
+
+\item Desde el menú, seleccionar:
+\begin{center}
+\textbf{Ver} $\to$ \textbf{Estrategia actual como red}
+\end{center}
+\end{itemize} 
+Posteriormente selecciónar con el ratón izquierdo del ratón el nodo que se desea editar
+
+Los principales componentes de este cuadro de diálogo se explican a continuación:
+\begin{description}
+\item [Variable:] Permite editar la variable lingüística asociada al nodo (ver \ref{variables})
+
+\item [Padres:] Muestra el listado de los nodos superiores a los que está inmediatamente conectado el nodo.
+
+\item [Hijos:] Muestra el listado de los nodos inferiores a los que está inmediatamente conectado el nodo. Los botones laterales permiten adicionar, editar o eliminar nodos hijos.
+
+\item [Función:] Especifica el tipo de función aritmética que se efectuará sobre los valores de los nodos hijos (ver \ref{fra}). 
+
+\item [Parámetros:] En esta lista se muestran y editan los parámetros de las funciones que no están asociados a los hijos (ver \ref{fra}).
+
+\item [Coeficientes:] En esta lista se muestran y editan los parámetros de las funciones que si están asociados a los hijos (ver \ref{fra}); en cada fila se muestran los coeficientes de un mismo hijo.
+
+\item [Forzar como entrada:] Si esta entrada está activa, el nodo no empleará la función de razonamiento aproximado. En su lugar el valor entregado a los nodos padres será el valor por defecto de su variable lingüística, o el valor de una variable de igual nombre que el nodo asignado al caso respectivo.
+
+\item [Offset Horizontal:] Este control permite desplazar a la derecha el nodo en la red. El mismo efecto se consigue presionando el botón derecho del ratón sobre el nodo y arrastrándolo (modo de vista Estrategia como Red).
+
+\item [Offset Vertical:] Este control permite desplazar hacia abajo el nodo en la red. El mismo efecto se consigue presionando el botón derecho del ratón sobre el nodo y arrastrándolo (modo de vista Estrategia como Red).
+
+\item [Descripción:] El usuario puede incluir un texto descriptivo del Nodo.
+\end{description}
+
+\figura{dialogonodo}{Di\'alogo para edici\'on de nodos en la red}
+
+\section{Funciones de Razonamiento aproximado}
+\label{fra}
+
+El listado de funciones de razonamiento aproximado implementadas se muestra en la tabla \ref{tab:fra}
+
+\begin{table}
+\begin{center}
+\tiny
+\begin{longtable}{|p{2cm}|p{4cm}|p{6cm}|} \hline
+\textbf{Función} & \textbf{Descripción} & $fra$
+
+\\ \hline
+Combinación Lineal &
+Efectúa la Combinación Lineal de los argumentos (un promedio ponderado); incluye un valor constante. &
+\[
+f(x_1,x_2,\cdots,x_n)=a_0 + \sum_{i=1}^n{a_1x_i}
+\]
+
+\\ \hline
+Supremo &
+Calcula el máximo valor de los argumentos. &
+\[
+f(x_1,x_2,\cdots,x_n)=\max (x_1,x_2,...,x_n)
+\]
+
+\\ \hline
+Ínfimo &
+Calcula el mínimo valor de los argumentos. &
+\[
+f(x_1,x_2,\cdots,x_n)=\min(x_1,x_2,...,x_n)
+\]
+
+\\ \hline
+Polinomio &
+Efectúa la Combinación Lineal de monomios de los argumentos. 
+Sólo es válida para valores no negativos de los argumentos. &
+\[
+f(x_1,x_2,\cdots,x_n)=\sum_{i=1}^n{a_ix_i^{b_i}}
+\]
+
+\\ \hline
+Combinación Lineal Acotada &
+Efectúa la Combinación Lineal de los argumentos (propedio ponderado); incluye un Valor constante. 
+El resultado se acota entre CotaInferior y CotaSuperior. &
+
+\[
+y=a_0 + \sum_{i=1}^n{a_ix_i}
+\]
+\[
+z=\max(y, CotaInferior)
+\]
+\[
+f(x_1,x_2,\cdots,x_n)=\min(z, CotaSuperior)
+\]
+
+\\ \hline
+Producto - Suma &
+Multiplica el primer argumento por la Combinación Lineal de los restantes argumentos; incluye un Valor constante. 
+Sólo es válida para valores no negativos de los argumentos. &
+\[
+f(x_1,x_2,\cdots,x_n)=a_0 + a_1x_1\left(\sum_{i=2}^n{a_ix_i}\right)
+\]
+
+\\ \hline
+Suma - Producto &
+Efectua la Combinación Lineal del producto de parejas de argumentos; incluye un Valor constante. 
+Sólo es válida para valores no negativos de los argumentos. &
+\[
+f(x_1,x_2,\cdots,x_n)=a_0 + \sum_{i=1}^{n/2}{a_ix_ia_{i+1}x_{i+1}}
+\]
+
+\\ \hline
+Ranking &
+Compara el valor del primer argumento respecto a los demás. 
+La comparación puede ser ascendente o descendente. &
+Si $orden > 0$ :
+\[
+f(x_1,x_2,\cdots,x_n)=\frac{Pos - 0.5}{n}
+\]
+Si $orden < 0$ :
+\[
+f(x_1,x_2,\cdots,x_n)=1 - \frac{Pos - 0.5}{n}
+\]
+\[
+Pos = n - card\{x_i, i=1,2,\cdots n|x_i>x_1\}
+\]
+\[
+f(x_1,x_2,\cdots,x_n)\in \left(\frac{1}{2n},1 - \frac{1}{2n}\right)
+\]
+
+\\ \hline
+Producto &
+Efectúa el Producto de los argumentos; incluye un Valor constante. 
+Sólo es válida para valores no negativos de los argumentos. & 
+\[
+f(x_1,x_2,\cdots,x_n)=a_0 + \prod_{i=1}^n{a_ix_i}
+\]
+
+\\ \hline
+\end{longtable} 
+\end{center} 
+\caption{Funciones de Razonamiento aproximado implementadas}
+\label{tab:fra}
+\end{table}
+
+\chapter{Variables Lingüísticas}
+\label{variables}
+Cada nodo en la red tiene una variable lingüística asociada. Ésta consiste de un conjunto de etiquetas (palabras) a las que a su vez se ha asociado un número difuso.
+
+A cada variable lingüística se le asigna también un valor por defecto, que puede ser:
+\begin{itemize}
+\item Indefinido
+\item Un número crisp
+\item Un intervalo
+\item Una etiqueta de la variable
+\item Un número difuso
+\end{itemize} 
+
+\section{Edición de Variables Lingüísticas}
+\label{dialogovariable}
+El contenido semántico de cada variable lingüística se edita con el cuadro de diálogo que muestra la figura \ref{fig:dialogovariable}. Para acceder a él, debe seleccionarse la opción \textit{Variable} del cuadro de diálogo de edición de nodos (ver sección \ref{nodos})
+
+Los principales componentes de este cuadro de diálogo se explican a continuación:
+\begin{description}
+\item [Nombre:] En este campo se edita el nombre de la variable lingüística, que será el mismo nombre asignado al Nodo de Cálculo.
+\item [Mínimo/Máximo:] En estos campos se editan los valores mínimo y máximo que puede tomar la variable.
+\item [Unidades:] Este campo opcional permite especificar las unidades de la variable.
+\item [Etiquetas:] La variable lingüística tiene un conjunto de etiquetas asociadas a ella. Cada una de ellas, a su vez, tiene un conjunto difuso asociado. En el cuadro de diálogo se dibujan los conjuntos difusos, y se listan las etiquetas. Si se selecciona una etiqueta de la lista, su conjunto difuso asociado se pinta en color rojo. Una etiqueta seleccionada se puede editar o borrar. tambien es posible crear nuevas etiquetas.
+\item [Autodefinir:] Esta opción permite la definición automática de etiquetas (ver sección \ref{dialogoautodefinirvariable}).
+\item [Valor:] Cada Variable tiene definido un Valor por defecto. El usuario puede seleccionar qué tipo de valor por defecto desea definir.
+\item [Ver Valor:] Si se activa esta opción, se pintará en color negro el valor por defecto asignado a la variable, en el mismno dibujo en que se muestran los conjuntos difusos de las etiquetas.
+\item [Editar Valor:] Mediante esta opción el usuario puede editar el valor por defecto asignado (ver secciones \ref{dialogointervalo}, \ref{dialogonumeroeditar} y \ref{dialogomodificador}).
+\item [Descripción:] El usuario puede incluir un texto descriptivo de la Variable.
+\end{description}
+
+\figura{dialogovariable}{Di\'alogo para edici\'on de variables ling\"u\'isticas}
+
+\subsection{Edición de Intervalos}
+\label{dialogointervalo}
+
+Con el cuadro de diálogo que muestra la figura \ref{fig:dialogointervalo} se editan los límites mínimo y máximo de un intervalo. Se emplea en la definición de valores por defecto de variables lingüísticas (ver seccion \ref{dialogovariable}).
+
+\figura{dialogointervalo}{Di\'alogo para edici\'on de intervalos}
+
+\subsection{Edición de Números Difusos}
+\label{dialogonumeroeditar}
+
+Con el cuadro de diálogo que muestra la figura \ref{fig:dialogonumeroeditar} se edita un número difuso. Se emplea en la definición de etiquetas y valores por defecto de variables lingüísticas (ver seccion \ref{dialogovariable}).
+
+Los principales componentes de este cuadro de diálogo se explican a continuación:
+\begin{description}
+\item [Etiqueta:] En este campo se edita el nombre de la etiqueta (Este campo no aparece en la definición de valores por defecto). 
+\item [Alfa-Cortes:] La definición del número difuso se hace mediante alfa-cortes. En el cuadro se pintan y listan los alfa-cortes del número. Cuando se selecciona un alfa-corte en especial de la lista, éste se pinta en color rojo.
+\item [Número de Alfa-Cortes:] Mediante esta opción se puede modificar el número de alfa-cortes definidos en el número. 
+\item [Valor:] Muestra el valor representativo del número difuso (Vease explicación en Sistemas de Computación con Palabras).
+\item [Ambigüedad:] Muestra la ambigüedad del número difuso (Vease explicación en Sistemas de Computación con Palabras).
+\item [a/b/c/d/Definición Rápida:] Permite definir rápidamente el número difuso a partir de cuatro vértices ($a \leq b \leq c \leq d$).
+\item [Trapecio/Campana:] Estas opciones mutuamente excluyentes establecen qué tipo de forma se desea dar al número cuando se emplea la opción \textit{Definición Rápida}.
+\item [Copiar Resultado:] Permite copiar un número tomado de otro nodo (ver seccion \ref{dialogocopiarnumero})
+
+\end{description}
+
+\figura{dialogonumeroeditar}{Di\'alogo para edici\'on de n\'umeros difusos}
+
+\subsection{Copiar Números Difusos}
+\label{dialogocopiarnumero}
+El cuadro de diálogo que muestra la figura \ref{fig:dialogocopiarnumero} permite copiar un número difuso presente en un nodo cualquiera. El usuario debe seleccionar primero la Estrategia, el Nodo y el Caso de donde quiere copiar el número. Posteriormente debe seleccionar la opción \textit{Copiar}. 
+
+\figura{dialogocopiarnumero}{Di\'alogo para copiar n\'umeros difusos}
+
+\subsection{Edición de Modificadores Lingüísticos}
+\label{dialogomodificador}
+El cuadro de diálogo que muestra la figura \ref{fig:dialogomodificador} permite adicionar modificadores lingüísticos a las etiquetas, cuando una de esta se selecciona como valor por defecto de una variable (ver sección \ref{variables}). Las opciones disponibles son:
+\begin{itemize}
+\item Sin modificador.
+\item A lo sumo.
+\item Por lo menos.
+\item Nada.
+\item Cualquier cosa.
+\end{itemize} 
+
+\figura{dialogomodificador}{Di\'alogo para edici\'on de modificadores ling\"u\'isticos}
+
+\section{Definición Automática de Variables}
+\label{dialogoautodefinirvariable}
+El cuadro de diálogo que muestra la figura \ref{fig:dialogoautodefinirvariable} permite definir automáticamente las etiquetas de una variable. El usuario debe seleccionar el número de etiquetas y la forma que desea darles (recta/curva). El programa define un conjutno de etiquetas de forma homogénea en el intervalo de la Variable. 
+
+Los nombres asignados a las etiquetas son:\textit{Conjunto 1}, \textit{Conjunto 2}, etc.
+
+Si el usuario selecciona conjuntos rectos se definen dos alfa-cortes para cada conjunto, pero si selecciona conjuntos curvos se definen 10 alfa-cortes.
+
+\figura{dialogoautodefinirvariable}{Di\'alogo para autodefinici\'on de variables ling\"u\'isticas}
+
+\section{Presentación de Variables Lingüísticas}
+\label{dialogonumeromostrar}
+Para desplegar la información de una variable lingüística sin que ésta se pueda editar, el programa emplea el cuadro de diálogo que muestra la figura \ref{fig:dialogonumeromostrar}
+
+Los principales componentes de este cuadro de diálogo se explican a continuación:
+\begin{description}
+\item [Nombre:] En este campo se muestra el nombre de la variable. 
+\item [Mínimo/Máximo:] En estos campos se muestran los valores mínimo y máximo que puede tomar la variable.
+\item [Unidades:] Este campo muestra las unidades de la variable.
+\item [Etiquetas:] La variable lingüística tiene un conjunto de etiquetas asociadas a ella. Cada una de ellas, a su vez, tiene un conjunto difuso asociado. En el cuadro de diálogo se dibujan los conjuntos difusos, y se listan las etiquetas. Si se selecciona una etiqueta de la lista, su conjunto difuso asociado se pinta en color rojo. En negro se muestra el valor que toma la variable.
+\item [Valor:] Muestra el valor representativo y la ambigüedad del valor que toma la variable separados por el caracter /.
+\end{description}
+
+\figura{dialogonumeromostrar}{Di\'alogo para mostrar números difusos}
+
+
+
+\chapter{Librerías}
+Una librería es un archivo que guarda información parcial de un proyecto. Específicamente puede guardar la definición de:
+\begin{itemize}
+\item Estrategias
+\item Casos
+\item Variables
+\end{itemize} 
+
+Una misma librería puede contener información mixta (Estrategias, Casos y Variables) de diferentes proyectos. De esta forma, el usuario tiene una alternativa más para reutilizar sus diseños.
+
+\section{Administración de Librerías}
+\label{dialogolibreria}
+El cuadro de diálogo que muestra la figura \ref{fig:dialogolibreria} se emplea para administrar las librerías. A él se accede a partir de la opción \textit{Librería} en los cuadros de diálogo de edición de Estrategias (sección \ref{estrategias}), Casos (sección \ref{casos}) y Variables (sección \ref{variables}).  
+
+Los principales componentes de este cuadro de diálogo se explican a continuación:
+\begin{description}
+\item [Seleccionar:] Permite cargar una librería desde el disco.
+\item [Salvar:] Permite salvar la información de la librería en el disco.
+\item [Disponibles/Descripción:] Mustra el listado de elementos almacenados en la librería. Si el cuadro de diálogo se ha llamado desde el cuadro de edición de Estrategias, sólo se mostrarán las estrategias disponibles. De igual forma, sólo se mostrarán los Casos y las Variables cuando haya sido llamado desde los cuadros de diálogo respectivos.
+\item [Actual:] Muestra información sobre el elemento que se estaba editando cuando se lamó el cuadro de diálogo.
+\item [Adicionar:] Adiciona el elemento actual a la librería. La librería debe salvarse para que la adición tenga efecto en el disco.
+\item [Leer:] Carga en el elemento actual la información del elemento seleccionado en el listado \textit{Disponibles}.
+\item [Borrar:] Elimina de la librería el elemento seleccionado en el listado \textit{Disponibles}. La librería debe salvarse para que la adición tenga efecto en el disco.
+\end{description}
+
+\figura{dialogolibreria}{Di\'alogo para administraci\'on de librer\'ias}
+
+\chapter{Reportes}
+El software puede generar reportes altamente configurables en los siguientes formatos (ver seccion \ref{dialogoreporte}):
+\begin{enumerate}
+\item Latex.
+\item HTML.
+\item Texto.
+\end{enumerate} 
+
+Los reportes pueden ser creados para:
+\begin{itemize}
+\item Todo el proyecto.
+\item La estrategia seleccionada.
+\item Todas las estrategias.
+\item El caso seleccionado.
+\item Todos los casos.
+\item Un análisis de resultados del proyecto.
+\end{itemize} 
+
+\section{Generación de Reportes}
+\label{dialogoreporte}
+Con el cuadro de diálogo que muestra la figura \ref{fig:dialogoreporte} se seleccionan las características del reporte a generar.
+
+Los principales componentes de este cuadro de diálogo se explican a continuación:
+\begin{description}
+\item [Archivo:] Permite definir el nombre y la ubicación del archivo principal del reporte generado.
+\item [Opciones:] Permite configurar las principales opciones del reporte que están explicadas en la tabla \ref{tab:reporte}.
+\item [Leer predeterminado:] Lee el listado de opciones del archivo de configuración.
+\item [Escribir predeterminado:] Escribe las opciones actuelmente seleccionadas en el archivo de configuración.
+\item [Configuración por defecto:] Carga las opciones por defecto.
+\item [Generar el reporte:] Esta opción inicia el proceso de generación del reporte. La barra adjunta indica el progreso de la generación.
+\end{description}
+
+\figura{dialogoreporte}{Di\'alogo para generaci\'on de reportes}
+
+\begin{table}
+\centering
+\tiny
+\begin{longtable}{|p{3cm}|p{2cm}|p{7cm}|} \hline
+\multicolumn{3}{|c|}{\textbf{Proyecto}} \\ \hline
+\textit{Propiedad} & \textit{Opciones} & \textit{Descripción} \\ \hline
+  Presentación & Si / No  & Incluir una presentación general del proyecto \\ \hline
+  Descripción & Si / No  & Incluir la descripción \\ \hline
+  Propiedades & Si / No  & Incluir el listado de propiedades\\ \hline
+  Estrategias & Si / No  & Incluir el listado de estrategias\\ \hline
+  Casos & Si / No   & Incluir el listado de casos \\ \hline
+  Resultados & Si / No  & Incluir un análisis de resultados \\ \hline
+  Profundidad de Tabla de Contenido & 1 / 2 / 3 / 4 / 5  & Número de subniveles incluidos en la tabla de contenido\\ \hline
+\multicolumn{3}{|c|}{\textbf{Estrategia}} \\ \hline
+\textit{Propiedad} & \textit{Opciones} & \textit{Descripción} \\ \hline
+  Descripción  & Si / No  & Incluir la descripción\\ \hline
+  Propiedades & Si / No  & Incluir el listado de propiedades \\ \hline
+  Lista de Nodos & Si / No  & Incluir el listado de los nodos \\ \hline
+  Nodos  & Si / No  & Incluir información detallada de los nodos \\ \hline
+\multicolumn{3}{|c|}{\textbf{Nodos}} \\ \hline
+\textit{Propiedad} & \textit{Opciones} & \textit{Descripción} \\ \hline
+  Descripción & Si / No  & Incluir la descripción \\ \hline
+  Semántica  & Si / No  & Incluir descripción de la variable lingüística\\ \hline
+  Nodos Hijos  & Si / No  & Incluir el listado de los nodos hijos\\ \hline
+  Función  & Si / No  & Incluir información sobre la función de razonamiento aproximado \\ \hline
+  Nodos Padre  & Si / No  & Incluir el listado de los nodos padre \\ \hline
+\multicolumn{3}{|c|}{\textbf{Variables Lingüísticas}} \\ \hline
+\textit{Propiedad} & \textit{Opciones} & \textit{Descripción} \\ \hline
+  Tabla de Semántica  & Si / No  & Incluir una tabla con la descripción de las etiquetas \\ \hline
+  Figura de Semántica & Si / No  & Incluir una figura con la forma de los conjuntos difusos \\ \hline
+  Valor por Defecto & Si / No  & Incluir información sobre el valor por defecto de la variable \\ \hline
+  Formato de Figuras HTML & PNG / JPEG / BMP  & Formato a emplear en las figuras cuando se generan reportes en HTML\\ \hline
+  Etiqueta en Figuras & Nombre / Número  & Cómo marcar cada etiqueta: por su nombre o por un número consecutivo\\ \hline
+  Soporte de Etiquetas & Si / No  & Incluir información sobre el soporte de cada número difuso\\ \hline
+  Núcleo de Etiquetas & Si / No  &  Incluir información sobre el núcleo de cada número difuso\\ \hline
+\multicolumn{3}{|c|}{\textbf{Caso}} \\ \hline
+\textit{Propiedad} & \textit{Opciones} & \textit{Descripción} \\ \hline
+  Descripción & Si / No  & Incluir la descripción \\ \hline
+  Propiedades & Si / No  & Incluir el listado de propiedades\\ \hline
+  Variables de Entrada & Si / No  & Mostrar el listado de variables de entrada\\ \hline
+  Variables Calculadas & Si / No  & Mostrar el listado de variables calculadas en la red \\ \hline
+\multicolumn{3}{|c|}{\textbf{Número}} \\ \hline
+\textit{Propiedad} & \textit{Opciones} & \textit{Descripción} \\ \hline
+  Valor Representativo & Si / No  & Incluir el valor representativo\\ \hline
+  Ambigüedad & Si / No  & Incluir la ambigüedad \\ \hline
+  Interpretación Corta & Si / No  & Incluir una interpretación lingüística corta \\ \hline
+  Interpretación Larga & Si / No  & Incluir una interpretación lingüística larga \\ \hline
+  Figura de Semántica & Si / No  & Incluir una figura con las etiquetas de la variable lingüística \\ \hline
+\multicolumn{3}{|c|}{\textbf{Resultados}} \\ \hline
+\textit{Propiedad} & \textit{Opciones} & \textit{Descripción} \\ \hline
+  Interpretaciones Cortas & Si / No  & Incluir tablas con las interpretaciones cortas \\ \hline
+  Interpretaciones Cortas Ordenadas & Si / No  & Incluir tablas con las interpretaciones cortas ordenadas de menor a mayor\\ \hline
+  Interpretaciones Largas & Si / No  & Incluir tablas con las interpretaciones largas y las respectivas consistencias\\ \hline
+  Sensibilidad al Optimismo & Si / No  & Incluir tablas con el cálculo de los valores representativos para diferentes niveles de optimismo\\ \hline
+\end{longtable}
+\caption{Opciones de configuración de los reportes}
+\label{tab:reporte}
+\end{table}
+
+\chapter{Importación y Exportación de Archivos}
+El programa puede intercambiar información con otros programas a través de la importación y exportación de archivos de texto. 
+
+El formato a emplear es el de una matriz en la que cada fila representa un caso y cada columna representa una variable.
+
+La primera línea del archivo contiene los nombres de las variables sparados por un caracter predefinido. Cada línea adicional del archivo contiene el nombre del caso y los valores de sus variables separados por el mismo caracter.
+
+El caracter de separación puede ser:
+
+\begin{enumerate}
+\item Tabulador
+\item ;
+\item \$
+\item \%
+\end{enumerate} 
+
+Un archivo de importación puede contener información en cualquiera de los siguientes formatos:
+\begin{enumerate}
+\item Una etiqueta válida (definida en la variable lingüística respectiva).
+\item Un número crisp.
+\item El valor representativo $V$ y la ambigüedad $A$ de un número difuso, separados por el caracter /. En este caso se interpretará que el número difuso corresponde a un triángulo simétrico centrado en $V$ y de soporte $\frac{2A}{3}$
+\end{enumerate} 
+
+\section{Exportar Archivos de texto}
+\label{dialogoexportar}
+Con el cuadro de diálogo que muestra la figura \ref{fig:dialogoexportar} se seleccionan las características del archivo de exportación.
+
+Los principales componentes de este cuadro de diálogo se explican a continuación:
+\begin{description}
+\item [Archivo:] Permite definir el nombre y la ubicación del archivo al que se exportará la información.
+\item[Opciones:] El usuario puede sele4ccionar los casos y las variables que desea exportar. Los botones con flechas permiten adicionar o retirar items seleccionados. Los botones de subir y bajar permiten controlar el orden de los items seleccionados.
+\item[Exortar todos los nodos:] Exporta todas las variables de todos los casos, sin tener en cuenta las opciones seleccionadas a que hace referencia el item anterior.
+\item[Exportar propiedades de los casos:] Exporta información adicional de cada caso.
+\item[Opciones:] Selección del formato en que se exportará la información. Las alternativas son:
+\begin{enumerate}
+\item Valor Representativo
+\item Ambigüedad
+\item Valor Representativo y Ambigüedad separados por el caracter /
+\item Interpretación corta del número difuso
+\item Interpretación larga del número difuso
+\end{enumerate} 
+\item[Separador:] Selección del caracter de separación de columnas.
+\end{description}
+
+\figura{dialogoexportar}{Di\'alogo para exportaci\'on de datos}
+
+\section{Importar Archivos de Texto}
+\label{dialogoimportar}
+Con el cuadro de diálogo que muestra la figura \ref{fig:dialogoimportar} se seleccionan la forma en que el programa interpretará la información contenida en el archivo de importación.
+
+Los principales componentes de este cuadro de diálogo se explican a continuación:
+\begin{description}
+\item [Archivo:] Permite definir el nombre y la ubicación del archivo desde el que se importará la información.
+\item[Opciones:] Al seleccionar una de estas alternativas se actualiza el listado de la derecha que contiene las opciones disponibles. El usuario debe seleccionar la que desee, y presionar el botón \textit{Aplicar}. Las alternativas se explican en la tabla \ref{tab:importar}
+\item[Importar:] Inicia el proceso de importación.
+\end{description}
+
+\figura{dialogoimportar}{Di\'alogo para importaci\'on de datos}
+
+\begin{table}
+\centering
+\begin{tabular}{|p{4cm}|p{6cm}|} \hline
+\textit{Opción } & \textit{Descripción} \\ \hline
+Comparación de cadenas & Determina si la comparación entre cadenas de caracteres se hace distinguiendo o no mayúsculas de minúsculas \\ \hline
+Caso Leido Inexistente & Si en el archivo aparece un caso no definido en el proyecto, ¿debe crearse el caso o ignorarse la línea del archivo?\\ \hline
+Caso Leido Existente &  Si en el archivo aparece un caso previamente definido en el proyecto, ¿debe borrarse la información previa, o sólo actualizarse?\\ \hline
+Nodos Calculados & Si en el archivo aparece información de un nodo que en el proyecto se calcula, ¿debe o no importarse la información?\\ \hline
+Interpretación & Debe crearse un número difuso o seleccionar la etiqueta más parecida a la información contenida en el archivo \\ \hline
+Variables Inexistentes & Si en el archivo aparece información de una variable no definida en el proyecto ¿debe crearse o ignorarse esa columna?\\ \hline
+Separador & Selección del caracter de sepación entre columnas \\ \hline
+\end{tabular}
+\caption{Opciones de importación}
+\label{tab:importar}
+\end{table}
+
+\chapter{La Interfaz Gráfica}
+El programa cuenta con una interfaz gráfica altamente configurable, y diseñada para tener acceso veloz a toda la información del proyecto en diferentes formas.
+
+\section{Vistas disponibles}
+\label{vistas}
+El siguiente es el listado de los tipos de vista disponible en el programa, a las que se accede a través de la opción \textbf{Ver} del Menú:
+
+\begin{description}
+\item [Ver Estrategia como Red:]
+Permite visualizar la estragetia seleccionada como una red de sistemas de computación con palabras. Al seleccionar un nodo puede editarse la red misma, las variables lingüísticas de los nodos, las funciones de cálculo y los valores por defecto.
+
+\item [Ver Caso como Red:]
+Permite visualizar la información del caso seleccionado, en relación a la estrategia seleccionada como una red de sistemas de computación con palabras. Cada nodo toma un color característico cuyo significado se muestra en la sección \ref{dialogocolores}. Al seleccionarse un nodo puede editarse la información relativa a ese nodo en el caso seleccionado. 
+
+Existen tres alternativas para presentar el valor de los nodos:
+\begin{description}
+\item[Palabras:] Muestra la etiqueta cuya consistencia con el número difuso del nodo es máxima.
+\item[Valor:] Muestra el valor representativo del número difuso del nodo.
+\item[Ambigüedad:] Muestra la ambigüedad del número difuso del nodo.
+\end{description} 
+
+\item [Ver Caso como Lista:]
+Permite visualizar la información del caso seleccionado, en relación a la estrategia seleccionada como una tabla de datos. Cada nodo toma un color característico cuyo significado se muestra en la sección \ref{dialogocolores}. Al seleccionarse un nodo puede editarse la información relativa a ese nodo en el caso seleccionado. 
+
+\item [Ver Variables del Caso Actual:]
+Permite visualizar los datos de entrada del caso seleccionado. Cada nodo toma un color característico cuyo significado se muestra en la sección \ref{dialogocolores}. Existen dos opciones
+\begin{description} 
+\item[En la estrategia Actual:] Despliega sólo los datos de entrada empleados en la estrategia actualmente seleccionada.
+\item[Todas:] Despliega todos los datos de entrada.
+\end{description} 
+
+\item [Matriz:]
+Permite visualizar la información de todos los casos y todos los nodos de todas las estrategias como una tabla de datos. Cada nodo puede tomar un color característico cuyo significado se muestra en la sección \ref{dialogocolores}, aunque por defecto no se habilta esta opción.
+
+Existen cuatro alternativas para presentar el valor de los nodos:
+\begin{description}
+\item[Valor:] Muestra el valor representativo del número difuso del nodo.
+\item[Ambigüedad:] Muestra la ambigüedad del número difuso del nodo.
+\item[Interpretación Corta:] Muestra la etiqueta cuya consistencia con el número difuso del nodo es máxima.
+\item[Interpretación Larga:] Utiliza la consistencia de todas las etiquetas con el número difuso del nodo, y construye una interpretación lingüística extensa.
+\end{description} 
+
+\end{description} 
+
+
+\section{Configuración de la Interfaz Gráfica}
+\label{dialogoconfigura}
+La interfaz gráfica es altamente configurable. El cuadro de diálogo que muestra la figura \ref{fig:dialogoconfiguracion} se emplea para seleccionar los parámetros que definen la presentación de la interfaz gráfica. Para acceder a él se debe ejecutar la secuencia de pasos:
+\begin{center}
+\textbf{Proyecto} $\to$ \textbf{Opciones de configuración}
+\end{center}
+
+El programa permite la configuración de los siguientes tipos de parámetros:
+\begin{description}
+\item[Colores:] Colores empleados para distinguir tipos de vista y tipos de datos.
+\item[Fuentes:] Tipos de fuente para la letra.
+\item[Dimensiones:] Geometría de la red y de las tablas.
+\item[Selecciones:] Opciones de configuración.
+\end{description} 
+
+\figura{dialogoconfiguracion}{Di\'alogo para configuraci\'on de la interfaz gr\'afica}
+
+\section{Significado de los colores}
+\label{dialogocolores}
+El cuadro de diálogo que muestra la figura \ref{fig:dialogoimportar} explica cuál es el significado de los colores que pueden tomar los nodos en la interfaz gráfica. Para activar esta opción el usuario puede ejecutar la secuencia de pasos siguiente, o emplear el ícono de la barra de herramientas:
+\begin{center}
+\textbf{Proyecto} $\to$ \textbf{Opciones de configuración} $\to$ \textbf{Selecciones} $\to$ \textbf{Mostrar Colores} $\to$ \textbf{Si} $\to$ \textbf{Aplicar} 
+\end{center}
+Se hace click con el botón izquierdo del ratón sobre la celda correspondiente.
+
+Los principales componentes del cuadro de diálogo de configuración se explican a continuación:
+\begin{description}
+\item [Opciones:] Muestra los listados de opciones de configuración.
+\item [Editar:] Permite editar la opción seleccionada.
+\item [Aplicar:] Aplica a la interfaz la opción seleccionada con su valor editado
+\item [Leer Predeterminado:] Aplica a la interfaz las opciones guardadas en el archivo de configuración predeterminada.
+\item [Escribir Predeterminado:] Guarda en el archivo de configuración predeterminada las opciones actuales.
+\item [Configuración por defecto:] Aplica a la interfaz las opciones por defecto.
+\end{description}
+
+\figura{dialogocolores}{Di\'alogo para mostrar el significado de los colores usados en la interfaz gr\'afica}
+
+\section{Edición de Generalidades}
+\label{dialogopropiedades}
+
+\figura{dialogopropiedades}{Di\'alogo para edici\'on de propiedades gen\'ericas}
+
+\chapter{Un ejemplo Ilustrativo}
+\label{ejemplo}
+%El siguiente ejemplo está consignado en el archivo \texttt{Ejemplo.fzn}.
+
+Supóngase que se desea evaluar dos alternativas de inversión (Alternativas A y B), teniendo en cuenta para ello dos variables principales:
+\begin{itemize}
+\item El rendimiento financiero.
+\item Sus implicaciones Sociales.
+\end{itemize} 
+
+El rendimiento financiero puede evaluarse en términos numéricos, empleando para ello, por ejemplo, el Valor Presente Neto (VPN) o la Tasa Interna de Retorno (TIR). Las implicaciones sociales generalmente sólo podrán estimarse de manera subjetiva, mediante palabras como ``Irrelevantes'' o ``Considerables''.
+
+Este es un ejemplo en el que se debe usar información numérica y lingüística simultáneamente para efectuar un cálculo. Con fines ilustrativos, proponemos dos formas de efectuar el cálculo de la valoración de alternativas:
+
+\begin{description}
+\item[Estrategia 1:] Empleamos el VPN y una evaluación de las implicaciones sociales para calcular una variable que llamaremos Evaluación 1.
+\item[Estrategia 2:] Empleamos la TIR y una evaluación de las implicaciones sociales para calcular una variable que llamaremos Evaluación 2.
+\end{description} 
+
+Para iniciar, editamos el proyecto (ver sección \ref{dialogoproyecto}), para incluir dos Estrategias y dos Casos que representen nuestro problema. El resultado se visualiza en la figura \ref{fig:ejemplo_proyecto}. 
+
+\figura{ejemplo_proyecto}{Proyecto del Ejemplo}
+
+\section{Estrategias 1 y 2}
+
+Ahora editamos cada estrategia, para incluir dos nodos hijos en el Nodo Principal (ver secciones \ref{dialogoestrategia} y \ref{dialogonodo}). Las figuras \ref{fig:ejemplo_nodo_1_inicial} y \ref{fig:ejemplo_nodo_2_inicial} muestran los cuadros de diálogo de Edición de Nodos de Cálculo despues de haber efectuado esta tarea.
+
+\figura{ejemplo_nodo_1_inicial}{Nodo Principal de la Estrategia 1}
+\figura{ejemplo_nodo_2_inicial}{Nodo Principal de la Estrategia 2}
+
+Las figuras \ref{fig:ejemplo_red_1} y \ref{fig:ejemplo_red_2} muestran cómo se visualizarían estas estrategias en fuzzynet. Los nodos en Azul son \textit{Nodos de Entrada} a las redes, es decir, representan información que se necesita para calcular otras cosas. Los nodos en Blanco son \textit{Nodos Calculados} es decir, representan información calculada con los Nodos de Entrada. 
+
+\figura{ejemplo_red_1}{Estrategia 1}
+\figura{ejemplo_red_2}{Estrategia 2}
+
+Los colores de los nodos son configurables asi como los tipos de letra y los tamaños de los nodos; por esta razón es posible que la visualización de las estrategias no sea \textit{exactamente igual} a lo que muestran las figuras \ref{fig:ejemplo_red_1} y \ref{fig:ejemplo_red_2}. Por ejemplo, si se modifica el \textit{Ancho de Caja}, la \textit{Altura de Caja} y los Tipos de Letra (Ver sección \ref{dialogoconfigura}), puede obtenerse una visualización más elegante, como la que se muestra en las figuras \ref{fig:ejemplo_red_elegante_1} y \ref{fig:ejemplo_red_elegante_1}.
+
+\figura{ejemplo_red_elegante_1}{Estrategia 1. Congiguración modificada}
+\figura{ejemplo_red_elegante_2}{Estrategia 2. Congiguración modificada}
+
+
+\section{Nodos de la Estrategia 1}
+La estrategia 1 tiene tres nodos (figura \ref{fig:ejemplo_red_1}):
+\begin{itemize}
+\item Evaluación 1
+\item VPN
+\item Implicaciones Sociales
+\end{itemize} 
+
+Para cada nodo es necesario definir una Variable Lingüística (Ver secciones \ref{variables} y \ref{dialogovariable}). Además, es necesario definir la función aritmética que se va a utilizar para calcular \textit{Evaluación 1} a partir de \textit{VPN} y de \textit{Implicaciones Sociales}. Estas tareas se explican a continuación. 
+
+\subsection{Edición de la Variable Lingüística \textit{Evaluación 1}} 
+
+Proponemos una variable lingüística definida con tres etiquetas, sobre el universo de discurso $[0,1]$:
+\begin{itemize}
+\item Mala
+\item Regular
+\item Buena
+\end{itemize} 
+
+La figura \ref{fig:ejemplo_variable_eval_1} muestra el cuadro de diálogo con la Variable Lingüística propuesta (Ver sección \ref{dialogovariable}). Para lograr este resultado, se ha empleado la opción \textit{Autodefinir} (sección \ref{dialogoautodefinirvariable}) para construir tres conjuntos difusos trapezoidales, y luego se ha editado cada uno de ellos para darle el Nombre adecuado (sección \ref{dialogonumeroeditar}). El valor por defecto que toma la Variable es \textit{Indefinido}. 
+
+\figura{ejemplo_variable_eval_1}{Variable Lingüística \textit{Evaluación 1}}
+
+\subsection{Edición de la Variable Lingüística \textit{VPN}} 
+
+Proponemos una variable lingüística definida con cinco etiquetas, sobre el universo de discurso $[0,100]$ en miles de Euros:
+\begin{itemize}
+\item Muy Bajo
+\item Bajo
+\item Medio
+\item Alto
+\item Muy Alto
+\end{itemize} 
+
+La figura \ref{fig:ejemplo_variable_vpn} muestra el cuadro de diálogo con la Variable Lingüística propuesta (Ver sección \ref{dialogovariable}). Para lograr este resultado, se han editado los valores Mínimo, Máximo y Unidades; luego se ha empleado la opción \textit{Autodefinir} (sección \ref{dialogoautodefinirvariable}) para construir tres conjuntos difusos trapezoidales, y luego se ha editado cada uno de ellos para darle el Nombre adecuado (sección \ref{dialogonumeroeditar}). El valor por defecto que toma la Variable es \textit{Indefinido}. 
+
+\figura{ejemplo_variable_vpn}{Variable Lingüística \textit{VPN}}
+
+\subsection{Edición de la Variable Lingüística \textit{Implicaciones Sociales}} 
+
+Proponemos una variable lingüística definida con cinco etiquetas, sobre el universo de discurso $[0,1]$:
+\begin{itemize}
+\item Irrelevantes 
+\item Bajas
+\item Tolerables
+\item Considerables
+\item Inaceptables
+\end{itemize} 
+
+La figura \ref{fig:ejemplo_variable_social} muestra el cuadro de diálogo con la Variable Lingüística propuesta (Ver sección \ref{dialogovariable}). Para lograr este resultado, se ha empleado la opción \textit{Autodefinir} (sección \ref{dialogoautodefinirvariable}) para construir tres conjuntos difusos trapezoidales, y luego se ha editado cada uno de ellos para darle el Nombre adecuado (sección \ref{dialogonumeroeditar}). El valor por defecto que toma la Variable es \textit{Indefinido}. 
+
+\figura{ejemplo_variable_social}{Variable Lingüística \textit{Implicaciones Sociales}}
+
+\subsection{La Función de Razonamiento Aproximado}
+Proponemos calcular la variable \textit{Evaluacion 1} mediante un promedio ponderado simple de las variables \textit{VPN} e \textit{Implicaciones Sociales}. Teniendo en cuenta que el rango de la variable $VPN$ es de $0$ a $100$, mientras que el rango de las otras dos es de $0$ a $1$, construimos la Función de Razonamiento Aproximado:
+\[
+Evaluaci\acute{o}n\;\;\mathit{1} =
+\frac{1}{2}\left(\frac{VPN}{100}\right) +
+\frac{1}{2}\left(Implicaciones\;\; Sociales\right)
+\]
+
+Para implementar esta función en Fuzzynet, editamos el Nodo de Cálculo correpondiente a \textit{Evaluación 1}. Este nodo ya tiene definidos los dos nodos hijos \textit{VPN} e\textit{Implicaciones Sociales}; Seleccionamos el tipo de función \textit{Combinación Lineal} y asignamos los siguientes parámetros:
+\begin{itemize}
+\item $a[0]=0$ (La combinación lineal no tiene offset)
+\item $VPN=0.005$ (El coeficiente correspondiente a $VPN$
+\item $Implicaciones\;\; Sociales=0.5$ (El coeficiente correspondiente a \textit{Implicaciones Sociales} 
+\end{itemize}  
+
+La figura \ref{fig:ejemplo_funcion_1} muestra el cuadro de diálogo resultante.
+
+\figura{ejemplo_funcion_1}{Nodo de Cálculo \textit{Evaluación 1} con la función de razonamiento aproximado definida}
+
+\section{Nodos de la Estrategia 2}
+La estrategia 2 tiene tres nodos (figura \ref{fig:ejemplo_red_1}):
+\begin{itemize}
+\item Evaluación 2
+\item TIR
+\item Implicaciones Sociales
+\end{itemize} 
+
+Para cada nodo es necesario definir una Variable Lingüística (Ver secciones \ref{variables} y \ref{dialogovariable}). Además, es necesario definir la función aritmética que se va a utilizar para calcular \textit{Evaluación 2} a partir de \textit{TIR} y de \textit{Implicaciones Sociales}. Estas tareas se explican a continuación. 
+
+\subsection{Edición de la Variable Lingüística \textit{Evaluación 2}} 
+
+Proponemos una variable lingüística definida con tres etiquetas, sobre el universo de discurso $[0,1]$:
+\begin{itemize}
+\item Mala
+\item Regular
+\item Buena
+\end{itemize} 
+
+La figura \ref{fig:ejemplo_variable_eval_2} muestra el cuadro de diálogo con la Variable Lingüística propuesta (Ver sección \ref{dialogovariable}). Para lograr este resultado, se ha empleado la opción \textit{Autodefinir} (sección \ref{dialogoautodefinirvariable}) para construir tres conjuntos difusos trapezoidales, y luego se ha editado cada uno de ellos para darle el Nombre adecuado (sección \ref{dialogonumeroeditar}). El valor por defecto que toma la Variable es \textit{Indefinido}. 
+
+\figura{ejemplo_variable_eval_2}{Variable Lingüística \textit{Evaluación 2}}
+
+\subsection{Edición de la Variable Lingüística \textit{TIR}} 
+
+Proponemos una variable lingüística definida con cinco etiquetas, sobre el universo de discurso $[0,10]$ en porcentaje:
+\begin{itemize}
+\item Muy Baja
+\item Baja
+\item Media
+\item Alta
+\item Muy Alta
+\end{itemize} 
+
+La figura \ref{fig:ejemplo_variable_tir} muestra el cuadro de diálogo con la Variable Lingüística propuesta (Ver sección \ref{dialogovariable}). Para lograr este resultado, se han editado los valores Mínimo, Máximo y Unidades; luego se ha empleado la opción \textit{Autodefinir} (sección \ref{dialogoautodefinirvariable}) para construir tres conjuntos difusos trapezoidales, y luego se ha editado cada uno de ellos para darle el Nombre adecuado (sección \ref{dialogonumeroeditar}). El valor por defecto que toma la Variable es \textit{Indefinido}. 
+
+\figura{ejemplo_variable_tir}{Variable Lingüística \textit{TIR}}
+
+\subsection{Edición de la Variable Lingüística \textit{Implicaciones Sociales}} 
+
+Proponemos una variable lingüística definida con cinco etiquetas, sobre el universo de discurso $[0,1]$:
+\begin{itemize}
+\item Irrelevantes 
+\item Bajas
+\item Tolerables
+\item Considerables
+\item Inaceptables
+\end{itemize} 
+
+La figura \ref{fig:ejemplo_variable_social_2} muestra el cuadro de diálogo con la Variable Lingüística propuesta (Ver sección \ref{dialogovariable}). Para lograr este resultado, se ha empleado la opción \textit{Autodefinir} (sección \ref{dialogoautodefinirvariable}) para construir tres conjuntos difusos trapezoidales, y luego se ha editado cada uno de ellos para darle el Nombre adecuado (sección \ref{dialogonumeroeditar}). El valor por defecto que toma la Variable es \textit{Indefinido}. 
+
+\figura{ejemplo_variable_social_2}{Variable Lingüística \textit{Implicaciones Sociales}}
+
+\subsection{La Función de Razonamiento Aproximado}
+Proponemos calcular la variable \textit{Evaluacion 1} mediante un promedio ponderado simple de las variables \textit{TIR} e \textit{Implicaciones Sociales}. Teniendo en cuenta que el rango de la variable $VPN$ es de $0$ a $10$, mientras que el rango de las otras dos es de $0$ a $1$, construimos la Función de Razonamiento Aproximado:
+\[
+Evaluaci\acute{o}n\;\;\mathit{1} =
+\frac{1}{2}\left(\frac{TIR}{10}\right) +
+\frac{1}{2}\left(Implicaciones\;\; Sociales\right)
+\]
+
+Para implementar esta función en Fuzzynet, editamos el Nodo de Cálculo correpondiente a \textit{Evaluación 1}. Este nodo ya tiene definidos los dos nodos hijos \textit{VPN} e\textit{Implicaciones Sociales}; Seleccionamos el tipo de función \textit{Combinación Lineal} y asignamos los siguientes parámetros:
+\begin{itemize}
+\item $a[0]=0$ (La combinación lineal no tiene offset)
+\item $TIR=0.05$ (El coeficiente correspondiente a $TIR$
+\item $Implicaciones\;\; Sociales=0.5$ (El coeficiente correspondiente a \textit{Implicaciones Sociales} 
+\end{itemize}  
+
+La figura \ref{fig:ejemplo_funcion_2} muestra el cuadro de diálogo resultante.
+
+\figura{ejemplo_funcion_2}{Nodo de Cálculo \textit{Evaluación 2} con la función de razonamiento aproximado definida}
+
+\section{Casos a Evaluar}
+
+El siguiente paso en nuestro ejemplo consiste en definir las dos alternativas de inversión que se van a evaluar. La tabla \ref{tab:casos} muestra los valores que toman las variables de entrada para las dos alternativas; en algunos casos son etiquetas, en otros son números crisp, y en otros son números difusos.
+
+\begin{table}
+\begin{tabular}{|l|c|c|c|} \hline
+Caso & \textbf{VPN} & \textbf{Implicaciones Sociales} & \textbf{TIR} \\ \hline \hline
+\textbf{Alternativa A} & Alto & Tolerables  & \textit{6} \\ \hline   
+\textbf{Alternativa B} & \textit{T(60,70,70,80)} & Tolerables & Media \\ \hline   
+\end{tabular}
+\caption{Valores de las Variables para las dos alternativas}
+\label{tab:casos}
+\end{table}
+
+Para introducir los datos de la tabla \ref{tab:casos} en el proyecto Fuzzynet, es necesario definir cada variable en cada caso, y luego asignarle el valor correspondiente.
+
+\subsection{Definición de cada variable en cada caso}
+
+Para definir cada variable en cada caso puede optarse al menos por las siguientes opciones:
+\begin{description}
+\item[Definir una a una cada variable:]
+Se puede adicionar una a una cada variable necesaria en cada Caso (ver sección \ref{dialogocaso}) con la opción de menú:
+\begin{center}
+\textbf{Proyecto} $\to$ \textbf{Caso}
+\end{center}
+
+\item[Definir varias variables simultáneamente:]
+Se puede seleccionar la estrategia cuyas variables de entrada se desean definir en cada Caso (ver sección \ref{dialogoseleccionarestrategia}) con la opción de menú:
+\begin{center}
+\textbf{Proyecto} $\to$ \textbf{Caso} $\to$ \textbf{Copiar} 
+\end{center}
+
+\item[Definir cada variable necesaria:]
+Desde el menú, selecciónese:
+\begin{center}
+\textbf{Proyecto} $\to$ \textbf{Opciones de Configuración} $\to$ \textbf{Selecciones} $\to$ \textbf{Matriz con colores} $\to$ \textbf{Si} $\to$ \textbf{Aplicar} 
+\end{center}
+
+A continuación selecciónese desde el menú:
+\begin{center}
+\textbf{Ver} $\to$ \textbf{Matriz} $\to$ \textbf{Valor} 
+\end{center}
+
+Debe visualizarse una matriz como la que muestra la figura \ref{fig:ejemplo_matriz_vacia}. El color fucsia que muestran algunas celdas corresponden a nodos cuyas variables no han sido definidas. Al hacer click con el botón izquierdo del ratón sobre cada una de esas celdas, se despliega un cuadro de diálogo que pregunta si se desea adicionar la variable. Debe responderse afirmativamente.
+
+\end{description} 
+
+\figura{ejemplo_matriz_vacia}{Matriz del ejemplo sin variables}
+
+\subsection{Definición del valor de cada Variable}
+Para definir el Valor que se le asigna a cada variable en cad Caso, debe accederse al cuadro de diálogo de Edición de Variables Lingüísticas (ver seccion \ref{dialogovariable}). Esto se logra por cualquiera de las siguientes vías:
+\begin{itemize}
+\item Mediante la opción de menú:
+\begin{center}
+\textbf{Proyecto} $\to$ \textbf{Caso}
+\end{center}
+Se selecciona la variable correspondiente, y se escoge la opción \textit{Editar} 
+
+\item Mediante cualquiera de las opciones de menú:
+\begin{center}
+\textbf{Ver} $\to$ \textbf{Caso actual como red}
+\end{center}
+Se hace click con el botón izquierdo del ratón sobre el nodo correspondiente.
+
+\item Mediante la opción de menú:
+\begin{center}
+\textbf{Ver} $\to$ \textbf{Caso actual lista}
+\end{center}
+Se hace click con el botón izquierdo del ratón sobre el renglón correspondiente.
+
+\item Mediante cualquiera de las opciones de menú:
+\begin{center}
+\textbf{Ver} $\to$ \textbf{Variables del Caso actual}
+\end{center}
+Se hace click con el botón izquierdo del ratón sobre el renglón correspondiente.
+
+\item Mediante cualquiera de las opciones de menú:
+\begin{center}
+\textbf{Ver} $\to$ \textbf{Matriz}
+\end{center}
+Se hace click con el botón izquierdo del ratón sobre la celda correspondiente.
+\end{itemize} 
+
+Con cualquiera de las opciones anteriores debe desplegarse un cuadro de diálogo semejante al que muestra la figura \ref{fig:ejemplo_valores}. El tipo de valor asignado se escoge de un listado que provee las siguientes posibilidades:
+\begin{itemize}
+\item Definir el Valor como Indefinido
+\item Definir el Valor como número Crisp
+\item Definir el Valor como un Intervalo
+\item Definir el Valor como un Número Difuso
+\item Definir el Valor como una Etiqueta Lingüística
+\end{itemize} 
+
+El Valor correpondiente se asigna con la opción \textit{Editar}. El Valor asignado puede visualizarse en color negro activando la opción \textit{Ver Valor}. 
+
+\figura{ejemplo_valores}{Edición de Variables Lingüísticas}
+
+\section{Análisis de Resultados}
+Desde el menú, selecciónese:
+\begin{center}
+\textbf{Proyecto} $\to$ \textbf{Opciones de Configuración} $\to$ \textbf{Selecciones} $\to$ \textbf{Matriz con colores} $\to$ \textbf{Si} $\to$ \textbf{Aplicar} 
+\end{center}
+
+A continuación selecciónese desde el menú:
+\begin{center}
+\textbf{Ver} $\to$ \textbf{Matriz} $\to$ \textbf{Valor} 
+\end{center}
+
+Debe visualizarse una matriz como la que muestra la figura \ref{fig:ejemplo_matriz_valor}. Los diferentes colores determinan si los Valores de Entrada son Números Crisp, Intervalos, Números Difusos, Etiquetas, o si por el contrario son Valores calculados por el programa (ver secciones \ref{vistas} y \ref{dialogoconfigura}).
+
+Las columnas \textit{Evaluación 1} y \textit{Evaluación 2} contienen la valoración de las dos alternativas siguiendo las dos estrategias definidas en el proyecto. En ambas estrategias la valoración de la Alternativa A es mayor que la de la Alternativa B. Según esto, nuestra selección debería ser la alternativa A. 
+
+Sin embargo, si modificamos nuestro nivel de optimismo por debajo del $32\%$ (Opción \textit{Opt} en la Barra de Herramientas), el orden de las Alternativas se invierte en la estrategia 1. Por lo tanto, una evaluación ``pesimista'' con la estrategia 1 sugiere seleccionar la alternativa B. 
+
+Este es un ejemplo en el que la subjetividad del decisor (modelada por el nivel de optimismo) incide directamente en la selección de la mejor alternativa.
+
+\figura{ejemplo_matriz_valor}{Matriz del ejemplo con valores}
+
+\end{document}
+

@@ -1,0 +1,549 @@
+This is pdfTeX, Version 3.14159-1.10b (Web2C 7.4.5) (format=pdflatex 2004.8.9)  1 MAY 2005 06:29
+**fzn.tex
+(./fzn.tex{/var/lib/texmf/pdftex/config/pdftex.cfg}
+LaTeX2e <2001/06/01>
+Babel <v3.7h> and hyphenation patterns for american, french, german, ngerman, s
+panish, nohyphenation, loaded.
+(/usr/share/texmf/tex/latex/base/book.cls
+Document Class: book 2001/04/21 v1.4e Standard LaTeX document class
+(/usr/share/texmf/tex/latex/base/bk12.clo
+File: bk12.clo 2001/04/21 v1.4e Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@chapter=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/share/texmf/tex/generic/babel/babel.sty
+Package: babel 2001/03/01 v3.7h The Babel package
+
+(/usr/share/texmf/tex/generic/babel/spanish.ldf
+Language: spanish.ldf 2001/01/30 v4.1c Spanish support from the babel system
+
+(/usr/share/texmf/tex/generic/babel/babel.def
+File: babel.def 2001/03/01 v3.7h Babel common definitions
+\babel@savecnt=\count88
+\U@D=\dimen103
+)
+\es@quottoks=\toks14
+\es@quotdepth=\count89
+Package babel Info: Making . an active character on input line 464.
+Package babel Info: Making " an active character on input line 495.
+Package babel Info: Making < an active character on input line 581.
+Package babel Info: Making > an active character on input line 582.
+))
+(/usr/share/texmf/tex/latex/base/inputenc.sty
+Package: inputenc 2001/07/10 v0.99a Input encoding file 
+
+(/usr/share/texmf/tex/latex/base/latin1.def
+File: latin1.def 2001/07/10 v0.99a Input encoding file 
+))
+(/usr/share/texmf/tex/latex/tools/longtable.sty
+Package: longtable 2000/10/22 v4.10 Multi-page Table package (DPC)
+\LTleft=\skip43
+\LTright=\skip44
+\LTpre=\skip45
+\LTpost=\skip46
+\LTchunksize=\count90
+\LTcapwidth=\dimen104
+\LT@head=\box26
+\LT@firsthead=\box27
+\LT@foot=\box28
+\LT@lastfoot=\box29
+\LT@cols=\count91
+\LT@rows=\count92
+\c@LT@tables=\count93
+\c@LT@chunks=\count94
+\LT@p@ftn=\toks15
+)
+(/usr/share/texmf/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2000/07/18 v2.13 AMS math features
+\@mathmargin=\skip47
+
+For additional information on amsmath, use the `?' option.
+(/usr/share/texmf/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01
+
+(/usr/share/texmf/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks16
+\ex@=\dimen105
+))
+(/usr/share/texmf/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen106
+)
+(/usr/share/texmf/tex/latex/amsmath/amsopn.sty
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count95
+LaTeX Info: Redefining \frac on input line 211.
+\uproot@=\count96
+\leftroot@=\count97
+LaTeX Info: Redefining \overline on input line 307.
+\classnum@=\count98
+\DOTSCASE@=\count99
+LaTeX Info: Redefining \ldots on input line 379.
+LaTeX Info: Redefining \dots on input line 382.
+LaTeX Info: Redefining \cdots on input line 467.
+\Mathstrutbox@=\box30
+\strutbox@=\box31
+\big@size=\dimen107
+LaTeX Font Info:    Redeclaring font encoding OML on input line 567.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
+\macc@depth=\count100
+\c@MaxMatrixCols=\count101
+\dotsspace@=\muskip10
+\c@parentequation=\count102
+\dspbrk@lvl=\count103
+\tag@help=\toks17
+\row@=\count104
+\column@=\count105
+\maxfields@=\count106
+\andhelp@=\toks18
+\eqnshift@=\dimen108
+\alignsep@=\dimen109
+\tagshift@=\dimen110
+\tagwidth@=\dimen111
+\totwidth@=\dimen112
+\lineht@=\dimen113
+\@envbody=\toks19
+\multlinegap=\skip48
+\multlinetaggap=\skip49
+\mathdisplay@stack=\toks20
+LaTeX Info: Redefining \[ on input line 2666.
+LaTeX Info: Redefining \] on input line 2667.
+)
+(/usr/share/texmf/tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texmf/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks21
+)
+(/usr/share/texmf/tex/latex/graphics/graphics.sty
+Package: graphics 2001/07/07 v1.0n Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texmf/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/usr/share/texmf/tex/latex/config/graphics.cfg
+File: graphics.cfg 2001/08/31 v1.1 graphics configuration of teTeX/TeXLive
+)
+Package graphics Info: Driver file: pdftex.def on input line 80.
+
+(/usr/share/texmf/tex/latex/graphics/pdftex.def
+File: pdftex.def 2002/06/19 v0.03k graphics/color for pdftex
+\Gread@gobject=\count107
+))
+\Gin@req@height=\dimen114
+\Gin@req@width=\dimen115
+)
+(/usr/share/texmf/tex/latex/html/html.sty
+(/usr/share/texmf/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2003/01/22 v6.73n Hypertext links for LaTeX
+\@linkdim=\dimen116
+\Hy@linkcounter=\count108
+\Hy@pagecounter=\count109
+
+(/usr/share/texmf/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2003/01/22 v6.73n Hyperref: PDFDocEncoding definition (HO)
+)
+(/usr/share/texmf/tex/latex/config/hyperref.cfg
+File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive and teTeX
+)
+Package hyperref Info: Hyper figures OFF on input line 1792.
+Package hyperref Info: Link nesting OFF on input line 1797.
+Package hyperref Info: Hyper index ON on input line 1800.
+Package hyperref Info: Plain pages ON on input line 1805.
+Package hyperref Info: Backreferencing OFF on input line 1812.
+
+Implicit mode ON; LaTeX internals redefined
+Package hyperref Info: Bookmarks ON on input line 1916.
+(/usr/share/texmf/tex/latex/html/url.sty
+Package: url 1999/03/02  ver 1.4  Verb mode for urls, email addresses, and file
+ names
+)
+LaTeX Info: Redefining \url on input line 2055.
+\Fld@menulength=\count110
+\Field@Width=\dimen117
+\Fld@charsize=\dimen118
+\Choice@toks=\toks22
+\Field@toks=\toks23
+Package hyperref Info: Hyper figures OFF on input line 2513.
+Package hyperref Info: Link nesting OFF on input line 2518.
+Package hyperref Info: Hyper index ON on input line 2521.
+Package hyperref Info: backreferencing OFF on input line 2528.
+Package hyperref Info: Link coloring OFF on input line 2533.
+\c@Item=\count111
+\c@Hfootnote=\count112
+)
+*hyperref using default driver hpdftex*
+(/usr/share/texmf/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2003/01/22 v6.73n Hyperref driver for pdfTeX
+
+(/usr/share/texmf/tex/latex/psnfss/pifont.sty
+Package: pifont 2002/09/08 PSNFSS-v9.0a Pi font support (SPQR) 
+LaTeX Font Info:    Try loading font information for U+pzd on input line 62.
+
+(/usr/share/texmf/tex/latex/psnfss/upzd.fd
+File: upzd.fd 2001/06/04 font definitions for U/pzd.
+)
+LaTeX Font Info:    Try loading font information for U+psy on input line 63.
+
+(/usr/share/texmf/tex/latex/psnfss/upsy.fd
+File: upsy.fd 2001/06/04 font definitions for U/psy.
+))
+\Fld@listcount=\count113
+\@outlinefile=\write3
+)
+Package: html 1999/07/19 v1.38 hypertext commands for latex2html (nd, hws, rrm)
+
+\c@lpart=\count114
+\c@lchapter=\count115
+\c@lsection=\count116
+\c@lsubsection=\count117
+\c@lsubsubsection=\count118
+\c@lparagraph=\count119
+\c@lsubparagraph=\count120
+\c@lsubsubparagraph=\count121
+\ptrfile=\write4
+) (./fzn.aux)
+\openout1 = `fzn.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+Package hyperref Info: Link coloring OFF on input line 26.
+
+(/usr/share/texmf/tex/latex/hyperref/nameref.sty
+Package: nameref 2001/01/27 v2.19 Cross-referencing by name of section
+\c@section@level=\count122
+)
+LaTeX Info: Redefining \ref on input line 26.
+LaTeX Info: Redefining \pageref on input line 26.
+ (./fzn.out) (./fzn.out)
+\openout3 = `fzn.out'.
+
+
+Cap\'{\i }tulo 1.
+[1
+
+
+{/var/lib/texmf/dvips/config/pdftex.map}] [2
+
+]
+Cap\'{\i }tulo 2.
+[3] <fig/jpg/dialogoproyecto.jpg, id=234, 221.628pt x 324.20187pt>
+File: fig/jpg/dialogoproyecto.jpg Graphic file (type jpg)
+
+<use fig/jpg/dialogoproyecto.jpg> [4] [5 <./fig/jpg/dialogoproyecto.jpg>]
+[6
+
+]
+Cap\'{\i }tulo 3.
+[7] <fig/jpg/dialogoestrategia.jpg, id=262, 223.00458pt x 193.17027pt>
+File: fig/jpg/dialogoestrategia.jpg Graphic file (type jpg)
+
+<use fig/jpg/dialogoestrategia.jpg> [8 <./fig/jpg/dialogoestrategia.jpg>]
+Cap\'{\i }tulo 4.
+<fig/jpg/dialogocaso.jpg, id=269, 228.51086pt x 253.95813pt>
+File: fig/jpg/dialogocaso.jpg Graphic file (type jpg)
+
+<use fig/jpg/dialogocaso.jpg> [9
+
+] [10 <./fig/jpg/dialogocaso.jpg>]
+<fig/jpg/dialogoseleccionarestrategia.jpg, id=285, 194.78485pt x 179.66187pt>
+File: fig/jpg/dialogoseleccionarestrategia.jpg Graphic file (type jpg)
+
+<use fig/jpg/dialogoseleccionarestrategia.jpg> [11 <./fig/jpg/dialogoselecciona
+restrategia.jpg>]
+<fig/jpg/dialogoordenarcasos.jpg, id=292, 242.27657pt x 207.35411pt>
+File: fig/jpg/dialogoordenarcasos.jpg Graphic file (type jpg)
+
+<use fig/jpg/dialogoordenarcasos.jpg> [12 <./fig/jpg/dialogoordenarcasos.jpg>]
+Cap\'{\i }tulo 5.
+[13
+
+] <fig/jpg/dialogonodo.jpg, id=305, 390.94629pt x 291.78168pt>
+File: fig/jpg/dialogonodo.jpg Graphic file (type jpg)
+
+<use fig/jpg/dialogonodo.jpg>
+Underfull \hbox (badness 2875) in paragraph at lines 224--224
+[]|/cmr6/Combinaci^^Son Li-
+ []
+
+
+Underfull \hbox (badness 2875) in paragraph at lines 253--253
+[]|/cmr6/Combinaci^^Son Li-
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 311
+ []
+
+[14] [15] [16 <./fig/jpg/dialogonodo.jpg>]
+Cap\'{\i }tulo 6.
+[17
+
+] <fig/jpg/dialogovariable.jpg, id=352, 311.79343pt x 264.76486pt>
+File: fig/jpg/dialogovariable.jpg Graphic file (type jpg)
+
+<use fig/jpg/dialogovariable.jpg>
+<fig/jpg/dialogointervalo.jpg, id=353, 194.78485pt x 83.75215pt>
+File: fig/jpg/dialogointervalo.jpg Graphic file (type jpg)
+
+<use fig/jpg/dialogointervalo.jpg> [18] [19 <./fig/jpg/dialogovariable.jpg> <./
+fig/jpg/dialogointervalo.jpg>]
+Overfull \hbox (6.07378pt too wide) in paragraph at lines 365--366
+[]/cmr12/Mediante es-ta op-ci^^Son se pue-de mo-di-fi-car el n^^Sume-
+ []
+
+<fig/jpg/dialogonumeroeditar.jpg, id=373, 311.79343pt x 208.02953pt>
+File: fig/jpg/dialogonumeroeditar.jpg Graphic file (type jpg)
+
+<use fig/jpg/dialogonumeroeditar.jpg>
+<fig/jpg/dialogocopiarnumero.jpg, id=374, 443.256pt x 192.49486pt>
+File: fig/jpg/dialogocopiarnumero.jpg Graphic file (type jpg)
+
+<use fig/jpg/dialogocopiarnumero.jpg> [20] [21 <./fig/jpg/dialogonumeroeditar.j
+pg> <./fig/jpg/dialogocopiarnumero.jpg>]
+<fig/jpg/dialogomodificador.jpg, id=386, 195.47314pt x 115.49692pt>
+File: fig/jpg/dialogomodificador.jpg Graphic file (type jpg)
+
+<use fig/jpg/dialogomodificador.jpg>
+<fig/jpg/dialogoautodefinirvariable.jpg, id=387, 234.70543pt x 78.34879pt>
+File: fig/jpg/dialogoautodefinirvariable.jpg Graphic file (type jpg)
+
+<use fig/jpg/dialogoautodefinirvariable.jpg> [22 <./fig/jpg/dialogomodificador.
+jpg>]
+Overfull \hbox (1.40678pt too wide) in paragraph at lines 412--413
+[]/cmr12/En es-tos cam-pos se mues-tran los va-lo-res m^^S^^Pni-mo y m^^Saxi-
+ []
+
+<fig/jpg/dialogonumeromostrar.jpg, id=397, 258.79543pt x 178.31104pt>
+File: fig/jpg/dialogonumeromostrar.jpg Graphic file (type jpg)
+
+<use fig/jpg/dialogonumeromostrar.jpg> [23 <./fig/jpg/dialogoautodefinirvariabl
+e.jpg>] [24 <./fig/jpg/dialogonumeromostrar.jpg>]
+Cap\'{\i }tulo 7.
+[25
+
+] <fig/jpg/dialogolibreria.jpg, id=418, 338.63657pt x 237.74803pt>
+File: fig/jpg/dialogolibreria.jpg Graphic file (type jpg)
+
+<use fig/jpg/dialogolibreria.jpg> [26 <./fig/jpg/dialogolibreria.jpg>]
+Cap\'{\i }tulo 8.
+[27
+
+] <fig/jpg/dialogoreporte.jpg, id=436, 320.74115pt x 355.27121pt>
+File: fig/jpg/dialogoreporte.jpg Graphic file (type jpg)
+
+<use fig/jpg/dialogoreporte.jpg>
+Underfull \vbox (badness 10000) detected at line 506
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 534--534
+[]|/cmr6/Interpretaciones Cor-tas
+ []
+
+[28 <./fig/jpg/dialogoreporte.jpg>] [29] [30
+
+]
+Cap\'{\i }tulo 9.
+[31]
+Overfull \hbox (5.96614pt too wide) in paragraph at lines 574--575
+[]/cmr12/Exporta in-for-ma-ci^^Son adi-cio-nal de ca-
+ []
+
+<fig/jpg/dialogoexportar.jpg, id=466, 391.63457pt x 347.84158pt>
+File: fig/jpg/dialogoexportar.jpg Graphic file (type jpg)
+
+<use fig/jpg/dialogoexportar.jpg> [32] [33 <./fig/jpg/dialogoexportar.jpg>]
+<fig/jpg/dialogoimportar.jpg, id=486, 321.42943pt x 237.07262pt>
+File: fig/jpg/dialogoimportar.jpg Graphic file (type jpg)
+
+<use fig/jpg/dialogoimportar.jpg> [34 <./fig/jpg/dialogoimportar.jpg>] [35]
+[36
+
+]
+Cap\'{\i }tulo 10.
+[37] [38]
+<fig/jpg/dialogoconfiguracion.jpg, id=523, 260.86029pt x 297.86047pt>
+File: fig/jpg/dialogoconfiguracion.jpg Graphic file (type jpg)
+
+<use fig/jpg/dialogoconfiguracion.jpg> [39 <./fig/jpg/dialogoconfiguracion.jpg>
+] <fig/jpg/dialogocolores.jpg, id=529, 183.7723pt x 168.85513pt>
+File: fig/jpg/dialogocolores.jpg Graphic file (type jpg)
+
+<use fig/jpg/dialogocolores.jpg>
+<fig/jpg/dialogopropiedades.jpg, id=530, 214.74515pt x 247.87935pt>
+File: fig/jpg/dialogopropiedades.jpg Graphic file (type jpg)
+
+<use fig/jpg/dialogopropiedades.jpg> [40 <./fig/jpg/dialogocolores.jpg>]
+[41 <./fig/jpg/dialogopropiedades.jpg>] [42
+
+]
+Cap\'{\i }tulo 11.
+<fig/jpg/ejemplo_proyecto.jpg, id=545, 325.215pt x 483.8075pt>
+File: fig/jpg/ejemplo_proyecto.jpg Graphic file (type jpg)
+
+<use fig/jpg/ejemplo_proyecto.jpg> [43] [44 <./fig/jpg/ejemplo_proyecto.jpg>]
+<fig/jpg/ejemplo_nodo_1_inicial.jpg, id=558, 570.13pt x 433.62pt>
+File: fig/jpg/ejemplo_nodo_1_inicial.jpg Graphic file (type jpg)
+
+<use fig/jpg/ejemplo_nodo_1_inicial.jpg>
+Overfull \hbox (37.59645pt too wide) in paragraph at lines 731--731
+ [][] 
+ []
+
+<fig/jpg/ejemplo_nodo_2_inicial.jpg, id=559, 570.13pt x 433.62pt>
+File: fig/jpg/ejemplo_nodo_2_inicial.jpg Graphic file (type jpg)
+
+<use fig/jpg/ejemplo_nodo_2_inicial.jpg>
+Overfull \hbox (37.59645pt too wide) in paragraph at lines 732--732
+ [][] 
+ []
+
+<fig/jpg/ejemplo_red_1.jpg, id=560, 272.01625pt x 293.095pt>
+File: fig/jpg/ejemplo_red_1.jpg Graphic file (type jpg)
+
+<use fig/jpg/ejemplo_red_1.jpg>
+<fig/jpg/ejemplo_red_2.jpg, id=561, 272.01625pt x 293.095pt>
+File: fig/jpg/ejemplo_red_2.jpg Graphic file (type jpg)
+
+<use fig/jpg/ejemplo_red_2.jpg> [45 <./fig/jpg/ejemplo_nodo_1_inicial.jpg>]
+[46 <./fig/jpg/ejemplo_nodo_2_inicial.jpg>] [47 <./fig/jpg/ejemplo_red_1.jpg> <
+./fig/jpg/ejemplo_red_2.jpg>]
+<fig/jpg/ejemplo_red_elegante_1.jpg, id=584, 695.59875pt x 327.2225pt>
+File: fig/jpg/ejemplo_red_elegante_1.jpg Graphic file (type jpg)
+
+<use fig/jpg/ejemplo_red_elegante_1.jpg>
+Overfull \hbox (131.69778pt too wide) in paragraph at lines 741--741
+ [][] 
+ []
+
+<fig/jpg/ejemplo_red_elegante_2.jpg, id=585, 695.59875pt x 327.2225pt>
+File: fig/jpg/ejemplo_red_elegante_2.jpg Graphic file (type jpg)
+
+<use fig/jpg/ejemplo_red_elegante_2.jpg>
+Overfull \hbox (131.69778pt too wide) in paragraph at lines 742--742
+ [][] 
+ []
+
+[48 <./fig/jpg/ejemplo_red_elegante_1.jpg>] [49 <./fig/jpg/ejemplo_red_elegante
+_2.jpg>]
+<fig/jpg/ejemplo_variable_eval_1.jpg, id=603, 455.7025pt x 395.4775pt>
+File: fig/jpg/ejemplo_variable_eval_1.jpg Graphic file (type jpg)
+
+<use fig/jpg/ejemplo_variable_eval_1.jpg> [50] [51 <./fig/jpg/ejemplo_variable_
+eval_1.jpg>]
+<fig/jpg/ejemplo_variable_vpn.jpg, id=622, 455.7025pt x 395.4775pt>
+File: fig/jpg/ejemplo_variable_vpn.jpg Graphic file (type jpg)
+
+<use fig/jpg/ejemplo_variable_vpn.jpg> [52 <./fig/jpg/ejemplo_variable_vpn.jpg>
+] <fig/jpg/ejemplo_variable_social.jpg, id=632, 455.7025pt x 395.4775pt>
+File: fig/jpg/ejemplo_variable_social.jpg Graphic file (type jpg)
+
+<use fig/jpg/ejemplo_variable_social.jpg> [53 <./fig/jpg/ejemplo_variable_socia
+l.jpg>] <fig/jpg/ejemplo_funcion_1.jpg, id=642, 570.13pt x 433.62pt>
+File: fig/jpg/ejemplo_funcion_1.jpg Graphic file (type jpg)
+
+<use fig/jpg/ejemplo_funcion_1.jpg>
+Overfull \hbox (37.59645pt too wide) in paragraph at lines 815--815
+ [][] 
+ []
+
+[54] [55 <./fig/jpg/ejemplo_funcion_1.jpg>]
+<fig/jpg/ejemplo_variable_eval_2.jpg, id=660, 455.7025pt x 395.4775pt>
+File: fig/jpg/ejemplo_variable_eval_2.jpg Graphic file (type jpg)
+
+<use fig/jpg/ejemplo_variable_eval_2.jpg>
+<fig/jpg/ejemplo_variable_tir.jpg, id=661, 455.7025pt x 395.4775pt>
+File: fig/jpg/ejemplo_variable_tir.jpg Graphic file (type jpg)
+
+<use fig/jpg/ejemplo_variable_tir.jpg> [56] [57 <./fig/jpg/ejemplo_variable_eva
+l_2.jpg>] [58 <./fig/jpg/ejemplo_variable_tir.jpg>]
+<fig/jpg/ejemplo_variable_social_2.jpg, id=684, 455.7025pt x 395.4775pt>
+File: fig/jpg/ejemplo_variable_social_2.jpg Graphic file (type jpg)
+
+<use fig/jpg/ejemplo_variable_social_2.jpg> [59] [60 <./fig/jpg/ejemplo_variabl
+e_social_2.jpg>] <fig/jpg/ejemplo_funcion_2.jpg, id=698, 570.13pt x 433.62pt>
+File: fig/jpg/ejemplo_funcion_2.jpg Graphic file (type jpg)
+
+<use fig/jpg/ejemplo_funcion_2.jpg>
+Overfull \hbox (37.59645pt too wide) in paragraph at lines 887--887
+ [][] 
+ []
+
+[61 <./fig/jpg/ejemplo_funcion_2.jpg>]
+<fig/jpg/ejemplo_matriz_vacia.jpg, id=708, 629.35126pt x 436.63126pt>
+File: fig/jpg/ejemplo_matriz_vacia.jpg Graphic file (type jpg)
+
+<use fig/jpg/ejemplo_matriz_vacia.jpg>
+Overfull \hbox (82.01228pt too wide) in paragraph at lines 936--936
+ [][] 
+ []
+
+[62] [63 <./fig/jpg/ejemplo_matriz_vacia.jpg>] [64]
+<fig/jpg/ejemplo_valores.jpg, id=727, 455.7025pt x 395.4775pt>
+File: fig/jpg/ejemplo_valores.jpg Graphic file (type jpg)
+
+<use fig/jpg/ejemplo_valores.jpg> [65 <./fig/jpg/ejemplo_valores.jpg>]
+<fig/jpg/ejemplo_matriz_valor.jpg, id=734, 651.43375pt x 436.63126pt>
+File: fig/jpg/ejemplo_matriz_valor.jpg Graphic file (type jpg)
+
+<use fig/jpg/ejemplo_matriz_valor.jpg>
+Overfull \hbox (98.5741pt too wide) in paragraph at lines 1004--1004
+ [][] 
+ []
+
+[66] [67 <./fig/jpg/ejemplo_matriz_valor.jpg>] (./fzn.aux) ) 
+Here is how much of TeX's memory you used:
+ 4141 strings out of 95433
+ 56011 string characters out of 1190141
+ 130037 words of memory out of 1000001
+ 6891 multiletter control sequences out of 10000+50000
+ 12162 words of font info for 42 fonts, out of 500000 for 1000
+ 14 hyphenation exceptions out of 1000
+ 34i,10n,36p,614b,472s stack positions out of 1500i,500n,5000p,200000b,5000s
+ 747 PDF objects out of 300000
+ 180 named destinations out of 131072
+ 542 words of extra memory for PDF output out of 65536
+</usr/share/texmf/f
+onts/type1/bluesky/cm/cmex10.pfb>{/usr/share/texmf/dvips/tetex/74afc74c.enc}</u
+sr/share/texmf/fonts/type1/bluesky/cm/cmbxti10.pfb>{/usr/share/texmf/dvips/tete
+x/aae443f0.enc}</usr/share/texmf/fonts/type1/bluesky/cm/cmmi8.pfb></usr/share/t
+exmf/fonts/type1/bluesky/cm/cmti7.pfb>{/usr/share/texmf/dvips/tetex/f7b6d320.en
+c}</usr/share/texmf/fonts/type1/bluesky/cm/cmr8.pfb></usr/share/texmf/fonts/typ
+e1/public/tt2001/fmex7.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmmi5.pfb>{
+/usr/share/texmf/dvips/tetex/bbad153f.enc}</usr/share/texmf/fonts/type1/bluesky
+/cm/cmsy6.pfb>{/usr/share/texmf/dvips/tetex/0ef0afca.enc}</usr/share/texmf/font
+s/type1/bluesky/cm/cmr5.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmr6.pfb><
+/usr/share/texmf/fonts/type1/bluesky/cm/cmmi6.pfb></usr/share/texmf/fonts/type1
+/bluesky/cm/cmbx6.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmmi12.pfb></usr
+/share/texmf/fonts/type1/bluesky/cm/cmsy10.pfb></usr/share/texmf/fonts/type1/bl
+uesky/cm/cmsl12.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmti12.pfb></usr/s
+hare/texmf/fonts/type1/bluesky/cm/cmr12.pfb></usr/share/texmf/fonts/type1/blues
+ky/cm/cmbx12.pfb>
+Output written on fzn.pdf (67 pages, 1247611 bytes).

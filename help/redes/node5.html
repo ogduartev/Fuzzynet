@@ -1,0 +1,173 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.70)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Valor Representativo de un Número Difuso. Ordenamiento</TITLE>
+<META NAME="description" CONTENT="Valor Representativo de un Número Difuso. Ordenamiento">
+<META NAME="keywords" CONTENT="redes">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="redes.css">
+
+</HEAD>
+
+<BODY >
+
+<H1><A NAME="SECTION00300000000000000000"></A>
+<A NAME="sec:valor"></A>
+<BR>
+Valor Representativo de un N&#250;mero Difuso. Ordenamiento
+</H1>
+
+<P>
+Una de las estrategias de ordenamiento de n&#250;meros difusos consiste en caracterizar cada n&#250;mero difuso por un <I>valor representativo</I> o &#237;ndice, y emplear el ordenamiento natural de los reales. 
+
+<P>
+De la m&#250;ltiples propuestas que existen para calcular ese valor representativo, presentamos aqui una ligera variaci&#243;n sobre la propuesta de Delgado y Vila.
+
+<P>
+Sea <IMG
+ WIDTH="22" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img36.gif"
+ ALT="$ N$"> un n&#250;mero difuso, y <!-- MATH
+ $N_\alpha=[L_\alpha, R_\alpha]$
+ -->
+<IMG
+ WIDTH="119" HEIGHT="37" ALIGN="CENTER" BORDER="0"
+ SRC="img37.gif"
+ ALT="$ N_\alpha=[L_\alpha, R_\alpha]$"> un <IMG
+ WIDTH="32" HEIGHT="33" ALIGN="CENTER" BORDER="0"
+ SRC="img38.gif"
+ ALT="$ \alpha-$">corte. Definimos <!-- MATH
+ $v_N(\alpha,\beta)$
+ -->
+<IMG
+ WIDTH="73" HEIGHT="37" ALIGN="CENTER" BORDER="0"
+ SRC="img39.gif"
+ ALT="$ v_N(\alpha,\beta)$"> el valor representativo de <IMG
+ WIDTH="29" HEIGHT="35" ALIGN="CENTER" BORDER="0"
+ SRC="img40.gif"
+ ALT="$ N_\alpha$"> como
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="equ:v_alpha"></A><!-- MATH
+ \begin{equation}
+v_N(\alpha,\beta)=(1-\beta)L_\alpha + \beta R_\alpha\qquad 0\leq\beta\leq 1
+\end{equation}
+ -->
+<TABLE CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="CENTER">
+<TD NOWRAP ALIGN="CENTER"><IMG
+ WIDTH="356" HEIGHT="37" ALIGN="CENTER" BORDER="0"
+ SRC="img41.gif"
+ ALT="$\displaystyle v_N(\alpha,\beta)=(1-\beta)L_\alpha + \beta R_\alpha\qquad 0\leq\beta\leq 1$"></TD>
+<TD NOWRAP WIDTH="10" ALIGN="RIGHT">
+(3.1)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+
+<P>
+Claramente se ve que <!-- MATH
+ $v_N(\alpha,\beta) \in N_\alpha$
+ -->
+<IMG
+ WIDTH="121" HEIGHT="37" ALIGN="CENTER" BORDER="0"
+ SRC="img42.gif"
+ ALT="$ v_N(\alpha,\beta) \in N_\alpha$">; adem&#225;s, si variamos <IMG
+ WIDTH="16" HEIGHT="35" ALIGN="CENTER" BORDER="0"
+ SRC="img43.gif"
+ ALT="$ \beta$"> desde 0 hasta <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img44.gif"
+ ALT="$ 1$"> entonces <!-- MATH
+ $v_N(\alpha,\beta)$
+ -->
+<IMG
+ WIDTH="73" HEIGHT="37" ALIGN="CENTER" BORDER="0"
+ SRC="img39.gif"
+ ALT="$ v_N(\alpha,\beta)$"> ``viaja'' desde <IMG
+ WIDTH="27" HEIGHT="35" ALIGN="CENTER" BORDER="0"
+ SRC="img45.gif"
+ ALT="$ L_\alpha$"> hasta <IMG
+ WIDTH="28" HEIGHT="35" ALIGN="CENTER" BORDER="0"
+ SRC="img46.gif"
+ ALT="$ R_\alpha$">. Denominamos a <IMG
+ WIDTH="16" HEIGHT="35" ALIGN="CENTER" BORDER="0"
+ SRC="img43.gif"
+ ALT="$ \beta$"> el <I>optimismo</I> de la representaci&#243;n crisp que hacemos del intervalo.
+
+<P>
+Sea <!-- MATH
+ $g(\alpha):[0,1]\to [0,1]$
+ -->
+<IMG
+ WIDTH="161" HEIGHT="37" ALIGN="CENTER" BORDER="0"
+ SRC="img47.gif"
+ ALT="$ g(\alpha):[0,1]\to [0,1]$"> una funci&#243;n creciente tal que <IMG
+ WIDTH="73" HEIGHT="37" ALIGN="CENTER" BORDER="0"
+ SRC="img48.gif"
+ ALT="$ g(0)=0$"> y <IMG
+ WIDTH="73" HEIGHT="37" ALIGN="CENTER" BORDER="0"
+ SRC="img49.gif"
+ ALT="$ g(1)=1$">. Definimos <!-- MATH
+ $V_N(\beta)$
+ -->
+<IMG
+ WIDTH="55" HEIGHT="37" ALIGN="CENTER" BORDER="0"
+ SRC="img50.gif"
+ ALT="$ V_N(\beta)$">, el valor representativo de <IMG
+ WIDTH="22" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img36.gif"
+ ALT="$ N$"> como el promedio ponderado por <IMG
+ WIDTH="41" HEIGHT="37" ALIGN="CENTER" BORDER="0"
+ SRC="img51.gif"
+ ALT="$ g(\alpha)$"> de los valores representativos de todos los <IMG
+ WIDTH="32" HEIGHT="33" ALIGN="CENTER" BORDER="0"
+ SRC="img38.gif"
+ ALT="$ \alpha-$">cortes:
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="equ:v_N"></A><!-- MATH
+ \begin{equation}
+V_N(\beta)=\frac{\int_0^1 g(\alpha)v_N(\alpha,\beta)d\alpha}
+	{\int_0^1 g(\alpha)d\alpha}
+\end{equation}
+ -->
+<TABLE CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="CENTER">
+<TD NOWRAP ALIGN="CENTER"><IMG
+ WIDTH="233" HEIGHT="74" ALIGN="CENTER" BORDER="0"
+ SRC="img52.gif"
+ ALT="$\displaystyle V_N(\beta)=\frac{\int_0^1 g(\alpha)v_N(\alpha,\beta)d\alpha} {\int_0^1 g(\alpha)d\alpha}$"></TD>
+<TD NOWRAP WIDTH="10" ALIGN="RIGHT">
+(3.2)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+
+<P>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"><STRONG>Subsecciones</STRONG></A>
+
+<UL>
+<LI><A NAME="tex2html59"
+  HREF="node6.html">Primer Caso</A>
+<LI><A NAME="tex2html60"
+  HREF="node7.html">Segundo Caso</A>
+</UL>
+<!--End of Table of Child-Links-->
+<BR><HR>
+<ADDRESS>
+Oscar Duarte
+2005-10-17
+</ADDRESS>
+</BODY>
+</HTML>

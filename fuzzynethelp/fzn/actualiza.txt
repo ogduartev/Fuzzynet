@@ -1,0 +1,17 @@
+#!/bin/bash
+for i in fzn/*.html
+do
+   sed 's/ALIGN="MIDDLE"/ALIGN="CENTER"/g' $i >tmp.html;
+   cp tmp.html $i;
+done
+rm tmp.html;
+./completaul fzn/help.hhc;
+./completaul fzn/help.hhk;
+rm /home/ogduarte/fuzzynet/fuzzynet/help/fzn/*
+cp fzn/*.* /home/ogduarte/fuzzynet/fuzzynet/help/fzn/.
+rm /windows/C/Oscar/fuzzynet/help/fzn/*
+cp fzn/*.* /windows/C/Oscar/fuzzynet/help/fzn/.
+rm /home/ogduarte/Proyectos/Granada/CDROM/Ejecutables/Linux/help/fzn/*
+cp fzn/*.* /home/ogduarte/Proyectos/Granada/CDROM/Ejecutables/Linux/help/fzn/.
+rm /home/ogduarte/Proyectos/Granada/CDROM/Ejecutables/Windows/help/fzn/*
+cp fzn/*.* /home/ogduarte/Proyectos/Granada/CDROM/Ejecutables/Windows/help/fzn/.

@@ -1,0 +1,77 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.70)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Introducción a las Redes de Cálculo con Palabras</TITLE>
+<META NAME="description" CONTENT="Introducción a las Redes de Cálculo con Palabras">
+<META NAME="keywords" CONTENT="redes">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="redes.css">
+
+</HEAD>
+
+<BODY >
+
+<H1><A NAME="SECTION00100000000000000000">
+Introducci&#243;n a las Redes de C&#225;lculo con Palabras</A>
+</H1>
+Dado que los Sistemas de Computaci&#243;n con palabras aceptan n&#250;meros difusos como entradas y salidas v&#225;lidas, podemos concatenar varios de estos sistemas. Con est&#225; idea proponemos construir Redes como la que se muestra en la figura <A HREF="#fig:red_gral">1.1</A>. 
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fig:red_gral"></A><A NAME="66"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figura 1.1:</STRONG>
+Redes de Sistemas de Computaci&#243;n con Palabras</CAPTION>
+<TR><TD><IMG
+ WIDTH="341" HEIGHT="192" BORDER="0"
+ SRC="img1.gif"
+ ALT="\begin{figure}\centering
+\fcolorbox{white}{white}{
+\begin{pspicture}(0,0)(7,4)...
+...
+\ncline{-&gt;}{N25}{N13}
+\ncline{-&gt;}{N26}{N13}
+\end{pspicture} }
+\end{figure}"></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+Se trata de una red orientada <I>hacia adelante</I>, que puede organizarse en capas; la salida de un determinado nodo puede ser la entrada de otro nodo de capas <I>m&#225;s adelante</I> (no necesariamente de la capa siguiente). Cada nodo contiene un sistema de computaci&#243;n con palabras asociado, y las se&#241;ales que conectan nodos son N&#250;meros Difusos.
+
+<P>
+Las reglas de evaluaci&#243;n de la red son las siguientes
+
+<OL>
+<LI>Cualquier Nodo de la red puede definirse como una entrada o una salida del sistema. 
+</LI>
+<LI>Si un Nodo se define como <I>Salida</I>, &#233;sta ser&#225; cualquiera de las salidas v&#225;lidas de los Sistemas de Computaci&#243;n con palabras.
+</LI>
+<LI>Si un Nodo se define como <I>Entrada</I>, &#233;sta ser&#225; cualquiera de las entradas v&#225;lidas de los Sistemas de Computaci&#243;n con palabras.
+</LI>
+<LI>Si un Nodo no recibe se&#241;ales de ning&#250;n otro nodo, debe definirse como Entrada del sistema.
+</LI>
+<LI>Si un Nodo se define como Entrada del sistema, su valor ser&#225; la entrada <I>actual</I>. En caso contario, su valor ser&#225; la salida del Sistema de Computaci&#243;n con palabras asociado al nodo
+</LI>
+</OL>
+
+<P>
+<BR><HR>
+<ADDRESS>
+Oscar Duarte
+2005-10-17
+</ADDRESS>
+</BODY>
+</HTML>

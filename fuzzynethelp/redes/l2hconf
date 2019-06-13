@@ -1,0 +1,67 @@
+$CUSTOM_TITLES=1;
+$NO_NAVIGATION=1;
+$SHOW_SECTION_NUMBERS=0;
+$REUSE=1;
+$MAX_SPLIT_DEPTH=8;
+$INFO=0;
+$TRANSPARENT_FIGURES=1;
+$HTML_VERSION = 3.2,no_math;
+$IMAGE_TYPE = 'gif';
+$ANTI_ALIAS = 1;
+
+open (HHP,">./redes/help.hhp");
+print HHP "Contents file=help.hhc\n";
+print HHP "Index file=help.hhk\n";
+print HHP "Title=Vertederos - Redes de cálculo\n";
+print HHP "Default topic=node1.html\n";
+close (HHP);
+
+open (HHC,">./redes/help.hhc");
+close (HHC);
+open (HHK,">./redes/help.hhk");
+print HHK "<UL>\n";
+close (HHK);
+
+$contadorNodos=0;
+$nivelAnterior=0;
+
+sub custom_title_hook
+{
+  open (HHC,">>./help.hhc");
+  open (HHK,">>./help.hhk");
+  $contadorNodos++;
+  $return = "node" . $contadorNodos ;
+
+  @tmp = split(/_/,$packed_curr_sec_id);
+  $nivel=0;
+  foreach $i ( @tmp)
+  {
+    if($i != 0)
+    {
+      $nivel++;
+    }
+  }
+  if($nivelAnterior < $nivel)
+  {
+    print HHC "<UL>\n";
+  }
+  if($nivelAnterior > $nivel)
+  {
+    print HHC "</UL>\n";
+  }
+  print HHC "<LI> <object type='text/sitemap'>";
+  print HHC "<param name='Name' value='" . $_[0] . "'>\n";
+  print HHC "<param name='ID' value=" . $contadorNodos . ">\n";
+  print HHC "<param name='Local' value='" . $return . ".html'>\n";
+  print HHC "</object>\n";
+  print HHK "<LI> <object type='text/sitemap'>";
+  print HHK "<param name='Name' value='" . $_[0] . "'>\n";
+  print HHK "<param name='Local' value='" . $return . ".html'>\n";
+  print HHK "</object>\n";
+  close (HHC);
+  close (HHK);
+  $nivelAnterior=$nivel;
+  $return;
+}
+
+1;

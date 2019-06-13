@@ -1,0 +1,466 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.70)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Algunas </TITLE>
+<META NAME="description" CONTENT="Algunas ">
+<META NAME="keywords" CONTENT="scp">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="scp.css">
+
+</HEAD>
+
+<BODY >
+
+<H2><A NAME="SECTION00231000000000000000">
+Algunas <IMG
+ WIDTH="35" HEIGHT="35" ALIGN="CENTER" BORDER="0"
+ SRC="img2.gif"
+ ALT="$ fra$"></A>
+</H2>
+
+<P>
+A continuaci&#243;n se listan algunas <IMG
+ WIDTH="35" HEIGHT="35" ALIGN="CENTER" BORDER="0"
+ SRC="img5.gif"
+ ALT="$ arf$"> &#250;tiles, de prop&#243;sito general. En todos los caso <IMG
+ WIDTH="23" HEIGHT="33" ALIGN="CENTER" BORDER="0"
+ SRC="img73.gif"
+ ALT="$ w_i$"> es un par&#225;metro de ponderaci&#243;n que nos permite establecer las importancias relativas de las entradas; se restringe a <!-- MATH
+ $0\leq w_i\leq 1$
+ -->
+<IMG
+ WIDTH="93" HEIGHT="33" ALIGN="CENTER" BORDER="0"
+ SRC="img75.gif"
+ ALT="$ 0\leq w_i \leq 1$"> y <!-- MATH
+ $\sum_{i=1}^{n}w_i = 1$
+ -->
+<IMG
+ WIDTH="104" HEIGHT="38" ALIGN="CENTER" BORDER="0"
+ SRC="img76.gif"
+ ALT="$ \sum_{i=1}^{n}w_i = 1$">; Tambi&#233;n definimos <IMG
+ WIDTH="19" HEIGHT="33" ALIGN="CENTER" BORDER="0"
+ SRC="img77.gif"
+ ALT="$ s_i$"> como una variable auxiliar que define el sentido del efecto de variar la entrada  <IMG
+ WIDTH="11" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img69.gif"
+ ALT="$ i$"> sobre la saluda:
+<!-- MATH
+ \begin{displaymath}
+s_i=
+\left\{
+\begin{matrix}
+1 & \text{si $y$\  crece cuando $x_i$\  crece} \\
+0 & \text{si $y$\  decrece cuando $x_i$\  crece}
+\end{matrix}
+\right.
+\end{displaymath}
+ -->
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="313" HEIGHT="65" ALIGN="CENTER" BORDER="0"
+ SRC="img78.gif"
+ ALT="$\displaystyle s_i=
+\left\{
+\begin{matrix}
+1 &amp; \text{si $y$ crece cuando $x_i$ crece} \\
+0 &amp; \text{si $y$ decrece cuando $x_i$ crece}
+\end{matrix}\right.
+$">
+</DIV><P></P>
+
+<P>
+Para analizar las diferencias entre las distintas opciones, definimos <IMG
+ WIDTH="30" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img79.gif"
+ ALT="$ w^+$"> y <IMG
+ WIDTH="30" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img80.gif"
+ ALT="$ w^-$"> como las sumas de los pesos de las entradas de relaciones crecientes y decrecientes respectivamente:
+<!-- MATH
+ \begin{displaymath}
+\begin{matrix}
+w^+=\sum_{i=1}^{n}s_i w_i & & w^-=\sum_{i=1}^{n}(1-s_i) w_i
+\end{matrix}
+\end{displaymath}
+ -->
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="339" HEIGHT="41" ALIGN="CENTER" BORDER="0"
+ SRC="img81.gif"
+ ALT="$\displaystyle \begin{matrix}
+w^+=\sum_{i=1}^{n}s_i w_i &amp; &amp; w^-=\sum_{i=1}^{n}(1-s_i) w_i
+\end{matrix}$">
+</DIV><P></P>
+Claramente <IMG
+ WIDTH="30" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img79.gif"
+ ALT="$ w^+$">, <IMG
+ WIDTH="30" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img80.gif"
+ ALT="$ w^-$"> pertenecen a <IMG
+ WIDTH="42" HEIGHT="37" ALIGN="CENTER" BORDER="0"
+ SRC="img82.gif"
+ ALT="$ [0,1]$"> y <!-- MATH
+ $w^+ + w^-=1$
+ -->
+<IMG
+ WIDTH="113" HEIGHT="38" ALIGN="CENTER" BORDER="0"
+ SRC="img83.gif"
+ ALT="$ w^+ + w^-=1$">.
+
+<P>
+<DL>
+<DT><STRONG>Opci&#243;n 1:</STRONG></DT>
+<DD>Una combinaci&#243;n lineal en <IMG
+ WIDTH="42" HEIGHT="37" ALIGN="CENTER" BORDER="0"
+ SRC="img82.gif"
+ ALT="$ [0,1]$">
+<!-- MATH
+ \begin{displaymath}
+y=arf_1(x)=\sum_{i=1}^{n}s_iw_ix_i + \sum_{i=1}^{n}(1-s_i)w_i(1-x_i)
+\end{displaymath}
+ -->
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="399" HEIGHT="71" ALIGN="CENTER" BORDER="0"
+ SRC="img84.gif"
+ ALT="$\displaystyle y=arf_1(x)=\sum_{i=1}^{n}s_iw_ix_i + \sum_{i=1}^{n}(1-s_i)w_i(1-x_i)
+$">
+</DIV><P></P>
+Es&lt;f&#241;acil probar que
+<!-- MATH
+ \begin{displaymath}
+y=arf_1(x)=w^-+\sum_{i=1}^{n}(-1)^{s_i+1}w_ix_i
+\end{displaymath}
+ -->
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="304" HEIGHT="71" ALIGN="CENTER" BORDER="0"
+ SRC="img85.gif"
+ ALT="$\displaystyle y=arf_1(x)=w^-+\sum_{i=1}^{n}(-1)^{s_i+1}w_ix_i
+$">
+</DIV><P></P>
+N&#243;tese que,
+
+<UL>
+<LI>si <!-- MATH
+ $x_i=1-s_i\;\; i=1,2,\cdots,n$
+ -->
+<IMG
+ WIDTH="218" HEIGHT="34" ALIGN="CENTER" BORDER="0"
+ SRC="img86.gif"
+ ALT="$ x_i=1-s_i\;\; i=1,2,\cdots,n$"> entonces <IMG
+ WIDTH="49" HEIGHT="33" ALIGN="CENTER" BORDER="0"
+ SRC="img87.gif"
+ ALT="$ y=0$">, el m&#237;nimo posible valor de salida.
+</LI>
+<LI>si <!-- MATH
+ $x_i=s_i\;\; i=1,2,\cdots,n$
+ -->
+<IMG
+ WIDTH="186" HEIGHT="34" ALIGN="CENTER" BORDER="0"
+ SRC="img88.gif"
+ ALT="$ x_i=s_i\;\; i=1,2,\cdots,n$"> entonces <IMG
+ WIDTH="49" HEIGHT="33" ALIGN="CENTER" BORDER="0"
+ SRC="img89.gif"
+ ALT="$ y=1$">, el m&#225;ximo posible valor de salida.
+</LI>
+<LI>el rango de salida es <IMG
+ WIDTH="81" HEIGHT="33" ALIGN="CENTER" BORDER="0"
+ SRC="img90.gif"
+ ALT="$ 1-0=1$">
+</LI>
+<LI>si <!-- MATH
+ $x_i=0\;\; i=1,2,\cdots,n$
+ -->
+<IMG
+ WIDTH="181" HEIGHT="34" ALIGN="CENTER" BORDER="0"
+ SRC="img91.gif"
+ ALT="$ x_i=0\;\; i=1,2,\cdots,n$"> entonces <IMG
+ WIDTH="65" HEIGHT="38" ALIGN="CENTER" BORDER="0"
+ SRC="img92.gif"
+ ALT="$ y=w^-$">; esta es la salida correspondiente a los m&#237;nimos posibles valores de entrada.
+</LI>
+<LI>si <!-- MATH
+ $x_i=1\;\; i=1,2,\cdots,n$
+ -->
+<IMG
+ WIDTH="181" HEIGHT="34" ALIGN="CENTER" BORDER="0"
+ SRC="img93.gif"
+ ALT="$ x_i=1\;\; i=1,2,\cdots,n$"> entonces <IMG
+ WIDTH="65" HEIGHT="38" ALIGN="CENTER" BORDER="0"
+ SRC="img94.gif"
+ ALT="$ y=w^+$">; esta es la salida correspondiente a los m&#225;ximos posibles valores de entrada.
+</LI>
+</UL>
+
+<P>
+</DD>
+<DT><STRONG>Opci&#243;n 2:</STRONG></DT>
+<DD>Una combinaci&#243;n lineal centrada
+<!-- MATH
+ \begin{displaymath}
+y=arf_2(x)=0.5\left[ 1 + \sum_{i=1}^{n}(-1)^{s_i+1}w_ix_i \right]
+\end{displaymath}
+ -->
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="338" HEIGHT="76" ALIGN="CENTER" BORDER="0"
+ SRC="img95.gif"
+ ALT="$\displaystyle y=arf_2(x)=0.5\left[ 1 + \sum_{i=1}^{n}(-1)^{s_i+1}w_ix_i \right]
+$">
+</DIV><P></P>
+Notese que,
+
+<UL>
+<LI>si <!-- MATH
+ $x_i=1-s_i\;\; i=1,2,\cdots,n$
+ -->
+<IMG
+ WIDTH="218" HEIGHT="34" ALIGN="CENTER" BORDER="0"
+ SRC="img86.gif"
+ ALT="$ x_i=1-s_i\;\; i=1,2,\cdots,n$"> entonces <!-- MATH
+ $y=0.5(1-w^-)$
+ -->
+<IMG
+ WIDTH="136" HEIGHT="38" ALIGN="CENTER" BORDER="0"
+ SRC="img96.gif"
+ ALT="$ y=0.5(1-w^-)$">, el m&#237;nimo valor de salida posible.
+</LI>
+<LI>si <!-- MATH
+ $x_i=s_i\;\; i=1,2,\cdots,n$
+ -->
+<IMG
+ WIDTH="186" HEIGHT="34" ALIGN="CENTER" BORDER="0"
+ SRC="img88.gif"
+ ALT="$ x_i=s_i\;\; i=1,2,\cdots,n$"> entonces <!-- MATH
+ $y=0.5(1+w^+)$
+ -->
+<IMG
+ WIDTH="136" HEIGHT="38" ALIGN="CENTER" BORDER="0"
+ SRC="img97.gif"
+ ALT="$ y=0.5(1+w^+)$">, el m&#225;ximo valor de salida posible.
+</LI>
+<LI>el rango de salida es <!-- MATH
+ $0.5(1+w^+)-0.5(1-w^-)=0.5$
+ -->
+<IMG
+ WIDTH="269" HEIGHT="38" ALIGN="CENTER" BORDER="0"
+ SRC="img98.gif"
+ ALT="$ 0.5(1+w^+)-0.5(1-w^-)=0.5$">
+</LI>
+<LI>si <!-- MATH
+ $x_i=0\;\; i=1,2,\cdots,n$
+ -->
+<IMG
+ WIDTH="181" HEIGHT="34" ALIGN="CENTER" BORDER="0"
+ SRC="img91.gif"
+ ALT="$ x_i=0\;\; i=1,2,\cdots,n$"> entonces <IMG
+ WIDTH="63" HEIGHT="33" ALIGN="CENTER" BORDER="0"
+ SRC="img99.gif"
+ ALT="$ y=0.5$">; esta es la salida con el m&#237;nimo valor en las entradas posible. Llamamos a esta opci&#243;n ``centrada'' porque entradas cero ocasionan un valor de salida en el centro de <IMG
+ WIDTH="42" HEIGHT="37" ALIGN="CENTER" BORDER="0"
+ SRC="img82.gif"
+ ALT="$ [0,1]$">.
+</LI>
+<LI>si <!-- MATH
+ $x_i=1\;\; i=1,2,\cdots,n$
+ -->
+<IMG
+ WIDTH="181" HEIGHT="34" ALIGN="CENTER" BORDER="0"
+ SRC="img93.gif"
+ ALT="$ x_i=1\;\; i=1,2,\cdots,n$"> entonces <!-- MATH
+ $y=0.5(1+w^+-w^-)$
+ -->
+<IMG
+ WIDTH="184" HEIGHT="38" ALIGN="CENTER" BORDER="0"
+ SRC="img100.gif"
+ ALT="$ y=0.5(1+w^+-w^-)$">; esta es la salida con el m&#225;ximo valor en las entradas posible.
+</LI>
+</UL>
+
+<P>
+</DD>
+</DL>
+
+<P>
+Opciones 3 y 4 son modificaciones de las opciones 1 y 2: Hemos remplazado <IMG
+ WIDTH="21" HEIGHT="33" ALIGN="CENTER" BORDER="0"
+ SRC="img34.gif"
+ ALT="$ x_i$"> por una funci&#243;n gen&#233;rica <!-- MATH
+ $g_i(x_i):[0,1]\to [0,1]$
+ -->
+<IMG
+ WIDTH="170" HEIGHT="37" ALIGN="CENTER" BORDER="0"
+ SRC="img101.gif"
+ ALT="$ g_i(x_i):[0,1]\to [0,1]$"> que debe ser mon&#243;tonamente creciente y tal que <IMG
+ WIDTH="73" HEIGHT="37" ALIGN="CENTER" BORDER="0"
+ SRC="img102.gif"
+ ALT="$ g(0)=0$"> y <IMG
+ WIDTH="73" HEIGHT="37" ALIGN="CENTER" BORDER="0"
+ SRC="img103.gif"
+ ALT="$ g(1)=1$">. A manera de ejemplo, sup&#243;ngase <!-- MATH
+ $g_i(x_i)=x_i^{r_i}$
+ -->
+<IMG
+ WIDTH="97" HEIGHT="37" ALIGN="CENTER" BORDER="0"
+ SRC="img104.gif"
+ ALT="$ g_i(x_i)=x_i^{r_i}$">; si <IMG
+ WIDTH="53" HEIGHT="33" ALIGN="CENTER" BORDER="0"
+ SRC="img105.gif"
+ ALT="$ r_i&gt;1$"> entonces los valores menores de <IMG
+ WIDTH="21" HEIGHT="33" ALIGN="CENTER" BORDER="0"
+ SRC="img34.gif"
+ ALT="$ x_i$"> ser&#225;n subvalorados, y los valore mayores ser&#225;n sobrevalorados.
+
+<P>
+<DL>
+<DT><STRONG>Opci&#243;n 3:</STRONG></DT>
+<DD>Una combinaci&#243;n no lineal en <IMG
+ WIDTH="42" HEIGHT="37" ALIGN="CENTER" BORDER="0"
+ SRC="img82.gif"
+ ALT="$ [0,1]$">:
+<!-- MATH
+ \begin{displaymath}
+y=arf_3(x)=\sum_{i=1}^{n}s_iw_ig_i(x_i) + \sum_{i=1}^{n}(1-s_i)w_ig_i(1-x_i)
+\end{displaymath}
+ -->
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="443" HEIGHT="71" ALIGN="CENTER" BORDER="0"
+ SRC="img106.gif"
+ ALT="$\displaystyle y=arf_3(x)=\sum_{i=1}^{n}s_iw_ig_i(x_i) + \sum_{i=1}^{n}(1-s_i)w_ig_i(1-x_i)
+$">
+</DIV><P></P>
+
+<P>
+</DD>
+<DT><STRONG>Opci&#243;n 4:</STRONG></DT>
+<DD>Una combinaci&#243;n no lineal centrada:
+<!-- MATH
+ \begin{displaymath}
+y=arf_4(x)=0.5\left[ 1 + \sum_{i=1}^{n}(-1)^{s_i+1}w_ig_i(x_i) \right]
+\end{displaymath}
+ -->
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="367" HEIGHT="76" ALIGN="CENTER" BORDER="0"
+ SRC="img107.gif"
+ ALT="$\displaystyle y=arf_4(x)=0.5\left[ 1 + \sum_{i=1}^{n}(-1)^{s_i+1}w_ig_i(x_i) \right]
+$">
+</DIV><P></P>
+
+<P>
+</DD>
+</DL>
+
+<P>
+La Figura <A HREF="#fig:options">2.3</A> muestra una comparaci&#243;n gr&#225;fica entre estas opciones. Se han seleccionado <IMG
+ WIDTH="50" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img108.gif"
+ ALT="$ n=2$">, <IMG
+ WIDTH="56" HEIGHT="33" ALIGN="CENTER" BORDER="0"
+ SRC="img109.gif"
+ ALT="$ s_1=1$">, <IMG
+ WIDTH="56" HEIGHT="33" ALIGN="CENTER" BORDER="0"
+ SRC="img110.gif"
+ ALT="$ s_2=0$">, <IMG
+ WIDTH="75" HEIGHT="33" ALIGN="CENTER" BORDER="0"
+ SRC="img111.gif"
+ ALT="$ w_1=0.4$">, <IMG
+ WIDTH="75" HEIGHT="33" ALIGN="CENTER" BORDER="0"
+ SRC="img112.gif"
+ ALT="$ w_2=0.6$">, <IMG
+ WIDTH="55" HEIGHT="33" ALIGN="CENTER" BORDER="0"
+ SRC="img113.gif"
+ ALT="$ r_1=2$">, <IMG
+ WIDTH="70" HEIGHT="33" ALIGN="CENTER" BORDER="0"
+ SRC="img114.gif"
+ ALT="$ r_2=0.5$"> y se han graficado <IMG
+ WIDTH="63" HEIGHT="37" ALIGN="CENTER" BORDER="0"
+ SRC="img3.gif"
+ ALT="$ arf_i(x)$"> (<IMG
+ WIDTH="99" HEIGHT="34" ALIGN="CENTER" BORDER="0"
+ SRC="img4.gif"
+ ALT="$ i=1,2,3,4$">) para tres valores de <IMG
+ WIDTH="23" HEIGHT="33" ALIGN="CENTER" BORDER="0"
+ SRC="img115.gif"
+ ALT="$ x_2$">: <IMG
+ WIDTH="29" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img116.gif"
+ ALT="$ 0.0$">, <IMG
+ WIDTH="29" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img117.gif"
+ ALT="$ 0.5$"> <IMG
+ WIDTH="29" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img118.gif"
+ ALT="$ 1.0$">. 
+
+<P>
+Claramente, las opciones <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img18.gif"
+ ALT="$ 1$"> y <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img119.gif"
+ ALT="$ 2$"> son hiperplanos con diferentes pendientes y desplazamientos. La opciones <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img120.gif"
+ ALT="$ 3$"> y <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img121.gif"
+ ALT="$ 4$"> son hipersuperficies que pueden verse como deformaciones de los planos originales.
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fig:options"></A><A NAME="264"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figura 2.3:</STRONG>
+Comparaci&#243;n entre <IMG
+ WIDTH="63" HEIGHT="37" ALIGN="CENTER" BORDER="0"
+ SRC="img3.gif"
+ ALT="$ arf_i(x)$"> (<IMG
+ WIDTH="99" HEIGHT="34" ALIGN="CENTER" BORDER="0"
+ SRC="img4.gif"
+ ALT="$ i=1,2,3,4$">)</CAPTION>
+<TR><TD><IMG
+ WIDTH="315" HEIGHT="252" BORDER="0"
+ SRC="img122.gif"
+ ALT="\begin{figure}\centering
+\begin{pspicture}(0,-1)(6,5)%\psgrid
+\tiny
+\rput[bl](.5...
+...)(0.5,0)
+\rput[l](0.6,0){\small :$x_2=1.0$}
+}
+\end{pspicture}\par\end{figure}"></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+<BR><HR>
+<ADDRESS>
+Oscar Duarte
+2005-05-01
+</ADDRESS>
+</BODY>
+</HTML>

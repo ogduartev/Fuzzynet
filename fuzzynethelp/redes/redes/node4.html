@@ -1,0 +1,300 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.70)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Diferenciabilidad</TITLE>
+<META NAME="description" CONTENT="Diferenciabilidad">
+<META NAME="keywords" CONTENT="redes">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="redes.css">
+
+</HEAD>
+
+<BODY >
+
+<H1><A NAME="SECTION00220000000000000000">
+Diferenciabilidad</A>
+</H1>
+Para emplear el algoritmo de retropropagaci&#243;n es necesario calcular el gradiente de la funci&#243;n de error respecto a las variables a ajustar. Sup&#243;ngase un nodo de la red de en la &#250;ltima capa, cuya funci&#243;n de razonameinto aproximado sea 
+<!-- MATH
+ \begin{displaymath}
+y=\phi(\nu)=\frac{1}{1+e^{-a\nu}}
+\end{displaymath}
+ -->
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="172" HEIGHT="59" ALIGN="CENTER" BORDER="0"
+ SRC="img19.gif"
+ ALT="$\displaystyle y=\phi(\nu)=\frac{1}{1+e^{-a\nu}}
+$">
+</DIV><P></P>
+<!-- MATH
+ \begin{displaymath}
+\nu=\sum_{j=1}^{n}{\omega_j x_j}
+\end{displaymath}
+ -->
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="107" HEIGHT="71" ALIGN="CENTER" BORDER="0"
+ SRC="img20.gif"
+ ALT="$\displaystyle \nu=\sum_{j=1}^{n}{\omega_j x_j}
+$">
+</DIV><P></P>
+En donde <IMG
+ WIDTH="14" HEIGHT="33" ALIGN="CENTER" BORDER="0"
+ SRC="img21.gif"
+ ALT="$ y$"> es la salida, <IMG
+ WIDTH="22" HEIGHT="33" ALIGN="CENTER" BORDER="0"
+ SRC="img22.gif"
+ ALT="$ x_j$"> son las entradas, y <IMG
+ WIDTH="23" HEIGHT="33" ALIGN="CENTER" BORDER="0"
+ SRC="img23.gif"
+ ALT="$ \omega_j$"> los pesos a ajustar.
+
+<P>
+Si empleamos como funci&#243;n de error a <!-- MATH
+ $\epsilon_1$
+ -->
+<IMG
+ WIDTH="20" HEIGHT="33" ALIGN="CENTER" BORDER="0"
+ SRC="img8.gif"
+ ALT="$ \epsilon_1$">, el gradiente descendiente estar&#225; formado por los t&#233;rminos <!-- MATH
+ $\frac{\partial \epsilon_1}{\partial \omega_j}$
+ -->
+<IMG
+ WIDTH="31" HEIGHT="42" ALIGN="CENTER" BORDER="0"
+ SRC="img24.gif"
+ ALT="$ \frac{\partial \epsilon_1}{\partial \omega_j}$"> que se calcular&#237;an asi:
+<!-- MATH
+ \begin{displaymath}
+\frac{\partial \epsilon_1}{\partial \omega_j}=
+\sum_{i=0}^{A}\frac{\partial \varepsilon(\alpha_i)}{\partial \omega_j}
+\end{displaymath}
+ -->
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="149" HEIGHT="78" ALIGN="CENTER" BORDER="0"
+ SRC="img25.gif"
+ ALT="$\displaystyle \frac{\partial \epsilon_1}{\partial \omega_j}=
+\sum_{i=0}^{A}\frac{\partial \varepsilon(\alpha_i)}{\partial \omega_j}
+$">
+</DIV><P></P>
+<!-- MATH
+ \begin{displaymath}
+\frac{\partial \varepsilon(\alpha_i)}{\partial \omega_j}=
+\frac{\partial \varepsilon(\alpha_i)}{\partial L_{Y_r}(\alpha_i)}
+\frac{\partial L_{Y_r}(\alpha_i)}{\partial \omega_j} +
+\frac{\partial \varepsilon(\alpha_i)}{\partial R_{Y_r}(\alpha_i)}
+\frac{\partial R_{Y_r}(\alpha_i)}{\partial \omega_j}
+\end{displaymath}
+ -->
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="409" HEIGHT="63" ALIGN="CENTER" BORDER="0"
+ SRC="img26.gif"
+ ALT="$\displaystyle \frac{\partial \varepsilon(\alpha_i)}{\partial \omega_j}=
+\frac{\...
+...artial R_{Y_r}(\alpha_i)}
+\frac{\partial R_{Y_r}(\alpha_i)}{\partial \omega_j}
+$">
+</DIV><P></P>
+<!-- MATH
+ \begin{displaymath}
+\frac{\partial \varepsilon(\alpha_i)}{\partial L_{Y_r}(\alpha_i)}=(L_{Y_r}(\alpha)-L_{Y_d}(\alpha))
+\end{displaymath}
+ -->
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="252" HEIGHT="63" ALIGN="CENTER" BORDER="0"
+ SRC="img27.gif"
+ ALT="$\displaystyle \frac{\partial \varepsilon(\alpha_i)}{\partial L_{Y_r}(\alpha_i)}=(L_{Y_r}(\alpha)-L_{Y_d}(\alpha))
+$">
+</DIV><P></P>
+<!-- MATH
+ \begin{displaymath}
+\frac{\partial \varepsilon(\alpha_i)}{\partial R_{Y_r}(\alpha_i)}=(R_{Y_r}(\alpha)-R_{Y_d}(\alpha))
+\end{displaymath}
+ -->
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="256" HEIGHT="63" ALIGN="CENTER" BORDER="0"
+ SRC="img28.gif"
+ ALT="$\displaystyle \frac{\partial \varepsilon(\alpha_i)}{\partial R_{Y_r}(\alpha_i)}=(R_{Y_r}(\alpha)-R_{Y_d}(\alpha))
+$">
+</DIV><P></P>
+Como <IMG
+ WIDTH="16" HEIGHT="35" ALIGN="CENTER" BORDER="0"
+ SRC="img29.gif"
+ ALT="$ \phi$"> es una funci&#243;n monotonamente creciente, entonces
+<!-- MATH
+ \begin{displaymath}
+\frac{\partial L_{Y_r}(\alpha_i)}{\partial \omega_j}=
+\frac{\partial L_{Y_r}(\alpha_i)}{\partial L_\nu(\alpha_i)}\frac{\partial L_\nu(\alpha_i)}{\partial \omega_j}
+\end{displaymath}
+ -->
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="246" HEIGHT="63" ALIGN="CENTER" BORDER="0"
+ SRC="img30.gif"
+ ALT="$\displaystyle \frac{\partial L_{Y_r}(\alpha_i)}{\partial \omega_j}=
+\frac{\part...
+...)}{\partial L_\nu(\alpha_i)}\frac{\partial L_\nu(\alpha_i)}{\partial \omega_j}
+$">
+</DIV><P></P>
+<!-- MATH
+ \begin{displaymath}
+\frac{\partial R_{Y_r}(\alpha_i)}{\partial \omega_j}=
+\frac{\partial R_{Y_r}(\alpha_i)}{\partial R_\nu(\alpha_i)}\frac{\partial R_\nu(\alpha_i)}{\partial \omega_j}
+\end{displaymath}
+ -->
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="251" HEIGHT="63" ALIGN="CENTER" BORDER="0"
+ SRC="img31.gif"
+ ALT="$\displaystyle \frac{\partial R_{Y_r}(\alpha_i)}{\partial \omega_j}=
+\frac{\part...
+...)}{\partial R_\nu(\alpha_i)}\frac{\partial R_\nu(\alpha_i)}{\partial \omega_j}
+$">
+</DIV><P></P>
+
+<P>
+Pero las derivadas parciales respecto a <IMG
+ WIDTH="23" HEIGHT="33" ALIGN="CENTER" BORDER="0"
+ SRC="img23.gif"
+ ALT="$ \omega_j$"> dependen del signo de <IMG
+ WIDTH="23" HEIGHT="33" ALIGN="CENTER" BORDER="0"
+ SRC="img23.gif"
+ ALT="$ \omega_j$">:
+<!-- MATH
+ \begin{displaymath}
+\frac{\partial L_\nu(\alpha_i)}{\partial \omega_j}=
+\left\{
+\begin{matrix}
+L_{x_j}(\alpha_i) & \text{si } \omega_j > 0 \\
+R_{x_j}(\alpha_i) & \text{si } \omega_j < 0 \\
+\text{indefinida} & \text{si } \omega = 0
+\end{matrix}
+\right.
+\end{displaymath}
+ -->
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="284" HEIGHT="88" ALIGN="CENTER" BORDER="0"
+ SRC="img32.gif"
+ ALT="$\displaystyle \frac{\partial L_\nu(\alpha_i)}{\partial \omega_j}=
+\left\{
+\begi...
+...\omega_j &lt; 0 \\
+\text{indefinida} &amp; \text{si } \omega = 0
+\end{matrix}\right.
+$">
+</DIV><P></P>
+
+<P>
+<!-- MATH
+ \begin{displaymath}
+\frac{\partial R_\nu(\alpha_i)}{\partial \omega_j}=
+\left\{
+\begin{matrix}
+R_{x_j}(\alpha_i) & \text{si } \omega_j > 0 \\
+L_{x_j}(\alpha_i) & \text{si } \omega_j < 0 \\
+\text{indefinida} & \text{si } \omega = 0
+\end{matrix}
+\right.
+\end{displaymath}
+ -->
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="286" HEIGHT="88" ALIGN="CENTER" BORDER="0"
+ SRC="img33.gif"
+ ALT="$\displaystyle \frac{\partial R_\nu(\alpha_i)}{\partial \omega_j}=
+\left\{
+\begi...
+...\omega_j &lt; 0 \\
+\text{indefinida} &amp; \text{si } \omega = 0
+\end{matrix}\right.
+$">
+</DIV><P></P>
+
+<P>
+Estas discontinuidades plantean una seria dificultad para el m&#233;todo del gradiente descendiente. Este problema no se resuelve al tomar <!-- MATH
+ $\epsilon_2$
+ -->
+<IMG
+ WIDTH="20" HEIGHT="33" ALIGN="CENTER" BORDER="0"
+ SRC="img9.gif"
+ ALT="$ \epsilon_2$"> ni <!-- MATH
+ $\epsilon_3$
+ -->
+<IMG
+ WIDTH="20" HEIGHT="33" ALIGN="CENTER" BORDER="0"
+ SRC="img15.gif"
+ ALT="$ \epsilon_3$">.
+
+<P>
+Posibles alternativas de soluci&#243;n (no han sido evaluadas):
+
+<OL>
+<LI>Asegurar que <!-- MATH
+ $\omega_j>0$
+ -->
+<IMG
+ WIDTH="58" HEIGHT="33" ALIGN="CENTER" BORDER="0"
+ SRC="img34.gif"
+ ALT="$ \omega_j&gt;0$">. En este caso s&#243;lo podrian representarse funciones mon&#243;tonamente crecientes.
+</LI>
+<LI>Asegurar que <!-- MATH
+ $\omega_j>0$
+ -->
+<IMG
+ WIDTH="58" HEIGHT="33" ALIGN="CENTER" BORDER="0"
+ SRC="img34.gif"
+ ALT="$ \omega_j&gt;0$"> y tomar el doble de entradas: por cada <IMG
+ WIDTH="22" HEIGHT="33" ALIGN="CENTER" BORDER="0"
+ SRC="img22.gif"
+ ALT="$ x_j$"> crear <IMG
+ WIDTH="37" HEIGHT="33" ALIGN="CENTER" BORDER="0"
+ SRC="img35.gif"
+ ALT="$ -x_j$">
+</LI>
+<LI>Emplear alguna heur&#237;stica para manipular el cambio de signo de <IMG
+ WIDTH="23" HEIGHT="33" ALIGN="CENTER" BORDER="0"
+ SRC="img23.gif"
+ ALT="$ \omega_j$">
+</LI>
+<LI>Emplear Algoritmos Gen&#233;ticos para encontrar los <IMG
+ WIDTH="23" HEIGHT="33" ALIGN="CENTER" BORDER="0"
+ SRC="img23.gif"
+ ALT="$ \omega_j$">
+</LI>
+</OL>
+
+<P>
+<BR><HR>
+<ADDRESS>
+Oscar Duarte
+2005-05-01
+</ADDRESS>
+</BODY>
+</HTML>

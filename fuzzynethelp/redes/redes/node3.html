@@ -1,0 +1,178 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.70)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Funciones de Error</TITLE>
+<META NAME="description" CONTENT="Funciones de Error">
+<META NAME="keywords" CONTENT="redes">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="redes.css">
+
+</HEAD>
+
+<BODY >
+
+<H1><A NAME="SECTION00210000000000000000">
+Funciones de Error</A>
+</H1>
+
+<P>
+Sea <IMG
+ WIDTH="23" HEIGHT="35" ALIGN="CENTER" BORDER="0"
+ SRC="img2.gif"
+ ALT="$ Y_r$"> el valor calculado por la red, y <IMG
+ WIDTH="23" HEIGHT="35" ALIGN="CENTER" BORDER="0"
+ SRC="img3.gif"
+ ALT="$ Y_d$"> el valor deseado. Sean <!-- MATH
+ $[L_{Y_r}(\alpha), R_{Y_r}(\alpha)]$
+ -->
+<IMG
+ WIDTH="134" HEIGHT="37" ALIGN="CENTER" BORDER="0"
+ SRC="img4.gif"
+ ALT="$ [L_{Y_r}(\alpha), R_{Y_r}(\alpha)]$"> y <!-- MATH
+ $[L_{Y_d}(\alpha),R_{Y_d}(\alpha)]$
+ -->
+<IMG
+ WIDTH="135" HEIGHT="37" ALIGN="CENTER" BORDER="0"
+ SRC="img5.gif"
+ ALT="$ [L_{Y_d}(\alpha),R_{Y_d}(\alpha)]$"> sus <IMG
+ WIDTH="17" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img6.gif"
+ ALT="$ \alpha$">-cortes. Sup&#243;ngase adem&#225;s que se tiene una representaci&#243;n discreta de los n&#250;meros difusos, para valores de <!-- MATH
+ $\alpha = \alpha_0,\cdots,\alpha_A$
+ -->
+<IMG
+ WIDTH="129" HEIGHT="33" ALIGN="CENTER" BORDER="0"
+ SRC="img7.gif"
+ ALT="$ \alpha = \alpha_0,\cdots,\alpha_A$">. Podemos definir las funciones de error <!-- MATH
+ $\epsilon_1$
+ -->
+<IMG
+ WIDTH="20" HEIGHT="33" ALIGN="CENTER" BORDER="0"
+ SRC="img8.gif"
+ ALT="$ \epsilon_1$"> y <!-- MATH
+ $\epsilon_2$
+ -->
+<IMG
+ WIDTH="20" HEIGHT="33" ALIGN="CENTER" BORDER="0"
+ SRC="img9.gif"
+ ALT="$ \epsilon_2$"> asi
+<!-- MATH
+ \begin{displaymath}
+\Delta_L(\alpha_i)=(L_{Y_r}(\alpha_i)-L_{Y_d}(\alpha_i))^2
+\end{displaymath}
+ -->
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="253" HEIGHT="41" ALIGN="CENTER" BORDER="0"
+ SRC="img10.gif"
+ ALT="$\displaystyle \Delta_L(\alpha_i)=(L_{Y_r}(\alpha_i)-L_{Y_d}(\alpha_i))^2
+$">
+</DIV><P></P>
+<!-- MATH
+ \begin{displaymath}
+\Delta_R(\alpha_i)=(R_{Y_r}(\alpha_i)-R_{Y_d}(\alpha_i))^2
+\end{displaymath}
+ -->
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="257" HEIGHT="41" ALIGN="CENTER" BORDER="0"
+ SRC="img11.gif"
+ ALT="$\displaystyle \Delta_R(\alpha_i)=(R_{Y_r}(\alpha_i)-R_{Y_d}(\alpha_i))^2
+$">
+</DIV><P></P>
+<!-- MATH
+ \begin{displaymath}
+\varepsilon(\alpha_i)=\frac{1}{2}(\Delta_L(\alpha_i)+\Delta_R(\alpha_i))
+\end{displaymath}
+ -->
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="237" HEIGHT="59" ALIGN="CENTER" BORDER="0"
+ SRC="img12.gif"
+ ALT="$\displaystyle \varepsilon(\alpha_i)=\frac{1}{2}(\Delta_L(\alpha_i)+\Delta_R(\alpha_i))
+$">
+</DIV><P></P>
+<!-- MATH
+ \begin{displaymath}
+\epsilon_1=\frac{1}{2}\sum_{i=0}^{A}\varepsilon(\alpha_i)
+\end{displaymath}
+ -->
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="133" HEIGHT="78" ALIGN="CENTER" BORDER="0"
+ SRC="img13.gif"
+ ALT="$\displaystyle \epsilon_1=\frac{1}{2}\sum_{i=0}^{A}\varepsilon(\alpha_i)
+$">
+</DIV><P></P> 
+<!-- MATH
+ \begin{displaymath}
+\epsilon_2=\frac{1}{2}\sum_{i=0}^{A}\alpha_i\varepsilon(\alpha_i)
+\end{displaymath}
+ -->
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="150" HEIGHT="78" ALIGN="CENTER" BORDER="0"
+ SRC="img14.gif"
+ ALT="$\displaystyle \epsilon_2=\frac{1}{2}\sum_{i=0}^{A}\alpha_i\varepsilon(\alpha_i)
+$">
+</DIV><P></P> 
+
+<P>
+Otra alternativa consiste en calcular un valor representativo de los n&#250;mero <IMG
+ WIDTH="23" HEIGHT="35" ALIGN="CENTER" BORDER="0"
+ SRC="img2.gif"
+ ALT="$ Y_r$"> y <IMG
+ WIDTH="23" HEIGHT="35" ALIGN="CENTER" BORDER="0"
+ SRC="img3.gif"
+ ALT="$ Y_d$"> (ver seccion <A HREF="node5.html#sec:valor">3</A>) y compararlos para definir el error <!-- MATH
+ $\epsilon_3$
+ -->
+<IMG
+ WIDTH="20" HEIGHT="33" ALIGN="CENTER" BORDER="0"
+ SRC="img15.gif"
+ ALT="$ \epsilon_3$">. Sean <IMG
+ WIDTH="23" HEIGHT="40" ALIGN="CENTER" BORDER="0"
+ SRC="img16.gif"
+ ALT="$ \bar Y_r$"> y <IMG
+ WIDTH="23" HEIGHT="40" ALIGN="CENTER" BORDER="0"
+ SRC="img17.gif"
+ ALT="$ \bar Y_d$"> esos valores:
+<!-- MATH
+ \begin{displaymath}
+\epsilon_3=(\bar Y_r - \bar Y_d)^2
+\end{displaymath}
+ -->
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="127" HEIGHT="41" ALIGN="CENTER" BORDER="0"
+ SRC="img18.gif"
+ ALT="$\displaystyle \epsilon_3=(\bar Y_r - \bar Y_d)^2
+$">
+</DIV><P></P>
+
+<P>
+<BR><HR>
+<ADDRESS>
+Oscar Duarte
+2005-05-01
+</ADDRESS>
+</BODY>
+</HTML>

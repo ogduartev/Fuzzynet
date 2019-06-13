@@ -1,0 +1,16 @@
+#!/bin/bash
+cd acerca
+bash ./actualiza.txt
+cd ..
+cd fzn
+latex2html -init_file l2hconf fzn
+bash ./actualiza.txt
+cd ..
+cd redes
+latex2html -init_file l2hconf redes
+bash ./actualiza.txt
+cd ..
+cd scp
+latex2html -init_file l2hconf scp
+bash ./actualiza.txt
+cd ..

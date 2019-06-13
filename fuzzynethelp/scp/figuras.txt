@@ -1,0 +1,9 @@
+#!/bin/bash
+cd fig/jpg
+for i in *.jpg
+do
+   jpegtopnm $i | pnmtops > ./../eps/$i.eps
+done
+cd ..
+cd ..
+

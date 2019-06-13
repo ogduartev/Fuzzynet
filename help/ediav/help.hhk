@@ -1,0 +1,111 @@
+<UL>
+<LI> <object type='text/sitemap'><param name='Name' value='Software'>
+<param name='Local' value='node1.html'>
+</object>
+<LI> <object type='text/sitemap'><param name='Name' value='EDIAV - Presentación'>
+<param name='Local' value='node2.html'>
+</object>
+<LI> <object type='text/sitemap'><param name='Name' value='Definición de la Metodología de diagnóstico ambiental de
+vertederos de residuos urbanos'>
+<param name='Local' value='node3.html'>
+</object>
+<LI> <object type='text/sitemap'><param name='Name' value='Variables de Entrada'>
+<param name='Local' value='node4.html'>
+</object>
+<LI> <object type='text/sitemap'><param name='Name' value='Variables calculadas'>
+<param name='Local' value='node5.html'>
+</object>
+<LI> <object type='text/sitemap'><param name='Name' value='El Proyecto'>
+<param name='Local' value='node6.html'>
+</object>
+<LI> <object type='text/sitemap'><param name='Name' value='Edición del Proyecto'>
+<param name='Local' value='node7.html'>
+</object>
+<LI> <object type='text/sitemap'><param name='Name' value='Metodologías'>
+<param name='Local' value='node8.html'>
+</object>
+<LI> <object type='text/sitemap'><param name='Name' value='Edición de Metodologías'>
+<param name='Local' value='node9.html'>
+</object>
+<LI> <object type='text/sitemap'><param name='Name' value='Casos'>
+<param name='Local' value='node10.html'>
+</object>
+<LI> <object type='text/sitemap'><param name='Name' value='Edición de Casos'>
+<param name='Local' value='node11.html'>
+</object>
+<LI> <object type='text/sitemap'><param name='Name' value='Copiar Variables de una Metodología'>
+<param name='Local' value='node12.html'>
+</object>
+<LI> <object type='text/sitemap'><param name='Name' value='Ordenar los Casos'>
+<param name='Local' value='node13.html'>
+</object>
+<LI> <object type='text/sitemap'><param name='Name' value='Nodos de Cálculo'>
+<param name='Local' value='node14.html'>
+</object>
+<LI> <object type='text/sitemap'><param name='Name' value='Edición de Nodos de Cálculo'>
+<param name='Local' value='node15.html'>
+</object>
+<LI> <object type='text/sitemap'><param name='Name' value='Funciones de Razonamiento aproximado'>
+<param name='Local' value='node16.html'>
+</object>
+<LI> <object type='text/sitemap'><param name='Name' value='Variables Lingüísticas'>
+<param name='Local' value='node17.html'>
+</object>
+<LI> <object type='text/sitemap'><param name='Name' value='Edición de Variables Lingüísticas'>
+<param name='Local' value='node18.html'>
+</object>
+<LI> <object type='text/sitemap'><param name='Name' value='Edición de Intervalos'>
+<param name='Local' value='node19.html'>
+</object>
+<LI> <object type='text/sitemap'><param name='Name' value='Edición de Números Difusos'>
+<param name='Local' value='node20.html'>
+</object>
+<LI> <object type='text/sitemap'><param name='Name' value='Copiar Números Difusos'>
+<param name='Local' value='node21.html'>
+</object>
+<LI> <object type='text/sitemap'><param name='Name' value='Edición de Modificadores Lingüísticos'>
+<param name='Local' value='node22.html'>
+</object>
+<LI> <object type='text/sitemap'><param name='Name' value='Definición Automática de Variables'>
+<param name='Local' value='node23.html'>
+</object>
+<LI> <object type='text/sitemap'><param name='Name' value='Presentación de Variables Lingüísticas'>
+<param name='Local' value='node24.html'>
+</object>
+<LI> <object type='text/sitemap'><param name='Name' value='Librerías'>
+<param name='Local' value='node25.html'>
+</object>
+<LI> <object type='text/sitemap'><param name='Name' value='Administración de Librerías'>
+<param name='Local' value='node26.html'>
+</object>
+<LI> <object type='text/sitemap'><param name='Name' value='Reportes'>
+<param name='Local' value='node27.html'>
+</object>
+<LI> <object type='text/sitemap'><param name='Name' value='Generación de Reportes'>
+<param name='Local' value='node28.html'>
+</object>
+<LI> <object type='text/sitemap'><param name='Name' value='Importación y Exportación de Archivos'>
+<param name='Local' value='node29.html'>
+</object>
+<LI> <object type='text/sitemap'><param name='Name' value='Exportar Archivos de texto'>
+<param name='Local' value='node30.html'>
+</object>
+<LI> <object type='text/sitemap'><param name='Name' value='Importar Archivos de Texto'>
+<param name='Local' value='node31.html'>
+</object>
+<LI> <object type='text/sitemap'><param name='Name' value='La Interfaz Gráfica'>
+<param name='Local' value='node32.html'>
+</object>
+<LI> <object type='text/sitemap'><param name='Name' value='Vistas disponibles'>
+<param name='Local' value='node33.html'>
+</object>
+<LI> <object type='text/sitemap'><param name='Name' value='Configuración de la Interfaz Gráfica'>
+<param name='Local' value='node34.html'>
+</object>
+<LI> <object type='text/sitemap'><param name='Name' value='Significado de los colores'>
+<param name='Local' value='node35.html'>
+</object>
+<LI> <object type='text/sitemap'><param name='Name' value='Edición de Propiedades Genéricas'>
+<param name='Local' value='node36.html'>
+</object>
+</UL>

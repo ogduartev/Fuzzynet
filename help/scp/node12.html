@@ -1,0 +1,208 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.70)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Interpretación Lingüística</TITLE>
+<META NAME="description" CONTENT="Interpretación Lingüística">
+<META NAME="keywords" CONTENT="scp">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="scp.css">
+
+</HEAD>
+
+<BODY >
+
+<H1><A NAME="SECTION00220000000000000000"></A>
+<A NAME="sec:ling_inter"></A>
+<BR>
+Interpretaci&#243;n Ling&#252;&#237;stica
+</H1>
+El prop&#243;sito del bloque de Interpretaci&#243;n Ling&#252;&#237;stica es convertir las entradas en n&#250;meros difusos. Las entradas pueden ser de diferentes tipos, y la salida ser&#225; siempre un n&#250;mero difuso <IMG
+ WIDTH="19" HEIGHT="33" ALIGN="CENTER" BORDER="0"
+ SRC="img55.gif"
+ ALT="$ \eta_i$"> para cada entrada. El siguiente listado muestra cu&#225;les son los tipos entradas validos:
+
+<P>
+<DL>
+<DT><STRONG>N&#250;meros crisp:</STRONG></DT>
+<DD>si la entrada actual <IMG
+ WIDTH="21" HEIGHT="33" ALIGN="CENTER" BORDER="0"
+ SRC="img33.gif"
+ ALT="$ x_i$"> es el n&#250;mero crisp <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img56.gif"
+ ALT="$ a$">, la salida del bloque ser&#225; el n&#250;mero difuso singleton <!-- MATH
+ $\eta_i=T(a,a,a,a)$
+ -->
+<IMG
+ WIDTH="137" HEIGHT="37" ALIGN="CENTER" BORDER="0"
+ SRC="img57.gif"
+ ALT="$ \eta_i=T(a,a,a,a)$">.
+
+<P>
+</DD>
+<DT><STRONG>Intervalos:</STRONG></DT>
+<DD>si la entrada actual <IMG
+ WIDTH="21" HEIGHT="33" ALIGN="CENTER" BORDER="0"
+ SRC="img33.gif"
+ ALT="$ x_i$"> es el intervalo <IMG
+ WIDTH="41" HEIGHT="37" ALIGN="CENTER" BORDER="0"
+ SRC="img58.gif"
+ ALT="$ [a,b]$">, la salida del bloque ser&#225; el n&#250;mero difuso rectangular <!-- MATH
+ $\eta_i=T(a,a,b,b)$
+ -->
+<IMG
+ WIDTH="133" HEIGHT="37" ALIGN="CENTER" BORDER="0"
+ SRC="img59.gif"
+ ALT="$ \eta_i=T(a,a,b,b)$">.
+
+<P>
+</DD>
+<DT><STRONG>N&#250;meros difusos:</STRONG></DT>
+<DD>si la entrada actual <IMG
+ WIDTH="21" HEIGHT="33" ALIGN="CENTER" BORDER="0"
+ SRC="img33.gif"
+ ALT="$ x_i$"> es un n&#250;mero difuso la salida del bloque <IMG
+ WIDTH="19" HEIGHT="33" ALIGN="CENTER" BORDER="0"
+ SRC="img55.gif"
+ ALT="$ \eta_i$"> ser&#225; la misma entrada sin cambios.
+
+<P>
+</DD>
+<DT><STRONG>Etiquetas Ling&#252;&#237;sticas:</STRONG></DT>
+<DD>si la entrada actual <IMG
+ WIDTH="21" HEIGHT="33" ALIGN="CENTER" BORDER="0"
+ SRC="img33.gif"
+ ALT="$ x_i$"> es la etiqueta ling&#252;&#237;stica <!-- MATH
+ $\mathcal{L}_{x_{ij}}$
+ -->
+<IMG
+ WIDTH="37" HEIGHT="35" ALIGN="CENTER" BORDER="0"
+ SRC="img47.gif"
+ ALT="$ \mathcal{L}_{x_{ij}}$"> la salida del bloque <IMG
+ WIDTH="19" HEIGHT="33" ALIGN="CENTER" BORDER="0"
+ SRC="img55.gif"
+ ALT="$ \eta_i$"> ser&#225; su conjunto difuso relacionado <!-- MATH
+ $f_{x_{ij}}$
+ -->
+<IMG
+ WIDTH="33" HEIGHT="35" ALIGN="CENTER" BORDER="0"
+ SRC="img48.gif"
+ ALT="$ f_{x_{ij}}$">.
+</DD>
+<DT><STRONG>Etiquetas Ling&#252;&#237;sticas modificadas:</STRONG></DT>
+<DD>si la entrada actual <IMG
+ WIDTH="21" HEIGHT="33" ALIGN="CENTER" BORDER="0"
+ SRC="img33.gif"
+ ALT="$ x_i$"> es la etiqueta ling&#252;&#237;stica modificada <I>``al menos''</I> <!-- MATH
+ $\mathcal{L}_{x_{ij}}$
+ -->
+<IMG
+ WIDTH="37" HEIGHT="35" ALIGN="CENTER" BORDER="0"
+ SRC="img47.gif"
+ ALT="$ \mathcal{L}_{x_{ij}}$"> la salida del bloque <IMG
+ WIDTH="19" HEIGHT="33" ALIGN="CENTER" BORDER="0"
+ SRC="img55.gif"
+ ALT="$ \eta_i$"> ser&#225; una versi&#243;n modificada de su conjunto difuso relacionado <!-- MATH
+ $f_{x_{ij}}$
+ -->
+<IMG
+ WIDTH="33" HEIGHT="35" ALIGN="CENTER" BORDER="0"
+ SRC="img48.gif"
+ ALT="$ f_{x_{ij}}$">: El l&#237;mite superior de cada <IMG
+ WIDTH="32" HEIGHT="33" ALIGN="CENTER" BORDER="0"
+ SRC="img60.gif"
+ ALT="$ \alpha-$">corte de <!-- MATH
+ $f_{x_{ij}}$
+ -->
+<IMG
+ WIDTH="33" HEIGHT="35" ALIGN="CENTER" BORDER="0"
+ SRC="img48.gif"
+ ALT="$ f_{x_{ij}}$"> se remplazar&#225; por <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img17.gif"
+ ALT="$ 1$">, el l&#237;mite superior de su Universo de Discurso <IMG
+ WIDTH="23" HEIGHT="35" ALIGN="CENTER" BORDER="0"
+ SRC="img36.gif"
+ ALT="$ U_i$">.
+
+<P>
+De forma similar, si la entrada actual <IMG
+ WIDTH="21" HEIGHT="33" ALIGN="CENTER" BORDER="0"
+ SRC="img33.gif"
+ ALT="$ x_i$"> es la etiqueta ling&#252;&#237;stica modificada <I>``a lo sumo''</I> <!-- MATH
+ $\mathcal{L}_{x_{ij}}$
+ -->
+<IMG
+ WIDTH="37" HEIGHT="35" ALIGN="CENTER" BORDER="0"
+ SRC="img47.gif"
+ ALT="$ \mathcal{L}_{x_{ij}}$"> la salida del bloque <IMG
+ WIDTH="19" HEIGHT="33" ALIGN="CENTER" BORDER="0"
+ SRC="img55.gif"
+ ALT="$ \eta_i$"> ser&#225; una versi&#243;n modificada de su conjunto difuso relacionado <!-- MATH
+ $f_{x_{ij}}$
+ -->
+<IMG
+ WIDTH="33" HEIGHT="35" ALIGN="CENTER" BORDER="0"
+ SRC="img48.gif"
+ ALT="$ f_{x_{ij}}$">: El l&#237;mite inferior de cada <IMG
+ WIDTH="32" HEIGHT="33" ALIGN="CENTER" BORDER="0"
+ SRC="img60.gif"
+ ALT="$ \alpha-$">corte de <!-- MATH
+ $f_{x_{ij}}$
+ -->
+<IMG
+ WIDTH="33" HEIGHT="35" ALIGN="CENTER" BORDER="0"
+ SRC="img48.gif"
+ ALT="$ f_{x_{ij}}$"> se remplazar&#225; por 0, el l&#237;mite inferior de su Universo de Discurso <IMG
+ WIDTH="23" HEIGHT="35" ALIGN="CENTER" BORDER="0"
+ SRC="img36.gif"
+ ALT="$ U_i$">.
+
+<P>
+</DD>
+<DT><STRONG>Palabras simples:</STRONG></DT>
+<DD>si la entrada actual <IMG
+ WIDTH="21" HEIGHT="33" ALIGN="CENTER" BORDER="0"
+ SRC="img33.gif"
+ ALT="$ x_i$"> es la palabra simple <I>``nada''</I> la salida del bloque ser&#225; el n&#250;mero difuso trapezoidal <!-- MATH
+ $\eta_i=T(0,0,0,0)$
+ -->
+<IMG
+ WIDTH="135" HEIGHT="37" ALIGN="CENTER" BORDER="0"
+ SRC="img61.gif"
+ ALT="$ \eta_i=T(0,0,0,0)$">.
+
+<P>
+Si la entrada actual <IMG
+ WIDTH="21" HEIGHT="33" ALIGN="CENTER" BORDER="0"
+ SRC="img33.gif"
+ ALT="$ x_i$"> es la palabra simple <I>``cualquier cosa''</I> la salida del bloque ser&#225; el n&#250;mero difuso trapezoidal <!-- MATH
+ $\eta_i=T(0,0,1,1)$
+ -->
+<IMG
+ WIDTH="135" HEIGHT="37" ALIGN="CENTER" BORDER="0"
+ SRC="img62.gif"
+ ALT="$ \eta_i=T(0,0,1,1)$">.
+</DD>
+</DL>
+
+<P>
+<BR><HR>
+<ADDRESS>
+Oscar Duarte
+2005-10-17
+</ADDRESS>
+</BODY>
+</HTML>

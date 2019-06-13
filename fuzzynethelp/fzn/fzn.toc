@@ -1,0 +1,30 @@
+\select@language {spanish}
+\contentsline {chapter}{\numberline {1}El Proyecto}{5}
+\contentsline {section}{\numberline {1.1}Edici\'on del Proyecto}{5}
+\contentsline {section}{\numberline {1.2}Edici\'on de Generalidades}{5}
+\contentsline {chapter}{\numberline {2}Estrategias}{7}
+\contentsline {section}{\numberline {2.1}Edici\'on de Estrategias}{7}
+\contentsline {chapter}{\numberline {3}Casos}{9}
+\contentsline {section}{\numberline {3.1}Edici\'on de Casos}{9}
+\contentsline {section}{\numberline {3.2}Selecci\'on de Estrategias}{9}
+\contentsline {section}{\numberline {3.3}Ordenar los Casos}{9}
+\contentsline {chapter}{\numberline {4}Nodos de C\'alculo}{11}
+\contentsline {section}{\numberline {4.1}Edici\'on de Nodos de C\'alculo}{11}
+\contentsline {section}{\numberline {4.2}Presentaci\'on de N\'umeros Difusos}{11}
+\contentsline {chapter}{\numberline {5}Variables Ling\"u\IeC {\'\i }sticas}{13}
+\contentsline {section}{\numberline {5.1}Edici\'on de Variables Ling\"u\IeC {\'\i }sticas}{13}
+\contentsline {section}{\numberline {5.2}Definici\'on Autom\'atica de Variables}{13}
+\contentsline {section}{\numberline {5.3}Edici\'on de Intervalos}{13}
+\contentsline {section}{\numberline {5.4}Edici\'on de N\'umeros Difusos}{13}
+\contentsline {section}{\numberline {5.5}Copiar N\'umeros Difusos}{13}
+\contentsline {section}{\numberline {5.6}Edici\'on de Modificadores Ling\"u\IeC {\'\i }sticos}{13}
+\contentsline {chapter}{\numberline {6}Librer\IeC {\'\i }as}{15}
+\contentsline {section}{\numberline {6.1}Administraci\'on de Librer\IeC {\'\i }as}{15}
+\contentsline {chapter}{\numberline {7}Reportes}{17}
+\contentsline {section}{\numberline {7.1}Generaci\'on de Reportes}{17}
+\contentsline {chapter}{\numberline {8}Importaci\'on y Exportaci\'on de Archivos}{19}
+\contentsline {section}{\numberline {8.1}Exportar Archivos de texto}{19}
+\contentsline {section}{\numberline {8.2}Importar Archivos de Texto}{19}
+\contentsline {chapter}{\numberline {9}La Interfaz Gr\'afica}{21}
+\contentsline {section}{\numberline {9.1}Configuraci\'on de la Interfaz Gr\'afica}{21}
+\contentsline {section}{\numberline {9.2}Edici\'on de Colores}{21}

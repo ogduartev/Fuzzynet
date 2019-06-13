@@ -1,0 +1,287 @@
+This is TeX, Version 3.14159 (Web2C 7.4.5) (format=latex 2004.8.9)  24 APR 2005 14:36
+**./images.tex
+(./images.tex
+LaTeX2e <2001/06/01>
+Babel <v3.7h> and hyphenation patterns for american, french, german, ngerman, s
+panish, nohyphenation, loaded.
+
+(/usr/share/texmf/tex/latex/base/book.cls
+Document Class: book 2001/04/21 v1.4e Standard LaTeX document class
+(/usr/share/texmf/tex/latex/base/bk12.clo
+File: bk12.clo 2001/04/21 v1.4e Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@chapter=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+) (/usr/share/texmf/tex/latex/base/ifthen.sty
+Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
+) (/usr/share/texmf/tex/generic/babel/babel.sty
+Package: babel 2001/03/01 v3.7h The Babel package
+(/usr/share/texmf/tex/generic/babel/spanish.ldf
+Language: spanish.ldf 2001/01/30 v4.1c Spanish support from the babel system
+(/usr/share/texmf/tex/generic/babel/babel.def
+File: babel.def 2001/03/01 v3.7h Babel common definitions
+\babel@savecnt=\count88
+\U@D=\dimen103
+)
+\es@quottoks=\toks14
+\es@quotdepth=\count89
+Package babel Info: Making . an active character on input line 464.
+Package babel Info: Making " an active character on input line 495.
+Package babel Info: Making < an active character on input line 581.
+Package babel Info: Making > an active character on input line 582.
+)) (/usr/share/texmf/tex/latex/base/inputenc.sty
+Package: inputenc 2001/07/10 v0.99a Input encoding file 
+(/usr/share/texmf/tex/latex/base/latin1.def
+File: latin1.def 2001/07/10 v0.99a Input encoding file 
+)) (/usr/share/texmf/tex/latex/pstricks/pst-all.sty
+Package: pst-all 1997/03/25 all pstricks tools
+(/usr/share/texmf/tex/latex/graphics/pstcol.sty
+Package: pstcol 2001/06/20 v1.1 PSTricks color colompatibility (DPC)
+(/usr/share/texmf/tex/latex/pstricks/pstricks.sty
+Package: pstricks 1997/03/25 package wrapper for PSTricks pstricks.tex
+(/usr/share/texmf/tex/generic/pstricks/pstricks.tex
+`PSTricks' v97 patch 14  <1999/12/23> (tvz)
+\pst@dima=\dimen104
+\pst@dimb=\dimen105
+\pst@dimc=\dimen106
+\pst@dimd=\dimen107
+\pst@dimg=\dimen108
+\pst@dimh=\dimen109
+\pst@hbox=\box26
+\pst@boxg=\box27
+\pst@cnta=\count90
+\pst@cntb=\count91
+\pst@cntc=\count92
+\pst@cntd=\count93
+\pst@cntg=\count94
+\pst@cnth=\count95
+\pst@toks=\toks15
+(/usr/share/texmf/tex/generic/pstricks/pstricks.con)
+\psunit=\dimen110
+\psxunit=\dimen111
+\psyunit=\dimen112
+\pslinewidth=\dimen113
+\pst@customdefs=\toks16
+\pslinearc=\dimen114
+\everypsbox=\toks17
+\psframesep=\dimen115
+\pslabelsep=\dimen116
+\theoverlaybox=\box28
+)) (/usr/share/texmf/tex/latex/graphics/color.sty
+Package: color 1999/02/16 v1.0i Standard LaTeX Color (DPC)
+(/usr/share/texmf/tex/latex/config/color.cfg
+File: color.cfg 2001/08/31 v1.1 color configuration of teTeX/TeXLive
+)
+Package color Info: Driver file: dvips.def on input line 125.
+(/usr/share/texmf/tex/latex/graphics/dvips.def
+File: dvips.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
+) (/usr/share/texmf/tex/latex/graphics/dvipsnam.def
+File: dvipsnam.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
+))) (/usr/share/texmf/tex/latex/pstricks/pst-grad.sty
+Package: pst-grad 1997/03/25 package wrapper for PSTricks pst-grad.tex
+(/usr/share/texmf/tex/generic/pstricks/pst-grad.tex  v97 patch 1, 1997/04/28
+Package color Info: Redefining color gradbegin on input line 45.
+Package color Info: Redefining color gradend on input line 49.
+)) (/usr/share/texmf/tex/latex/pstricks/pst-plot.sty
+Package: pst-plot 1997/03/25 package wrapper for PSTricks pst-plot.tex
+(/usr/share/texmf/tex/generic/pstricks/pst-plot.tex  v97 patch 2, 1999/12/12 (/
+usr/share/texmf/tex/generic/multido/multido.tex  v1.4, 93/01/14 <tvz>
+\multido@count=\count96
+\multidocount=\count97
+\multido@stuff=\toks18
+))) (/usr/share/texmf/tex/latex/pstricks/pst-coil.sty
+Package: pst-coil 1997/03/25 package wrapper for PSTricks pst-coil.tex
+(/usr/share/texmf/tex/generic/pstricks/pst-coil.tex  v97 patch 2, 1998/03/19)) 
+(/usr/share/texmf/tex/latex/pstricks/pst-text.sty
+Package: pst-text 1997/03/25 package wrapper for PSTricks pst-text.tex
+(/usr/share/texmf/tex/generic/pstricks/pst-text.tex  v97, 1997/03/25)) (/usr/sh
+are/texmf/tex/latex/pstricks/pst-char.sty
+Package: pst-char 1997/03/25 package wrapper for PSTricks pst-char.tex
+(/usr/share/texmf/tex/generic/pstricks/pst-char.tex  v97 patch 3, 1999/03/11)) 
+(/usr/share/texmf/tex/latex/pstricks/pst-node.sty
+Package: pst-node 1997/03/25 package wrapper for PSTricks pst-node.tex
+(/usr/share/texmf/tex/generic/pstricks/pst-node.tex  v97 patch 11, 2000/11/09
+\psrow=\count98
+\pscol=\count99
+\psmatrixcnt=\count100
+\psrowsep=\skip43
+\pscolsep=\skip44
+)) (/usr/share/texmf/tex/latex/pstricks/pst-3d.sty
+Package: pst-3d 1997/03/25 package wrapper for PSTricks pst-3d.tex
+(/usr/share/texmf/tex/generic/pstricks/pst-3d.tex  v97, 1997/03/25)) (/usr/shar
+e/texmf/tex/latex/pstricks/pst-eps.sty
+Package: pst-eps 1997/03/25 package wrapper for PSTricks pst-eps.tex
+(/usr/share/texmf/tex/generic/pstricks/pst-eps.tex  v97 patch 1, 1997/05/05
+\pst@epsout=\write3
+\pst@tempout=\write4
+)) (/usr/share/texmf/tex/latex/pstricks/pst-fill.sty
+Package: pst-fill 1997/04/08 package wrapper for PSTricks pst-fill package
+(/usr/share/texmf/tex/generic/pstricks/pst-fill.tex  v97 patch 2, 1997/12/12
+\pst@fillbox=\box29
+)) (/usr/share/texmf/tex/latex/pstricks/pst-tree.sty
+Package: pst-tree 1997/03/25 package wrapper for PSTricks pst-tree.tex
+(/usr/share/texmf/tex/generic/pstricks/pst-tree.tex  v97 patch 5, 1999/10/28
+\pstree@rootbox=\box30
+\pstree@box=\box31
+\psnodecnt=\count101
+\pstreelevel=\count102
+\pstreecnt=\count103
+\pstree@cnt=\count104
+\pstree@stop=\count105
+)) (/usr/share/texmf/tex/generic/multido/multido.sty
+Package: multido 1997/03/25 package wrapper for multido.tex
+(/usr/share/texmf/tex/generic/multido/multido.tex  v1.4, 93/01/14 <tvz>))) (/us
+r/share/texmf/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2000/07/18 v2.13 AMS math features
+\@mathmargin=\skip45
+For additional information on amsmath, use the `?' option.
+(/usr/share/texmf/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01
+(/usr/share/texmf/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks19
+\ex@=\dimen117
+)) (/usr/share/texmf/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen118
+) (/usr/share/texmf/tex/latex/amsmath/amsopn.sty
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count106
+LaTeX Info: Redefining \frac on input line 211.
+\uproot@=\count107
+\leftroot@=\count108
+LaTeX Info: Redefining \overline on input line 307.
+\classnum@=\count109
+\DOTSCASE@=\count110
+LaTeX Info: Redefining \ldots on input line 379.
+LaTeX Info: Redefining \dots on input line 382.
+LaTeX Info: Redefining \cdots on input line 467.
+\Mathstrutbox@=\box32
+\strutbox@=\box33
+\big@size=\dimen119
+LaTeX Font Info:    Redeclaring font encoding OML on input line 567.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
+\macc@depth=\count111
+\c@MaxMatrixCols=\count112
+\dotsspace@=\muskip10
+\c@parentequation=\count113
+\dspbrk@lvl=\count114
+\tag@help=\toks20
+\row@=\count115
+\column@=\count116
+\maxfields@=\count117
+\andhelp@=\toks21
+\eqnshift@=\dimen120
+\alignsep@=\dimen121
+\tagshift@=\dimen122
+\tagwidth@=\dimen123
+\totwidth@=\dimen124
+\lineht@=\dimen125
+\@envbody=\toks22
+\multlinegap=\skip46
+\multlinetaggap=\skip47
+\mathdisplay@stack=\toks23
+LaTeX Info: Redefining \[ on input line 2666.
+LaTeX Info: Redefining \] on input line 2667.
+) (/usr/share/texmf/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2001/10/25 v2.2f
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 132.
+) (/usr/share/texmf/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2002/01/22 v2.2d
+)
+
+! LaTeX Error: Option clash for package color.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.18 
+     
+The package color has already been loaded with options:
+  []
+There has now been an attempt to load it with options
+  [dvips]
+Adding the global options:
+  ,dvips
+to your \documentclass declaration may fix this.
+Try typing  <return>  to proceed.
+
+\sizebox=\box34
+\lthtmlwrite=\write5
+(./images.aux)
+\openout1 = `images.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 131.
+LaTeX Font Info:    ... okay on input line 131.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 131.
+LaTeX Font Info:    ... okay on input line 131.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 131.
+LaTeX Font Info:    ... okay on input line 131.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 131.
+LaTeX Font Info:    ... okay on input line 131.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 131.
+LaTeX Font Info:    ... okay on input line 131.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 131.
+LaTeX Font Info:    ... okay on input line 131.
+
+latex2htmlLength hsize=349.0pt
+
+latex2htmlLength vsize=630.3738pt
+
+latex2htmlLength hoffset=0.0pt
+
+latex2htmlLength voffset=0.0pt
+
+latex2htmlLength topmargin=0.0pt
+
+latex2htmlLength topskip=0.00003pt
+
+latex2htmlLength headheight=0.0pt
+
+latex2htmlLength headsep=0.0pt
+
+latex2htmlLength parskip=0.0pt plus 1.0pt
+
+latex2htmlLength oddsidemargin=17.0pt
+
+latex2htmlLength evensidemargin=62.0pt
+
+LaTeX Font Info:    Try loading font information for U+msa on input line 179.
+(/usr/share/texmf/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2002/01/19 v2.2g AMS font definitions
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 179.
+(/usr/share/texmf/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2002/01/19 v2.2g AMS font definitions
+)
+l2hSize :figure14:120.61096pt::0.0pt::349.0pt.
+[1
+
+
+
+] (./images.aux) ) 
+Here is how much of TeX's memory you used:
+ 3861 strings out of 95843
+ 45843 string characters out of 1195856
+ 117219 words of memory out of 1000001
+ 6727 multiletter control sequences out of 10000+50000
+ 8294 words of font info for 32 fonts, out of 500000 for 1000
+ 14 hyphenation exceptions out of 1000
+ 30i,9n,25p,228b,400s stack positions out of 1500i,500n,5000p,200000b,5000s
+
+Output written on images.dvi (1 page, 6052 bytes).

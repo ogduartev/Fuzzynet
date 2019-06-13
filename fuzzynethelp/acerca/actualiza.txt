@@ -1,0 +1,9 @@
+#!/bin/bash
+rm /home/ogduarte/fuzzynet/fuzzynet/help/acerca/*
+cp acerca/*.* /home/ogduarte/fuzzynet/fuzzynet/help/acerca/.
+rm /windows/C/Oscar/fuzzynet/help/acerca/*
+cp acerca/*.* /windows/C/Oscar/fuzzynet/help/acerca/.
+rm /home/ogduarte/Proyectos/Granada/CDROM/Ejecutables/Linux/help/acerca/*
+cp acerca/*.* /home/ogduarte/Proyectos/Granada/CDROM/Ejecutables/Linux/help/acerca/.
+rm /home/ogduarte/Proyectos/Granada/CDROM/Ejecutables/Windows/help/acerca/*
+cp acerca/*.* /home/ogduarte/Proyectos/Granada/CDROM/Ejecutables/Windows/help/acerca/.

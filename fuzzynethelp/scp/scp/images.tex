@@ -1,0 +1,378 @@
+\batchmode
+\documentclass[letterpaper,12pt]{book}
+\RequirePackage{ifthen}
+
+
+\usepackage[spanish]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage{pst-all}
+\usepackage{pstcol}
+\usepackage{enumerate}
+\title{Sistemas de Computación con Palabras}
+\author{Oscar G. Duarte V.}
+\date{}
+
+
+\usepackage[dvips]{color}
+
+
+\pagecolor[gray]{.7}
+
+\usepackage[latin1]{inputenc}
+
+
+
+\makeatletter
+
+\makeatletter
+\count@=\the\catcode`\_ \catcode`\_=8 
+\newenvironment{tex2html_wrap}{}{}%
+\catcode`\<=12\catcode`\_=\count@
+\newcommand{\providedcommand}[1]{\expandafter\providecommand\csname #1\endcsname}%
+\newcommand{\renewedcommand}[1]{\expandafter\providecommand\csname #1\endcsname{}%
+  \expandafter\renewcommand\csname #1\endcsname}%
+\newcommand{\newedenvironment}[1]{\newenvironment{#1}{}{}\renewenvironment{#1}}%
+\let\newedcommand\renewedcommand
+\let\renewedenvironment\newedenvironment
+\makeatother
+\let\mathon=$
+\let\mathoff=$
+\ifx\AtBeginDocument\undefined \newcommand{\AtBeginDocument}[1]{}\fi
+\newbox\sizebox
+\setlength{\hoffset}{0pt}\setlength{\voffset}{0pt}
+\addtolength{\textheight}{\footskip}\setlength{\footskip}{0pt}
+\addtolength{\textheight}{\topmargin}\setlength{\topmargin}{0pt}
+\addtolength{\textheight}{\headheight}\setlength{\headheight}{0pt}
+\addtolength{\textheight}{\headsep}\setlength{\headsep}{0pt}
+\setlength{\textwidth}{349pt}
+\newwrite\lthtmlwrite
+\makeatletter
+\let\realnormalsize=\normalsize
+\global\topskip=2sp
+\def\preveqno{}\let\real@float=\@float \let\realend@float=\end@float
+\def\@float{\let\@savefreelist\@freelist\real@float}
+\def\liih@math{\ifmmode$\else\bad@math\fi}
+\def\end@float{\realend@float\global\let\@freelist\@savefreelist}
+\let\real@dbflt=\@dbflt \let\end@dblfloat=\end@float
+\let\@largefloatcheck=\relax
+\let\if@boxedmulticols=\iftrue
+\def\@dbflt{\let\@savefreelist\@freelist\real@dbflt}
+\def\adjustnormalsize{\def\normalsize{\mathsurround=0pt \realnormalsize
+ \parindent=0pt\abovedisplayskip=0pt\belowdisplayskip=0pt}%
+ \def\phantompar{\csname par\endcsname}\normalsize}%
+\def\lthtmltypeout#1{{\let\protect\string \immediate\write\lthtmlwrite{#1}}}%
+\newcommand\lthtmlhboxmathA{\adjustnormalsize\setbox\sizebox=\hbox\bgroup\kern.05em }%
+\newcommand\lthtmlhboxmathB{\adjustnormalsize\setbox\sizebox=\hbox to\hsize\bgroup\hfill }%
+\newcommand\lthtmlvboxmathA{\adjustnormalsize\setbox\sizebox=\vbox\bgroup %
+ \let\ifinner=\iffalse \let\)\liih@math }%
+\newcommand\lthtmlboxmathZ{\@next\next\@currlist{}{\def\next{\voidb@x}}%
+ \expandafter\box\next\egroup}%
+\newcommand\lthtmlmathtype[1]{\gdef\lthtmlmathenv{#1}}%
+\newcommand\lthtmllogmath{\lthtmltypeout{l2hSize %
+:\lthtmlmathenv:\the\ht\sizebox::\the\dp\sizebox::\the\wd\sizebox.\preveqno}}%
+\newcommand\lthtmlfigureA[1]{\let\@savefreelist\@freelist
+       \lthtmlmathtype{#1}\lthtmlvboxmathA}%
+\newcommand\lthtmlpictureA{\bgroup\catcode`\_=8 \lthtmlpictureB}%
+\newcommand\lthtmlpictureB[1]{\lthtmlmathtype{#1}\egroup
+       \let\@savefreelist\@freelist \lthtmlhboxmathB}%
+\newcommand\lthtmlpictureZ[1]{\hfill\lthtmlfigureZ}%
+\newcommand\lthtmlfigureZ{\lthtmlboxmathZ\lthtmllogmath\copy\sizebox
+       \global\let\@freelist\@savefreelist}%
+\newcommand\lthtmldisplayA{\bgroup\catcode`\_=8 \lthtmldisplayAi}%
+\newcommand\lthtmldisplayAi[1]{\lthtmlmathtype{#1}\egroup\lthtmlvboxmathA}%
+\newcommand\lthtmldisplayB[1]{\edef\preveqno{(\theequation)}%
+  \lthtmldisplayA{#1}\let\@eqnnum\relax}%
+\newcommand\lthtmldisplayZ{\lthtmlboxmathZ\lthtmllogmath\lthtmlsetmath}%
+\newcommand\lthtmlinlinemathA{\bgroup\catcode`\_=8 \lthtmlinlinemathB}
+\newcommand\lthtmlinlinemathB[1]{\lthtmlmathtype{#1}\egroup\lthtmlhboxmathA
+  \vrule height1.5ex width0pt }%
+\newcommand\lthtmlinlineA{\bgroup\catcode`\_=8 \lthtmlinlineB}%
+\newcommand\lthtmlinlineB[1]{\lthtmlmathtype{#1}\egroup\lthtmlhboxmathA}%
+\newcommand\lthtmlinlineZ{\egroup\expandafter\ifdim\dp\sizebox>0pt %
+  \expandafter\centerinlinemath\fi\lthtmllogmath\lthtmlsetinline}
+\newcommand\lthtmlinlinemathZ{\egroup\expandafter\ifdim\dp\sizebox>0pt %
+  \expandafter\centerinlinemath\fi\lthtmllogmath\lthtmlsetmath}
+\newcommand\lthtmlindisplaymathZ{\egroup %
+  \centerinlinemath\lthtmllogmath\lthtmlsetmath}
+\def\lthtmlsetinline{\hbox{\vrule width.1em \vtop{\vbox{%
+  \kern.1em\copy\sizebox}\ifdim\dp\sizebox>0pt\kern.1em\else\kern.3pt\fi
+  \ifdim\hsize>\wd\sizebox \hrule depth1pt\fi}}}
+\def\lthtmlsetmath{\hbox{\vrule width.1em\kern-.05em\vtop{\vbox{%
+  \kern.1em\kern0.8 pt\hbox{\hglue.17em\copy\sizebox\hglue0.8 pt}}\kern.3pt%
+  \ifdim\dp\sizebox>0pt\kern.1em\fi \kern0.8 pt%
+  \ifdim\hsize>\wd\sizebox \hrule depth1pt\fi}}}
+\def\centerinlinemath{%
+  \dimen1=\ifdim\ht\sizebox<\dp\sizebox \dp\sizebox\else\ht\sizebox\fi
+  \advance\dimen1by.5pt \vrule width0pt height\dimen1 depth\dimen1 
+ \dp\sizebox=\dimen1\ht\sizebox=\dimen1\relax}
+
+\def\lthtmlcheckvsize{\ifdim\ht\sizebox<\vsize 
+  \ifdim\wd\sizebox<\hsize\expandafter\hfill\fi \expandafter\vfill
+  \else\expandafter\vss\fi}%
+\providecommand{\selectlanguage}[1]{}%
+\makeatletter \tracingstats = 1 
+\providecommand{\Chi}{\textrm{X}}
+\providecommand{\Nu}{\textrm{N}}
+\providecommand{\Kappa}{\textrm{K}}
+\providecommand{\Zeta}{\textrm{Z}}
+\providecommand{\Alpha}{\textrm{A}}
+\providecommand{\Omicron}{\textrm{O}}
+\providecommand{\omicron}{\textrm{o}}
+\providecommand{\Beta}{\textrm{B}}
+\providecommand{\Eta}{\textrm{H}}
+\providecommand{\Tau}{\textrm{T}}
+\providecommand{\Rho}{\textrm{R}}
+\providecommand{\Epsilon}{\textrm{E}}
+\providecommand{\Iota}{\textrm{J}}
+\providecommand{\Mu}{\textrm{M}}
+
+
+\begin{document}
+\pagestyle{empty}\thispagestyle{empty}\lthtmltypeout{}%
+\lthtmltypeout{latex2htmlLength hsize=\the\hsize}\lthtmltypeout{}%
+\lthtmltypeout{latex2htmlLength vsize=\the\vsize}\lthtmltypeout{}%
+\lthtmltypeout{latex2htmlLength hoffset=\the\hoffset}\lthtmltypeout{}%
+\lthtmltypeout{latex2htmlLength voffset=\the\voffset}\lthtmltypeout{}%
+\lthtmltypeout{latex2htmlLength topmargin=\the\topmargin}\lthtmltypeout{}%
+\lthtmltypeout{latex2htmlLength topskip=\the\topskip}\lthtmltypeout{}%
+\lthtmltypeout{latex2htmlLength headheight=\the\headheight}\lthtmltypeout{}%
+\lthtmltypeout{latex2htmlLength headsep=\the\headsep}\lthtmltypeout{}%
+\lthtmltypeout{latex2htmlLength parskip=\the\parskip}\lthtmltypeout{}%
+\lthtmltypeout{latex2htmlLength oddsidemargin=\the\oddsidemargin}\lthtmltypeout{}%
+\makeatletter
+\if@twoside\lthtmltypeout{latex2htmlLength evensidemargin=\the\evensidemargin}%
+\else\lthtmltypeout{latex2htmlLength evensidemargin=\the\oddsidemargin}\fi%
+\lthtmltypeout{}%
+\makeatother
+\setcounter{page}{1}
+\onecolumn
+
+% !!! IMAGES START HERE !!!
+
+
+%
+\providecommand{\figura}[2]{
+\begin{figure}
+\centering
+\includegraphics[scale=0.75]{fig/#1}
+\caption{#2}
+
+\end{figure}
+}%
+
+\stepcounter{chapter}
+\stepcounter{section}
+\stepcounter{subsection}
+\stepcounter{subsection}
+\stepcounter{subsection}
+\stepcounter{subsection}
+\stepcounter{subsection}
+\stepcounter{subsection}
+\stepcounter{subsection}
+\stepcounter{chapter}
+{\newpage\clearpage
+\lthtmlfigureA{figure47}%
+\begin{figure}\centering
+\psset{unit=.8}
+\begin{pspicture}(-.5,0)(10,4)%\psgrid
+\psframe(0,0)(9.3,3.5)
+\tiny
+\rput[bl](0.5,0.5){
+  \psframe(0,0)(2.2,1.0)
+  \rput[t](1.1,.85){Interpretación}
+  \rput[b](1.1,.15){Lingüística}
+  \rput[b]{90}(-.8,.5){ENTRADAS}
+  \psline{<-}(0,.5)(-.7,.5)
+  \psline{->}(2.2,.5)(3,.5)
+}
+\rput[bl](3.5,0.5){
+  \psframe(0,0)(2.2,1.0)
+  \rput[t](1.1,.85){Razonamiento}
+  \rput[b](1.1,.15){Aproximado}
+  \psline{->}(2.2,.5)(3,.5)
+}
+\rput[bl](6.5,0.5){
+  \psframe(0,0)(2.2,1.0)
+  \rput[t](1.1,.85){Aproximación}
+  \rput[b](1.1,.15){Lingüística}
+  \rput[t]{90}(3.1,.5){SALIDAS}
+  \psline{->}(2.2,.5)(3,.5)
+}
+\rput[bl](3.5,2){
+  \psframe(0,0)(2.2,1.0)
+  \rput[t](1.1,.85){Función de}
+  \rput[c](1.1,.5){Razonamiento}
+  \rput[b](1.1,.15){Aproximado}
+  \psline{->}(1.1,0)(1.1,-.5)
+}
+\end{pspicture}
+
+\end{figure}%
+\lthtmlfigureZ
+\lthtmlcheckvsize\clearpage}
+
+\stepcounter{section}
+{\newpage\clearpage
+\lthtmlfigureA{figure118}%
+\begin{figure}\centering
+\begin{pspicture}(0,0)(8,3)%\psgrid
+\rput[bl](1,.5)
+{
+  \psaxes[labels=y,dy=1.5]{->}(0,0)(6,2)
+  \psline[linewidth=2pt]{-}(1,0)(2,1.5)(4,1.5)(5,0)
+  \rput[b](1,-.4){$a$}
+  \rput[b](2,-.4){$b$}
+  \rput[b](4,-.4){$c$}
+  \rput[b](5,-.4){$d$}
+}
+\end{pspicture}
+
+\end{figure}%
+\lthtmlfigureZ
+\lthtmlcheckvsize\clearpage}
+
+\stepcounter{section}
+\stepcounter{section}
+\stepcounter{subsection}
+{\newpage\clearpage
+\lthtmlfigureA{figure206}%
+\begin{figure}\centering
+\begin{pspicture}(0,-1)(6,5)%\psgrid
+\tiny
+\rput[bl](.5,3)
+{
+	\psset{unit=1.5}
+  \psaxes{->}(0,0)(1.2,1.2)
+  \rput[br](1.2,.1){\small$x_1$}
+  \rput[bl](.1,1){\small$arf_1(x)$}
+  \psplot[linestyle=solid]{0}{1}{0.4 x mul 1 0 sub 0.6 mul add}
+  \psplot[linestyle=dashed]{0}{1}{0.4 x mul 1 0.5 sub 0.6 mul add}
+  \psplot[linestyle=dotted]{0}{1}{0.4 x mul 1 1 sub 0.6 mul add}
+}
+\rput[bl](4,3)
+{
+	\psset{unit=1.5}
+  \psaxes{->}(0,0)(1.2,1.2)
+  \rput[br](1.2,.1){\small$x_1$}
+  \rput[bl](.1,1){\small$arf_2(x)$}
+  \psplot[linestyle=solid]{0}{1}{0.5 1 0.4 x mul -0.6 0 mul add add mul}
+  \psplot[linestyle=dashed]{0}{1}{0.5 1 0.4 x mul -0.6 0.5 mul add add mul}
+  \psplot[linestyle=dotted]{0}{1}{0.5 1 0.4 x mul -0.6 1 mul add add mul}
+}
+\rput[bl](.5,.5)
+{
+	\psset{unit=1.5}
+  \psaxes{->}(0,0)(1.2,1.2)
+  \rput[br](1.2,.1){\small$x_1$}
+  \rput[bl](.1,1){\small$arf_3(x)$}
+\psplot[linestyle=solid]{0}{1}{0.4 x x mul mul 1 0 0.5 exp sub 0.6 mul add}
+  \psplot[linestyle=dashed]{0}{1}{0.4 x x mul mul 1 0.5 0.5 exp sub 0.6 mul add}
+  \psplot[linestyle=dotted]{0}{1}{0.4 x x mul mul 1 1 0.5 exp sub 0.6 mul add}
+}
+\rput[bl](4,.5)
+{
+	\psset{unit=1.5}
+  \psaxes{->}(0,0)(1.2,1.2)
+  \rput[br](1.2,.1){\small$x_1$}
+  \rput[bl](.1,1){\small$arf_4(x)$}
+\psplot[linestyle=solid]{0}{1}{0.5 1 0.4 x x mul mul -0.6 0 0.5 exp mul add add mul}
+  \psplot[linestyle=dashed]{0}{1}{0.5 1 0.4 x x mul mul -0.6 0.5 0.5 exp mul add add mul}
+  \psplot[linestyle=dotted]{0}{1}{0.5 1 0.4 x x mul mul -0.6 1 0.5 exp mul add add mul}
+}
+\rput[l](0,-.5)
+{
+	\psline[linestyle=solid](0,0)(0.5,0)
+	\rput[l](0.6,0){\small :$x_2=0.0$}
+}
+\rput[l](2.5,-.5)
+{
+	\psline[linestyle=dashed](0,0)(0.5,0)
+	\rput[l](0.6,0){\small :$x_2=0.5$}
+}
+\rput[l](5,-.5)
+{
+	\psline[linestyle=dotted](0,0)(0.5,0)
+	\rput[l](0.6,0){\small :$x_2=1.0$}
+}
+\end{pspicture}
+\par
+
+\end{figure}%
+\lthtmlfigureZ
+\lthtmlcheckvsize\clearpage}
+
+\stepcounter{subsection}
+\stepcounter{section}
+\stepcounter{chapter}
+\stepcounter{section}
+{\newpage\clearpage
+\lthtmlfigureA{figure351}%
+\begin{figure}\centering
+\begin{pspicture}(0,0)(8,3)%\psgrid
+\rput[bl](1,.5)
+{
+  \psaxes[dx=1.0,dy=1.5]{->}(0,0)(6,2)
+  \psline[linewidth=2pt]{-}(1,0)(3,1.5)(3,1.5)(5,0)
+  \psline[linestyle=dashed,linewidth=2pt]%
+  {-}(2,0)(3,1.5)(3,1.5)(4,0)
+}
+\end{pspicture}
+
+\end{figure}%
+\lthtmlfigureZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlfigureA{figure362}%
+\begin{figure}\begin{center}
+	\begin{pspicture}(0,0)(6,6)%\psgrid
+	\psaxes[dx=1,Dx=.2,dy=1,Dy=.5,Oy=2.0]{->}(0,0)(6,5)
+	\psline[linestyle=solid](0,0)(5,4)
+	\psline[linestyle=dashed](0,1)(5,3)
+	\rput[br](5,0.1){$\beta$}
+	\end{pspicture}
+\end{center}
+	
+\end{figure}%
+\lthtmlfigureZ
+\lthtmlcheckvsize\clearpage}
+
+\stepcounter{section}
+{\newpage\clearpage
+\lthtmlfigureA{figure375}%
+\begin{figure}\centering
+\begin{pspicture}(0,0)(8,3)%\psgrid
+\rput[bl](1,.5)
+{
+  \psaxes[dx=1.0,dy=1.5]{->}(0,0)(6,2)
+  \psline[linewidth=2pt]{-}(1,0)(4,1.5)(4,1.5)(4,0)
+  \psline[linestyle=dashed,linewidth=2pt]%
+  {-}(3,0)(3.5,1.5)(3.5,1.5)(4,0)
+}
+\end{pspicture}
+
+\end{figure}%
+\lthtmlfigureZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlfigureA{figure388}%
+\begin{figure}\begin{center}
+	\begin{pspicture}(0,0)(6,6)%\psgrid
+	\psaxes[dx=1,Dx=.4,dy=1,Dy=0.2,Oy=3.0]{->}(0,0)(6,5)
+	\psplot[linestyle=solid]{0}{5}%
+	{1 x 0.4 mul add 2 x 0.4 mul add div 1.5 mul 2.5 add 3.0 sub 5 mul}
+	\psline[linestyle=dashed](0,2.5)(5,2.5)
+	\rput[br](5,0.1){$\beta$}
+	\end{pspicture}
+\end{center}
+	
+\end{figure}%
+\lthtmlfigureZ
+\lthtmlcheckvsize\clearpage}
+
+
+\end{document}

@@ -1,0 +1,17 @@
+#!/bin/bash
+for i in scp/*.html
+do
+   sed 's/ALIGN="MIDDLE"/ALIGN="CENTER"/g' $i >tmp.html;
+   cp tmp.html $i;
+done
+rm tmp.html;
+./completaul scp/help.hhc;
+./completaul scp/help.hhk;
+rm /home/ogduarte/fuzzynet/fuzzynet/help/scp/*
+cp scp/*.* /home/ogduarte/fuzzynet/fuzzynet/help/scp/.
+rm /windows/C/Oscar/fuzzynet/help/scp/*
+cp scp/*.* /windows/C/Oscar/fuzzynet/help/scp/.
+rm /home/ogduarte/Proyectos/Granada/CDROM/Ejecutables/Linux/help/scp/*
+cp scp/*.* /home/ogduarte/Proyectos/Granada/CDROM/Ejecutables/Linux/help/scp/.
+rm /home/ogduarte/Proyectos/Granada/CDROM/Ejecutables/Windows/help/scp/*
+cp scp/*.* /home/ogduarte/Proyectos/Granada/CDROM/Ejecutables/Windows/help/scp/.

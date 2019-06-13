@@ -1,0 +1,178 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.70)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Construcción de una </TITLE>
+<META NAME="description" CONTENT="Construcción de una ">
+<META NAME="keywords" CONTENT="scp">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="scp.css">
+
+</HEAD>
+
+<BODY >
+
+<H2><A NAME="SECTION00232000000000000000"></A>
+<A NAME="sec:arf"></A>
+<BR>
+Construcci&#243;n de una <IMG
+ WIDTH="35" HEIGHT="35" ALIGN="CENTER" BORDER="0"
+ SRC="img5.gif"
+ ALT="$ arf$">
+</H2>
+Se resumen aqui algunas ideas generales sobre c&#243;mo obtener una <IMG
+ WIDTH="35" HEIGHT="35" ALIGN="CENTER" BORDER="0"
+ SRC="img5.gif"
+ ALT="$ arf$"> adecuada en tres situaciones diferentes:
+<DL COMPACT>
+<DT>a.</DT>
+<DD><I>Se ha definido previamente una estrategia crisp: </I>
+	El paradigma de la computaci&#243;n con palabras puede dar nuevas perspectivas a problemas previamente estudiados. A manera de ejemplo, considerese el problema de estimar el impacto ambiental: La Importancia <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img123.gif"
+ ALT="$ I$"> de un impacto simple debe evaluarse teniendo en cuenta un conjunto de <IMG
+ WIDTH="16" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img31.gif"
+ ALT="$ n$"> caracter&#237;sticas <!-- MATH
+ $F=\{F_1,F_2,\cdots ,F_n\}$
+ -->
+<IMG
+ WIDTH="178" HEIGHT="37" ALIGN="CENTER" BORDER="0"
+ SRC="img124.gif"
+ ALT="$ F=\{F_1,F_2,\cdots ,F_n\}$">. La propuesta usual es efectuar un propmedio ponderado de dichas caracter&#237;sticas (v&#233;ase, por ejemplo [#!Canter88!#]). 
+
+<P>
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="ecu:importa"></A><!-- MATH
+ \begin{equation}
+I= \sum_{i=1}^{n}a_iF_i
+\end{equation}
+ -->
+<TABLE CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="CENTER">
+<TD NOWRAP ALIGN="CENTER"><IMG
+ WIDTH="103" HEIGHT="71" ALIGN="CENTER" BORDER="0"
+ SRC="img125.gif"
+ ALT="$\displaystyle I= \sum_{i=1}^{n}a_iF_i$"></TD>
+<TD NOWRAP WIDTH="10" ALIGN="RIGHT">
+(2.3)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+
+<P>
+Otra posibilidad es la de usar un sistema de computaci&#243;n con palabras basado en aritm&#233;tica difusa para el c&#225;lculo de <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img123.gif"
+ ALT="$ I$"> (ver [#!Duarte00!#]). Las principales ventajas de esta alternativa son: una forma m&#225;s natural de especificar los valores de cada <IMG
+ WIDTH="22" HEIGHT="35" ALIGN="CENTER" BORDER="0"
+ SRC="img126.gif"
+ ALT="$ F_i$"> y un marco unificado para el manejo de incertidumbres y ambig&#252;edades. Para construir una <IMG
+ WIDTH="35" HEIGHT="35" ALIGN="CENTER" BORDER="0"
+ SRC="img5.gif"
+ ALT="$ arf$"> adecuada, podemos adaptar <A HREF="#ecu:importa">2.3</A>.
+
+<P>
+</DD>
+<DT>b.</DT>
+<DD><I>Es posible consultar a expertos: </I> Si los expertos est&#225;n disponibles, se puede dise&#241;ar con elllos una <IMG
+ WIDTH="35" HEIGHT="35" ALIGN="CENTER" BORDER="0"
+ SRC="img5.gif"
+ ALT="$ arf$"> adecuada; mediante encuestas o t&#233;cnicas m&#225;s sofistricadas como las entrevistas Delphi, se puede intentar dar respuesta a las siguientes preguntas:
+
+<P>
+<DL COMPACT>
+<DT>i.</DT>
+<DD>&#191;La relaci&#243;n entre entradas y salidas es mon&#243;tona?
+	
+</DD>
+<DT>ii.</DT>
+<DD>&#191;En caso afirmativo, cu&#225;l es el sentido de esa monoton&#237;a, creciente o decreciente?
+	
+</DD>
+<DT>iii.</DT>
+<DD>&#191;Qu&#233; tan importante es cada entrada?
+	
+</DD>
+<DT>iv.</DT>
+<DD>&#191;La salida debe estar4 centrada cuando las entradas son las m&#237;nimas posibles?
+	
+</DD>
+<DT>v.</DT>
+<DD>&#191;Deberiamos esperar una relaci&#243;n lineal para cada entrada?
+</DD>
+</DL>
+
+<P>
+Las respuesta a esas preguntas pueden brindarnos buena informaci&#243;n para la construicci&#243;n de una <IMG
+ WIDTH="35" HEIGHT="35" ALIGN="CENTER" BORDER="0"
+ SRC="img5.gif"
+ ALT="$ arf$"> adecuada:
+
+<UL>
+<LI>Si la relaci&#243;n es mon&#243;tona, podemos intentar una de las opciones listadas arriba. Si no lo es, deberiamos recolectar datos e intentar otro procedimiento.
+</LI>
+<LI>El sentido de la monot&#237;a define <IMG
+ WIDTH="19" HEIGHT="33" ALIGN="CENTER" BORDER="0"
+ SRC="img77.gif"
+ ALT="$ s_i$">: <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img18.gif"
+ ALT="$ 1$"> si es creciente, y 0 si es decreciente.
+</LI>
+<LI>La importancia de cada entrada define <IMG
+ WIDTH="23" HEIGHT="33" ALIGN="CENTER" BORDER="0"
+ SRC="img73.gif"
+ ALT="$ w_i$">. Recuerde que <!-- MATH
+ $0\leq w_i \leq 1$
+ -->
+<IMG
+ WIDTH="93" HEIGHT="33" ALIGN="CENTER" BORDER="0"
+ SRC="img75.gif"
+ ALT="$ 0\leq w_i \leq 1$"> y <!-- MATH
+ $\sum_i w_i=1$
+ -->
+<IMG
+ WIDTH="87" HEIGHT="37" ALIGN="CENTER" BORDER="0"
+ SRC="img127.gif"
+ ALT="$ \sum_i w_i=1$">.
+</LI>
+<LI>Si la salida debe estar centrada cuando las entradas son m&#237;nimas, pueden usarse las opciones 2 o 4; en caso contrario pueden usarse las opciones 1 o 3.
+</LI>
+<LI>Si la relaci&#243;n es lineal, usamos las opciones 1 o 2. De lo contrario usamos las opciones 3 o 4; En este caso deberiamos recolectar datos para efectuar un ajuste de los par&#225;metros de <IMG
+ WIDTH="50" HEIGHT="37" ALIGN="CENTER" BORDER="0"
+ SRC="img128.gif"
+ ALT="$ g_i(x_i)$">
+</LI>
+</UL>
+
+<P>
+</DD>
+<DT>c.</DT>
+<DD><I>Existe un registro hist&#243;rico de datos: </I> Si se dispone de una colecci&#243;n de parejas de entrada-salida, puede intentarse un ajuste de una <IMG
+ WIDTH="35" HEIGHT="35" ALIGN="CENTER" BORDER="0"
+ SRC="img5.gif"
+ ALT="$ arf$"> gen&#233;rica a esos datos. Las opciones listadas arriba son muy r&#237;gidas para este prop&#243;sito. En su ligar, las redes de computaci&#243;n con palabras pueden ser m&#225;s flexibles que un &#250;nico sistema de computaci&#243;n con palabras.
+
+<P>
+</DD>
+</DL>
+
+<P>
+<BR><HR>
+<ADDRESS>
+Oscar Duarte
+2005-05-01
+</ADDRESS>
+</BODY>
+</HTML>

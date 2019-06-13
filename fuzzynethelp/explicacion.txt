@@ -1,0 +1,137 @@
+I need to create help files and I want to use latex/latex2html to do
+that. I have found a previous message in the latex2html mailing list
+(http://tug.org/mailman/htdig/latex2html/2002-August/002008.html)
+concerning with this topic, but no further references, so I have tried
+to do it by myself, and I want to share with you the results.
+
+In the message of August-2002 Ross Moore suggested a postproccesing of
+the contents.pl or labels.pl files... I have tried a different
+approach... I have used the .latex2html-init file and the
+custom_title_hook subroutine.
+
+I do not know in depth the latex/latex2html code, and I have not written
+any previous perl subroutine... so I am sure you can do a better job...
+My .latex2html-init file is bellow. You will find some weak points:
+
+1) The directory and file names managment
+2) I must to add manually some "</UL>" line at the end of the .hhc and
+.hhk files. A simple c++ program can do that for you (see bellow).
+3) No Anchors are proccessed, just file names
+4) I must replace in the html files the ALIGN="MIDDLE" statments for
+ALIGN="CENTER". A simple grep instruction do that. Why? because I am
+using the wxHTML class of that library does not recognize the "MIDDLE"
+that latex2html generates. (see bellow)
+
+I hope this wil be useful for anybody... at least it has been useful for
+me...
+
+Oscar Duarte
+Universidad Nacional de Colombia
+http://www.ing.unal.edu.co/~ogduarte
+
+
+=========================================
+The .latex2html-init file ....
+
+$CUSTOM_TITLES=1;
+$NO_NAVIGATION=1;
+$SHOW_SECTION_NUMBERS=0;
+$REUSE=1;
+$MAX_SPLIT_DEPTH=8;
+$INFO=0;
+$TRANSPARENT_FIGURES=1;
+$HTML_VERSION = 3.2,no_math;
+$IMAGE_TYPE = 'gif';
+$ANTI_ALIAS = 1;
+
+open (HHP,">./fzn/help.hhp");
+print HHP "Contents file=help.hhc\n";
+print HHP "Index file=help.hhk\n";
+print HHP "Title=Fuzzynet - Manual del Usuario\n";
+print HHP "Default topic=node1.html\n";
+close (HHP);
+
+open (HHC,">/home/ogduarte/fuzzynethelp/fzn/fzn/help.hhc");
+close (HHC);
+open (HHK,">/home/ogduarte/fuzzynethelp/fzn/fzn/help.hhk");
+print HHK "<UL>\n";
+close (HHK);
+
+$contadorNodos=0;
+$nivelAnterior=0;
+
+sub custom_title_hook
+{
+  open (HHC,">>/home/ogduarte/fuzzynethelp/fzn/fzn/help.hhc");
+  open (HHK,">>/home/ogduarte/fuzzynethelp/fzn/fzn/help.hhk");
+  $contadorNodos++;
+  $return = "node" . $contadorNodos ;
+
+  @tmp = split(/_/,$packed_curr_sec_id);
+  $nivel=0;
+  foreach $i ( @tmp)
+  {
+    if($i != 0)
+    {
+      $nivel++;
+    }
+  }
+  if($nivelAnterior < $nivel)
+  {
+    print HHC "<UL>\n";
+  }
+  if($nivelAnterior > $nivel)
+  {
+    print HHC "</UL>\n";
+  }
+  print HHC "<LI> <object type='text/sitemap'>";
+  print HHC "<param name='Name' value='" . $_[0] . "'>\n";
+  print HHC "<param name='ID' value=" . $contadorNodos . ">\n";
+  print HHC "<param name='Local' value='" . $return . ".html'>\n";
+  print HHC "</object>\n";
+  print HHK "<LI> <object type='text/sitemap'>";
+  print HHK "<param name='Name' value='" . $_[0] . "'>\n";
+  print HHK "<param name='Local' value='" . $return . ".html'>\n";
+  print HHK "</object>\n";
+  close (HHC);
+  close (HHK);
+  $nivelAnterior=$nivel;
+  $return;
+}
+
+1;
+
+=========================
+Adding the </UL>'s....
+
+
+int main(int argc, char *argv[])
+{
+  wxTextFile file(argv[1]);
+  file.Open();
+  int i,tam,dif=0;
+  tam=file.GetLineCount();
+  for(i=0;i<tam;i++)
+  {
+    if(file.GetLine(i)=="<UL>"){dif++;}
+    if(file.GetLine(i)=="</UL>"){dif--;}
+  }
+  for(i=0;i<dif;i++)
+  {
+    file.AddLine("</UL>");
+  }
+  file.Write();
+
+  return EXIT_SUCCESS;
+}
+
+=================================
+changing "CENTER" with "MIDDLE"...
+
+#!/bin/bash
+for i in fzn/*.html
+do
+   sed 's/ALIGN="MIDDLE"/ALIGN="CENTER"/g' $i >tmp.html;
+   cp tmp.html $i;
+done
+rm tmp.html;

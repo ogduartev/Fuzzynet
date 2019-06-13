@@ -1,0 +1,320 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.70)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Variables calculadas</TITLE>
+<META NAME="description" CONTENT="Variables calculadas">
+<META NAME="keywords" CONTENT="ediav">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="ediav.css">
+
+</HEAD>
+
+<BODY >
+
+<H1><A NAME="SECTION01220000000000000000"></A>
+<A NAME="varcalculadas"></A>
+<BR>
+Variables calculadas
+</H1>
+
+<P>
+Con la informaci&#243;n presentada en la secci&#243;n <A HREF="node4.html#varentrada">2.1</A> se calcula la informaci&#243;n que se resume en la tabla <A HREF="#tab:vars">2.5</A>.
+
+<P>
+Las Variables de Incidencia del Impacto se usan para calcular los coeficientes de ubicaci&#243;n y de tratamiento <IMG
+ WIDTH="49" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img66.gif"
+ ALT="$ CUB$"> y <IMG
+ WIDTH="33" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img67.gif"
+ ALT="$ CT$">cuyos valores se reescalan en las variables <IMG
+ WIDTH="24" HEIGHT="35" ALIGN="CENTER" BORDER="0"
+ SRC="img68.gif"
+ ALT="$ P_1$"> y <IMG
+ WIDTH="26" HEIGHT="35" ALIGN="CENTER" BORDER="0"
+ SRC="img69.gif"
+ ALT="$ C_1$">.
+
+<P>
+Las variables de Circunstancias Singulares y de Impactos Evidentes se usan para calcular <IMG
+ WIDTH="32" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img70.gif"
+ ALT="$ CS$"> e <IMG
+ WIDTH="29" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img71.gif"
+ ALT="$ IE$"> respectivamente; estas variables y <IMG
+ WIDTH="26" HEIGHT="35" ALIGN="CENTER" BORDER="0"
+ SRC="img69.gif"
+ ALT="$ C_1$"> se combinan en <IMG
+ WIDTH="24" HEIGHT="35" ALIGN="CENTER" BORDER="0"
+ SRC="img72.gif"
+ ALT="$ P_2$">. El tama&#241;o de la poblaci&#243;n se transforma en <IMG
+ WIDTH="34" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1.gif"
+ ALT="$ CP$"> siguiendo la expresi&#243;n <!-- MATH
+ $CP=0.368 POB^{0.319}$
+ -->
+<IMG
+ WIDTH="178" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img73.gif"
+ ALT="$ CP=0.368 POB^{0.319}$">, y se acota superiormente en <IMG
+ WIDTH="23" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img36.gif"
+ ALT="$ 10$">. <IMG
+ WIDTH="34" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1.gif"
+ ALT="$ CP$"> es reescalizada en <IMG
+ WIDTH="24" HEIGHT="35" ALIGN="CENTER" BORDER="0"
+ SRC="img74.gif"
+ ALT="$ P_3$"> (ver figura <A HREF="#fig:pob">2.6</A>).
+
+<P>
+La variable <IMG
+ WIDTH="61" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img20.gif"
+ ALT="$ CFIN$"> (Coeficiente FINal) representa la evaluaci&#243;n final del impacto ambiental. Su valor est&#225; en el rango <IMG
+ WIDTH="75" HEIGHT="33" ALIGN="CENTER" BORDER="0"
+ SRC="img75.gif"
+ ALT="$ 0-1000$">.
+
+<P>
+<BR><P></P>
+<DIV ALIGN="CENTER"><A NAME="154"></A>
+<TABLE>
+<CAPTION><STRONG>Tabla 2.5:</STRONG>
+Variables calculadas</CAPTION>
+<TR><TD>	<DIV ALIGN="CENTER">
+<TABLE CELLPADDING=3 BORDER="1" ALIGN="CENTER">
+<TR><TD ALIGN="LEFT">Nombre</TD>
+<TD ALIGN="LEFT">Rango</TD>
+<TD ALIGN="CENTER">ecuaci&#243;n</TD>
+</TR>
+<TR><TD ALIGN="LEFT"><IMG
+ WIDTH="20" HEIGHT="35" ALIGN="CENTER" BORDER="0"
+ SRC="img76.gif"
+ ALT="$ I_j$"></TD>
+<TD ALIGN="LEFT"><IMG
+ WIDTH="56" HEIGHT="33" ALIGN="CENTER" BORDER="0"
+ SRC="img54.gif"
+ ALT="$ 0-10$"></TD>
+<TD ALIGN="CENTER"><IMG
+ WIDTH="55" HEIGHT="35" ALIGN="CENTER" BORDER="0"
+ SRC="img77.gif"
+ ALT="$ Pr_jC_j$"></TD>
+</TR>
+<TR><TD ALIGN="LEFT"><IMG
+ WIDTH="29" HEIGHT="35" ALIGN="CENTER" BORDER="0"
+ SRC="img27.gif"
+ ALT="$ W_j$"></TD>
+<TD ALIGN="LEFT"><IMG
+ WIDTH="56" HEIGHT="33" ALIGN="CENTER" BORDER="0"
+ SRC="img57.gif"
+ ALT="$ 0-20$"></TD>
+<TD ALIGN="CENTER">Table <A HREF="node4.html#tab:vars_j">2.2</A></TD>
+</TR>
+<TR><TD ALIGN="LEFT"><IMG
+ WIDTH="49" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img66.gif"
+ ALT="$ CUB$"></TD>
+<TD ALIGN="LEFT"><IMG
+ WIDTH="65" HEIGHT="33" ALIGN="CENTER" BORDER="0"
+ SRC="img78.gif"
+ ALT="$ 0-100$"></TD>
+<TD ALIGN="CENTER"><!-- MATH
+ $\frac{1}{10}\sum_j W_jI_j$
+ -->
+<IMG
+ WIDTH="95" HEIGHT="40" ALIGN="CENTER" BORDER="0"
+ SRC="img79.gif"
+ ALT="$ \frac{1}{10}\sum_j W_jI_j$"></TD>
+</TR>
+<TR><TD ALIGN="LEFT"><IMG
+ WIDTH="24" HEIGHT="35" ALIGN="CENTER" BORDER="0"
+ SRC="img68.gif"
+ ALT="$ P_1$"></TD>
+<TD ALIGN="LEFT"><IMG
+ WIDTH="75" HEIGHT="33" ALIGN="CENTER" BORDER="0"
+ SRC="img75.gif"
+ ALT="$ 0-1000$"></TD>
+<TD ALIGN="CENTER"><IMG
+ WIDTH="68" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img80.gif"
+ ALT="$ 10CUB$"></TD>
+</TR>
+<TR><TD ALIGN="LEFT"><IMG
+ WIDTH="33" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img67.gif"
+ ALT="$ CT$"></TD>
+<TD ALIGN="LEFT"><IMG
+ WIDTH="65" HEIGHT="33" ALIGN="CENTER" BORDER="0"
+ SRC="img81.gif"
+ ALT="$ 0-200$"></TD>
+<TD ALIGN="CENTER"><!-- MATH
+ $\frac{1}{10}\sum_j W_jI_jT_j$
+ -->
+<IMG
+ WIDTH="113" HEIGHT="40" ALIGN="CENTER" BORDER="0"
+ SRC="img82.gif"
+ ALT="$ \frac{1}{10}\sum_j W_jI_jT_j$"></TD>
+</TR>
+<TR><TD ALIGN="LEFT"><IMG
+ WIDTH="26" HEIGHT="35" ALIGN="CENTER" BORDER="0"
+ SRC="img69.gif"
+ ALT="$ C_1$"></TD>
+<TD ALIGN="LEFT"><IMG
+ WIDTH="56" HEIGHT="33" ALIGN="CENTER" BORDER="0"
+ SRC="img54.gif"
+ ALT="$ 0-10$"></TD>
+<TD ALIGN="CENTER"><!-- MATH
+ $\frac{10}{200}CT$
+ -->
+<IMG
+ WIDTH="57" HEIGHT="40" ALIGN="CENTER" BORDER="0"
+ SRC="img83.gif"
+ ALT="$ \frac{10}{200}CT$"></TD>
+</TR>
+<TR><TD ALIGN="LEFT"><IMG
+ WIDTH="32" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img70.gif"
+ ALT="$ CS$"></TD>
+<TD ALIGN="LEFT"><IMG
+ WIDTH="56" HEIGHT="33" ALIGN="CENTER" BORDER="0"
+ SRC="img54.gif"
+ ALT="$ 0-10$"></TD>
+<TD ALIGN="CENTER"><!-- MATH
+ $\frac{1}{10}\sum_i CS_i$
+ -->
+<IMG
+ WIDTH="86" HEIGHT="40" ALIGN="CENTER" BORDER="0"
+ SRC="img84.gif"
+ ALT="$ \frac{1}{10}\sum_i CS_i$"></TD>
+</TR>
+<TR><TD ALIGN="LEFT"><IMG
+ WIDTH="29" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img71.gif"
+ ALT="$ IE$"></TD>
+<TD ALIGN="LEFT"><IMG
+ WIDTH="56" HEIGHT="33" ALIGN="CENTER" BORDER="0"
+ SRC="img85.gif"
+ ALT="$ 0-15$"></TD>
+<TD ALIGN="CENTER"><!-- MATH
+ $\frac{1}{10}\sum_k IE_k$
+ -->
+<IMG
+ WIDTH="88" HEIGHT="40" ALIGN="CENTER" BORDER="0"
+ SRC="img86.gif"
+ ALT="$ \frac{1}{10}\sum_k IE_k$"></TD>
+</TR>
+<TR><TD ALIGN="LEFT"><IMG
+ WIDTH="24" HEIGHT="35" ALIGN="CENTER" BORDER="0"
+ SRC="img72.gif"
+ ALT="$ P_2$"></TD>
+<TD ALIGN="LEFT"><IMG
+ WIDTH="65" HEIGHT="33" ALIGN="CENTER" BORDER="0"
+ SRC="img87.gif"
+ ALT="$ 0-250$"></TD>
+<TD ALIGN="CENTER"><!-- MATH
+ $C_1(CS+IE)$
+ -->
+<IMG
+ WIDTH="115" HEIGHT="37" ALIGN="CENTER" BORDER="0"
+ SRC="img88.gif"
+ ALT="$ C_1(CS+IE)$"></TD>
+</TR>
+<TR><TD ALIGN="LEFT"><IMG
+ WIDTH="34" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1.gif"
+ ALT="$ CP$"></TD>
+<TD ALIGN="LEFT"><IMG
+ WIDTH="56" HEIGHT="33" ALIGN="CENTER" BORDER="0"
+ SRC="img54.gif"
+ ALT="$ 0-10$"></TD>
+<TD ALIGN="CENTER"><!-- MATH
+ $0.368 POB^{0.319}$
+ -->
+<IMG
+ WIDTH="123" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img89.gif"
+ ALT="$ 0.368 POB^{0.319}$"></TD>
+</TR>
+<TR><TD ALIGN="LEFT"><IMG
+ WIDTH="24" HEIGHT="35" ALIGN="CENTER" BORDER="0"
+ SRC="img74.gif"
+ ALT="$ P_3$"></TD>
+<TD ALIGN="LEFT"><IMG
+ WIDTH="61" HEIGHT="33" ALIGN="CENTER" BORDER="0"
+ SRC="img90.gif"
+ ALT="$ 0-0.8$"></TD>
+<TD ALIGN="CENTER"><IMG
+ WIDTH="67" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img91.gif"
+ ALT="$ 0.08CP$"></TD>
+</TR>
+<TR><TD ALIGN="LEFT"><IMG
+ WIDTH="61" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img20.gif"
+ ALT="$ CFIN$"></TD>
+<TD ALIGN="LEFT"><IMG
+ WIDTH="75" HEIGHT="33" ALIGN="CENTER" BORDER="0"
+ SRC="img75.gif"
+ ALT="$ 0-1000$"></TD>
+<TD ALIGN="CENTER"><!-- MATH
+ $P_3(P_1+P_2)$
+ -->
+<IMG
+ WIDTH="101" HEIGHT="37" ALIGN="CENTER" BORDER="0"
+ SRC="img92.gif"
+ ALT="$ P_3(P_1+P_2)$"></TD>
+</TR>
+</TABLE>
+</DIV>
+	
+	<A NAME="tab:vars"></A></TD></TR>
+</TABLE>
+</DIV><P></P>
+<BR>
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fig:pob"></A><A NAME="581"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figura 2.6:</STRONG>
+<IMG
+ WIDTH="34" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1.gif"
+ ALT="$ CP$"> como una funci&#243;n de <IMG
+ WIDTH="49" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2.gif"
+ ALT="$ POB$"></CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER"></DIV>
+<P>
+<DIV ALIGN="CENTER"><IMG
+  WIDTH="428" HEIGHT="216" ALIGN="BOTTOM" BORDER="0"
+ SRC="./pob.jpg"
+ ALT="Image pob">
+</DIV></TD></TR>
+</TABLE>
+</DIV>
+
+
+<P>
+<BR><HR>
+<ADDRESS>
+Oscar Duarte
+2005-10-17
+</ADDRESS>
+</BODY>
+</HTML>

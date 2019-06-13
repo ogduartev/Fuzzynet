@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Fuzzynet" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/Fuzzynet" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Option projectLinkerOptionsRelation="2" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/Fuzzynet" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Option projectLinkerOptionsRelation="2" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="`wx-config --cflags`" />
+			<Add directory="include" />
+		</Compiler>
+		<Linker>
+			<Add option="`wx-config --libs`" />
+		</Linker>
+		<Unit filename="FuzzynetApp.cpp" />
+		<Unit filename="FuzzynetApp.h" />
+		<Unit filename="FuzzynetMain.cpp" />
+		<Unit filename="FuzzynetMain.h" />
+		<Unit filename="include/cadenas.h" />
+		<Unit filename="include/caso.h" />
+		<Unit filename="include/dialogoautodefinirvariable.h" />
+		<Unit filename="include/dialogocaso.h" />
+		<Unit filename="include/dialogocolores.h" />
+		<Unit filename="include/dialogoconfigura.h" />
+		<Unit filename="include/dialogocopiarnumero.h" />
+		<Unit filename="include/dialogoestrategia.h" />
+		<Unit filename="include/dialogoexportar.h" />
+		<Unit filename="include/dialogoimportar.h" />
+		<Unit filename="include/dialogointervalo.h" />
+		<Unit filename="include/dialogolibreria.h" />
+		<Unit filename="include/dialogomodificador.h" />
+		<Unit filename="include/dialogonodo.h" />
+		<Unit filename="include/dialogonumeroeditar.h" />
+		<Unit filename="include/dialogonumeromostrar.h" />
+		<Unit filename="include/dialogoordenarcasos.h" />
+		<Unit filename="include/dialogopropiedades.h" />
+		<Unit filename="include/dialogoproyecto.h" />
+		<Unit filename="include/dialogoreporte.h" />
+		<Unit filename="include/dialogoseleccionarestrategia.h" />
+		<Unit filename="include/dialogovariable.h" />
+		<Unit filename="include/estrategia.h" />
+		<Unit filename="include/fuzzfunc.h" />
+		<Unit filename="include/fuzznum.h" />
+		<Unit filename="include/fuzzyvar.h" />
+		<Unit filename="include/libreria.h" />
+		<Unit filename="include/listacolores.h" />
+		<Unit filename="include/listadimensiones.h" />
+		<Unit filename="include/listafuentes.h" />
+		<Unit filename="include/listaselecciones.h" />
+		<Unit filename="include/mi_fstream.h" />
+		<Unit filename="include/micanvas.h" />
+		<Unit filename="include/nodocalculo.h" />
+		<Unit filename="include/paginacolores.h" />
+		<Unit filename="include/paginadimensiones.h" />
+		<Unit filename="include/paginafuentes.h" />
+		<Unit filename="include/paginalistados.h" />
+		<Unit filename="include/paginaselecciones.h" />
+		<Unit filename="include/paginaseleccionesgrilla.h" />
+		<Unit filename="include/propiedades.h" />
+		<Unit filename="include/proyecto.h" />
+		<Unit filename="include/region.h" />
+		<Unit filename="include/reporte.h" />
+		<Unit filename="include/reportehtml.h" />
+		<Unit filename="include/reportelatex.h" />
+		<Unit filename="include/reportetexto.h" />
+		<Unit filename="include/xpms.h" />
+		<Unit filename="src/caso.cpp" />
+		<Unit filename="src/dialogoautodefinirvariable.cpp" />
+		<Unit filename="src/dialogocaso.cpp" />
+		<Unit filename="src/dialogocolores.cpp" />
+		<Unit filename="src/dialogoconfigura.cpp" />
+		<Unit filename="src/dialogocopiarnumero.cpp" />
+		<Unit filename="src/dialogoestrategia.cpp" />
+		<Unit filename="src/dialogoexportar.cpp" />
+		<Unit filename="src/dialogoimportar.cpp" />
+		<Unit filename="src/dialogointervalo.cpp" />
+		<Unit filename="src/dialogolibreria.cpp" />
+		<Unit filename="src/dialogomodificador.cpp" />
+		<Unit filename="src/dialogonodo.cpp" />
+		<Unit filename="src/dialogonumeroeditar.cpp" />
+		<Unit filename="src/dialogonumeromostrar.cpp" />
+		<Unit filename="src/dialogoordenarcasos.cpp" />
+		<Unit filename="src/dialogopropiedades.cpp" />
+		<Unit filename="src/dialogoproyecto.cpp" />
+		<Unit filename="src/dialogoreporte.cpp" />
+		<Unit filename="src/dialogoseleccionarestrategia.cpp" />
+		<Unit filename="src/dialogovariable.cpp" />
+		<Unit filename="src/diputacion.cpp" />
+		<Unit filename="src/estrategia.cpp" />
+		<Unit filename="src/fuzzfunc.cpp" />
+		<Unit filename="src/fuzznum.cpp" />
+		<Unit filename="src/fuzzyvar.cpp" />
+		<Unit filename="src/libreria.cpp" />
+		<Unit filename="src/listacolores.cpp" />
+		<Unit filename="src/listadimensiones.cpp" />
+		<Unit filename="src/listafuentes.cpp" />
+		<Unit filename="src/listaselecciones.cpp" />
+		<Unit filename="src/mi_fstream.cpp" />
+		<Unit filename="src/micanvas.cpp" />
+		<Unit filename="src/montse.cpp" />
+		<Unit filename="src/nodocalculo.cpp" />
+		<Unit filename="src/paginacolores.cpp" />
+		<Unit filename="src/paginadimensiones.cpp" />
+		<Unit filename="src/paginafuentes.cpp" />
+		<Unit filename="src/paginalistados.cpp" />
+		<Unit filename="src/paginaselecciones.cpp" />
+		<Unit filename="src/paginaseleccionesgrilla.cpp" />
+		<Unit filename="src/propiedades.cpp" />
+		<Unit filename="src/proyecto.cpp" />
+		<Unit filename="src/region.cpp" />
+		<Unit filename="src/reporte.cpp" />
+		<Unit filename="src/reportehtml.cpp" />
+		<Unit filename="src/reportelatex.cpp" />
+		<Unit filename="src/reportetexto.cpp" />
+		<Extensions>
+			<envvars />
+			<code_completion />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
